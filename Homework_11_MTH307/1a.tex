@@ -1,0 +1,19 @@
+Show that
+        $A=\left( \begin{array} {c c c} 1 & 1 & 1 \\ 1 & 1 & 1 \\1 & 1 & 1 \end{array} \right)$ is positive.
+\notab{ 
+        \nl \begin{proof} Let $v$ be an arbitrary vector defined as $v = \vvec{x}{y}{z}$. Computing $\inner{Av,v}$, we obtain 
+        \begin{align*}
+            \inner{Av,v} &= \inner {\begin{bmatrix}
+                1 & 1 & 1\\
+                1 & 1 & 1\\
+                1 & 1 & 1
+            \end{bmatrix}
+            \vvec{x}{y}{z}, \vvec{x}{y}{z} }\\
+            &= \inner{\vvec{x+y+z}{x+y+z}{x+y+z}, \vvec{x,y,z}}\\
+            &= x^2 + y^2 + z^2 + 2xy + 2xz + 2yz\\
+            &= (x+y+z)^2\\
+            &\geq 0
+        \end{align*}
+        Therefore $A$ is positive.
+    \end{proof}
+}

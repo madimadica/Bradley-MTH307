@@ -1,0 +1,118 @@
+\documentclass[12pt]{article}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{diagbox}
+\usepackage{empheq}
+\usepackage{makecell}
+\usepackage[autostyle]{csquotes}
+\usepackage{amssymb, amsthm, linguex, enumerate, amsmath}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{tcolorbox}
+%\usepackage{mathabx}
+\pagestyle{empty}
+\usepackage{amssymb, amsthm, linguex, enumerate, amsmath}
+\newcommand{\pf}{\mathcal{P}(\mathbf{F})}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Cb}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\Fb}{\mathbf{F}}
+\newcommand{\Rb}{\mathbf{R}}
+\newcommand{\x}{x \in \mathbb{R}}
+\newcommand{\nat}{n \in \mathbb{N}}
+\newcommand{\dx}{\frac{d}{dx}}
+\newcommand{\dxof}[1]{\frac{d}{dx} \left( {#1} \right) }
+\renewcommand{\vector}[1]{\left\langle{#1}\right\rangle}
+\newcommand{\pars}[1]{\left( {#1} \right) }
+\newcommand{\brac}[1]{\left[ {#1} \right] }
+\newcommand{\limit}[3]{\lim_{{#1}\to {#2}} {#3}}
+\newcommand{\xo}{x_0}
+\newcommand{\iid}{independent identically distributed }
+\newcommand{\dble}{differentiable }
+\newcommand{\xbar}{\bar{X}}
+\newcommand{\ybar}{\bar{Y}}
+\newcommand{\OR}{\,\lor\,}
+\newcommand{\AND}{\,\land\,}
+\newcommand{\rv}{random variable }
+\newcommand{\distn}{distribution }
+\newcommand{\cont}{continuous }
+\newcommand{\then}{\,\Rightarrow\,}
+\renewcommand{\emptyset}{\{\,\}}
+\newcommand{\disc}{discontinuous }
+\newcommand{\forx}{\qquad \text{for all } x}
+\newcommand{\cbi}{closed bounded interval }
+\newcommand{\seq}[1]{\{{#1}\}}
+\newcommand{\limn}{\lim_{n\to\infty}}
+\renewcommand{\f}[1]{f^{({#1})}}
+\renewcommand{\sup}[1]{\text{sup}\left\{ {#1} \right\}}
+\renewcommand{\inf}[1]{\text{inf}\left\{ {#1} \right\}}
+\newcommand{\N}[2]{N \left( {#1},{#2} \right)}
+\newcommand{\gammaDist}[2]{\gamma \left( {#1},{#2} \right)}
+\newcommand{\Ndef}{N\left(\mu, \sigma^2\right)} %default normal
+\newcommand{\thru}[1]{{#1}_1, \dots, {#1}_n}
+\newcommand{\yn}{Y_1, \dots, Y_n}
+\renewcommand{\max}[1]{\text{max}\left\{ {#1} \right\}}
+\renewcommand{\min}[1]{\text{min}\left\{ {#1} \right\}}
+\renewcommand{\over}[1]{\frac{1}{{#1}}}
+\newcommand{\poly}[1]{\mathcal{P}_{#1}(\mathbf{R})}
+\newcommand{\vtrip}[3]{\begin{pmatrix}{#1}\\{#2}\\{#3}\end{pmatrix}}
+\newcommand{\vquad}[4]{\begin{pmatrix}{#1}\\{#2}\\{#3}\\{#4}\end{pmatrix}}
+\newcommand{\vquin}[5]{\begin{pmatrix}{#1}\\{#2}\\{#3}\\{#4}\\{#5}\end{pmatrix}}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\newcommand*\widefbox[1]{\fbox{\hspace{2em}#1\hspace{2em}}}
+%\usepackage{mathabx}
+\newtcolorbox{mybox}[1][]{colback=white, sharp corners, #1}
+
+
+%Create a new vspace line no indent
+\newcommand{\nl}{\vspace{0.1in}\noindent}
+\newcommand{\nnl}{\vspace{0.2in}\noindent}
+
+%Remove hyphens
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+%Page dimentions
+\textwidth 6.5in
+\hoffset=-.65in
+\textheight=9.5in
+\voffset=-1.in
+\newcommand{\say}[1]{\textquotedblleft{#1}\textquotedblright}
+\newcommand{\T}[2]{T\big({#1}\big)({#2})}
+\newcommand{\func}[2]{\big({#1}\big)({#2})}
+\newcommand{\dimn}[1]{\operatorname{dim}\,{#1}}
+\newcommand{\rank}[1]{\operatorname{dim}\operatorname{range}{#1}}
+\newcommand{\nullity}[1]{\operatorname{dim}\operatorname{null}{#1}}
+\begin{document}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RO]{Matthew Wilder}
+\fancyhead[LO]{Assignment 4 - MTH 307}
+\fancyfoot[CO]{Page \thepage}
+
+\noindent \textbf{Matthew Wilder}\\MATH 307 - Spring 2022 \\
+Assignment \#4 \\
+Due Friday, 02-11-22, 16:00 CST \\
+
+\input{Questions.tex}
+\end{document} 

@@ -1,0 +1,18 @@
+Consider the operator
+$T = \left(
+        \begin{array}{cc}
+          0 & 0  \\
+          0 & 1 \\
+        \end{array}
+      \right)$
+acting on $\mathbf{R}^2$.  How many subspaces are there that are invariant under $T$?
+\begin{mybox}
+  \textbf{Solution: } First, the trival subspaces of $\operatorname{span}\{0\}$ and $\R^2$ hold true. Then using the triangular matrix property to get the eigenvalues $\lambda = 0$ and $\lambda = 1$, we can compute eigenvectors for them. 
+
+  \nl For $\lambda = 0$, 
+  $$\matx{1}{0}{0}{0} \vdub{x}{y} =  \vdub{1x}{0y} = 0v = 0 \quad \text{ implies }  \vdub{x}{y} \in \operatorname{span}(\vbrac{0,1}).$$
+  For $\lambda = 1$, 
+  $$\matx{1}{0}{0}{0} \vdub{x}{y} = \vdub{1x}{0y} = 1v = v \quad \text{ implies }  \vdub{x}{y} \in \operatorname{span}(\vbrac{1,0}).$$
+  So there are 4 distinct invariant subspaces,
+  $$\operatorname{span}(\vec{0}) \qquad \operatorname{span}(\vbrac{0,1}) \qquad \operatorname{span}(\vbrac{1,0}) \qquad \R^2$$
+\end{mybox}

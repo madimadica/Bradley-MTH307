@@ -1,0 +1,48 @@
+Suppose $\mathbf{F} = \mathbf{C}$ and $T \in \mathcal{L}(V)$.  Prove that there exists $D, N \in  \mathcal{L}(V)$ such that $T = D + N$, the operator $D$ is diagonalizable, $N$ is nilpotent, and $DN = ND$.
+
+\begin{proof}
+    By Theorem 8.29 there exists a basis of $V$ where $T$ is a block diagonal matrix of the form 
+    $$T = \begin{bmatrix}
+        A_1 & & 0 \\ & \ddots & \\ 0 & & A_m
+    \end{bmatrix} \wideand A_j = \begin{bmatrix}
+        \lambda_j & & \ast \\ & \ddots & \\ 0 & & \lambda_j
+    \end{bmatrix}$$
+    Then we can decompose $A_j$ into 
+    $$D_j = \begin{bmatrix}
+        \lambda_1 & & 0 \\ & \ddots & \\ 0 & & \lambda_j
+    \end{bmatrix} \wideand N_j = \begin{bmatrix}
+        0 & & \ast \\ & \ddots & \\ 0 & & 0
+    \end{bmatrix}$$
+    Then commutivity clearly holds for $D_j$ and $N_j$ since
+    $$D_jN_j = \lambda_j I N_j = \lambda_j N_j = N_j (\lambda_j) = N_j (\lambda I) = N_j D_j;$$
+    Then to form $D$ and $N$ we have 
+    $$D = \begin{bmatrix}
+        \begin{pmatrix}
+            \lambda_1 & & 0 \\
+            & \ddots & \\
+            0 & & \lambda_1
+        \end{pmatrix}
+        & & \\
+        &         \ddots & \\
+        & &         \begin{pmatrix}
+            \lambda_m & & 0 \\
+            & \ddots & \\
+            0 & & \lambda_m
+        \end{pmatrix}
+    \end{bmatrix} \wideand 
+    N = \begin{bmatrix}
+        \begin{pmatrix}
+            0 & & \ast \\
+            & \ddots & \\
+            0 & & 0
+        \end{pmatrix}
+        & & \\
+        &         \ddots & \\
+        & &         \begin{pmatrix}
+            0 & & \ast \\
+            & \ddots & \\
+            0 & & 0
+        \end{pmatrix}
+    \end{bmatrix}.$$
+    Clearly $T = D + N$. And for every $j \in \{1, \dots, m\}$ we have $D_j N_j = N_j D_j$, then $DN = ND$.
+\end{proof}

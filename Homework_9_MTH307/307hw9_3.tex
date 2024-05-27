@@ -1,0 +1,23 @@
+In $\mathbf{R}^4$, let
+    \[
+        U = \text{span}\left((0,0,1,1) , (1,2,1,1) \right).
+    \]
+    Find $u \in U$ such that $\|u - (1,3,5,4) \|$ is as small as possible.
+
+    \vspace{0.5in}
+
+
+    \nl \textbf{Solution: } Let $B$ be an orthonormal basis of $U$. Let $v_1, v_2 \in \R^4$ equal $v_1 = (0,0,1,1)$ and $v_2 = (1,2,1,1).$ Using the Gram-Schmidt procedure on $v_1$ and $v_2$,
+    $$e_1 = \frac{1}{\norm{v_1}} v_1 = \over{\sqrt 2} (0,0,1,1)$$
+    and
+    \begin{align*}
+    e_2 &= \frac{v_2 - \inner{v_2, e_1}e_1}{\norm{v_2 - \inner{v_2, e_1}e_1}} \\ &= \frac{v_2 - \over2 \inner{v_2,v_1}v_1 }{\norm{v_2 - \over2 \inner{v_2,v_1}v_1}}
+    \\ &= \frac{v_2 - \over2(0 + 0 + 1 + 1) v_1 }{\norm{v_2 - \over2(0 + 0 + 1 + 1) v_1}}\\
+    &= \frac{v_2 - v_1}{\norm{v_2 - v_1}}\\
+    &= \frac{1}{\sqrt5}(1,2,0,0).
+    \end{align*}
+Then $B := \set{e_1, e_2}$. Then the closest point to $u \in U$ to $w := (1,3,5,4)$ is 
+\begin{align*}
+    u &= \inner{w, e_1}e_1 + \inner{w,e_2}e_2 \\ &= \frac{5+4}{2}(0,0,1,1) + \frac{1 + 6}{5} (1,2,0,0)\\
+    &= \pars{\frac75,\; \frac{14}{5},\; \frac92,\; \frac92 }.
+\end{align*}   

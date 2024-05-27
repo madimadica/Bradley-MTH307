@@ -1,0 +1,27 @@
+Suppose $T \in \mathcal{L}(V)$ and there exists nonzero vectors $v$ and $w$ so that
+        \[
+            Tv = 3w \hspace{.5in} \text{and} \hspace{.5in} Tw=3v.
+        \]
+        Prove that 3 or $-3$ is an eigenvalue of $T$.
+\begin{mybox}
+\begin{proof}
+    Because $T$ is linear, for some $v,w \in V,\; T(v+w) = T(v) + T(w)$.
+
+    \begin{align*}
+        T(v+w) &= T(v) + T(w)\qquad \text{Linearity.}\\
+        &= 3w + 3v \qquad \text{Given.}\\
+        &= 3(w+v) \qquad \text{Factor out 3.}\\
+        &= 3(v+w) \qquad \text{Commutativity on } V
+    \end{align*}
+    Therefore $3$ is an eigenvalue since $T(v+w) = 3(v+w)$.
+
+    \nnl For the next eigenvalue, we will take a look at $T(v-w)$.
+    \begin{align*}
+        T(v-w) &= T(v) - T(w)\qquad \text{Linearity.}\\
+        &= 3w - 3v \qquad\qquad \text{Given.}\\
+        &= -3(-w+v) \qquad \text{Factor out 3.}\\
+        &= 3(v-w) \qquad\qquad \text{Commutativity on } V
+    \end{align*}
+    Therefore $-3$ is an eigenvalue since $T(v-w) = -3(v-w)$.
+\end{proof}
+\end{mybox}

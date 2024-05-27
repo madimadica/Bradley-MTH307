@@ -1,0 +1,35 @@
+Find a $4 \times 4$ matrix $M$ so that the range of $M$ is spanned by $(1,0,1,0)$ and $(0,1,0,1)$.\vspace{0.4in}
+\begin{mybox}
+    \textbf{Solution: } Let
+    $$M = \begin{bmatrix} 
+        1 & 0 & 0 & 0\\
+        0 & 1 & 0 & 0\\
+        1 & 0 & 0 & 0\\
+        0 & 1 & 0 & 0
+    \end{bmatrix}.$$
+    Then the range of $M$ is
+    \begin{align}
+        \operatorname{range}M &= \{M(a,\,b,\,c,\,d)^T : a,\,b,\,c,\,d\in R\} \notag\\&=
+         \left\{ \begin{bmatrix} 
+            1 & 0 & 0 & 0\\
+            0 & 1 & 0 & 0\\
+            1 & 0 & 0 & 0\\
+            0 & 1 & 0 & 0
+        \end{bmatrix}
+        \begin{pmatrix}
+            a\\
+            b\\
+            c\\
+            d
+        \end{pmatrix} : a,\,b,\,c,\,d \in \R \right\} \notag\\
+        &= \{ (a,\,b,\,a,\,b)^T : a,\,b \in \R \}\notag\\
+        &= \{ a(1,\,0,\,1,\,0)^T + b(0,\,1,\,0,\,1)^T : a,\,b \in \R \}\notag
+    \end{align}
+    Which is by definition the span of $(1,\,0,\,1,\,0)$ and $(0,\,1,\,0,\,1)$. Therefore,
+        $$\operatorname{range}M =  \operatorname{span}\left\{
+            (1,\,0,\,1,\,0), \; (0,\,1,\,0,\,1)
+        \right\}.\notag
+    $$
+
+\end{mybox}
+

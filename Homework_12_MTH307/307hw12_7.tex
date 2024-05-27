@@ -1,0 +1,13 @@
+Suppose $T \in \mathcal{L}(V)$ and $s$ is a singular value of $T$. Prove that there exists a vector $v \in V$ such that $\| v \| = 1$ and $\| Tv \| = s$.
+
+\begin{proof} $ $
+
+    \nl Let $s_1, \dots, s_n$ be the singular values of $T$. Let $s = s_1$. Then by SVD, there exists orthonormal bases $e_1, \dots, e_n$ and $f_1, \dots, f_n$ such that 
+    $$Tv = s_1 \inner{v, e_1}f_1 + \cdots + s_n \inner{v,e_n}f_n$$ for every $v \in V$. If we choose $v = e_1$ then its clear that $\norm{v} = 1$ by normalized vector properties. Further, 
+    \begin{align*}
+        Tv &=  s_1 \inner{v, e_1}f_1 + \cdots + s_n \inner{v,e_n}f_n\\
+        &=  s_1 \underbrace{ \inner{e_1, e_1} }_{\textstyle = 1} f_1 + s_2 \underbrace{\inner{e_1, e_2}}_{\textstyle = 0} f_2 + \underbrace{\cdots}_{ \textstyle = 0} + s_n \underbrace{\inner{e_1,e_n}}_{\textstyle = 0}f_n\\
+        &= s_1 f_1 \\ &= s f_1.
+    \end{align*}
+    Then $\norm{Tv}^2 = \norm{sf_1}^2 = \inner{sf_1, sf_1} = \abs{s}^2 \inner{f_1, f_1} = \abs{s^2}$ since $f_1$ is normalized. Thus $\norm{Tv} = \abs{s}$. But singular values are non-negative by definition, hence $\abs{s} = s$ and therefore $\norm{Tv} = s$ for $v = e_1$. 
+\end{proof}

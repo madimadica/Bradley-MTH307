@@ -1,0 +1,13 @@
+(CST) Suppose $V$ is a complex inner product space. Prove that every normal operator on $V$ has a square root. (An operator $R \in \mathcal{L}(V)$ is called a \emph{square root} of $T$ if $R^2 = T$.)
+
+\begin{proof}
+    Let $T$ be an arbitrary normal operator on $V$. Then By the Complex Spectral Theorem, since $T$ is normal, there exists an orthonormal basis for $V$ consisting of $T$'s eigenvectors, which can further be used to create a diagonal matrix. Hence, the transformation matrix of $T$ can be expressed as:
+    $$\mathcal M(T) = \mqty[\dmat{\lambda_1}{\ddots}{\lambda_n}]$$
+    with $\lambda_i$ denoting an eigenvalue of $T$ and $\dim V = n$.
+
+    \nl Now, let the transformation matrix of $R$ be defined as
+    $$\mathcal M(R) = \mqty[\dmat{\sqrt{\lambda_1}}{\ddots}{\sqrt{\lambda_n}}].$$
+    Then,
+    $$\mathcal M(R^2) = \mqty[\dmat{\sqrt{\lambda_1}}{\ddots}{\sqrt{\lambda_n}}] \cdot \mqty[\dmat{\sqrt{\lambda_1}}{\ddots}{\sqrt{\lambda_n}}] = \mqty[\dmat{\lambda_1}{\ddots}{\lambda_n}] = \mathcal M(T).$$
+    Hence, $R$ is the square root of $T$. Note that the square root of any complex number is indeed a complex number (and its opposite) (this is left as an exercise for a MTH 403 student).
+\end{proof}

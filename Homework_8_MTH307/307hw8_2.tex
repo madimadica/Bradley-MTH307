@@ -1,0 +1,16 @@
+Prove or disprove: there is an inner product on $\mathbf{R}^2$ such that the associated norm is given by
+    \[
+        \|(x,y)\| = \max \{ |x|, |y| \}
+    \]
+    for all $(x,y) \in \mathbf{R}^2$.
+\begin{mybox} \textbf{Solution:} False by counterexample.
+\begin{proof}
+    Let $\bv, \bw \in \R^2$ such that $\bv = \pars{2,2}$ and $\bw = \pars{2,-2}$. Computing the norms, we obtain $\norm{\bv} = \max\set{|2|,|2|} = 2$ and $\norm{\bw} = \max\set{|2|, |-2|} = 2$.
+
+    \nl Taking the norm of the sum $\bv + \bw$,
+    \begin{align*}\norm{\bv + \bw} &= \norm{(2,2) + (2,-2)} \\ &= \norm{(4,0)} \\ &= \max\set{|4|,|0|} \\ &= 4.
+    \end{align*}
+    Since $\bv \cdot \bw = (2,2) \cdot (2,-2) = 2\cdot 2 + 2 \cdot (-2) = 0$, $\bv$ and $\bw$ are orthogonal. Hence, by the Pythagorean Theorem, $\norm{\bv + \bw}^2 = \norm{\bv}^2 + \norm{\bw}^2$. However,\\
+    $4^2 = 16 \neq 8 = 2^2 + 2^2$. Thus a contradiction to the Pythagorean Theorem.
+\end{proof}
+\end{mybox}

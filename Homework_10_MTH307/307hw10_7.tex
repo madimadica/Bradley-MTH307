@@ -1,0 +1,19 @@
+(CST) Prove that a normal operator on a complex inner product space is self-adjoint if and only if all its eigenvalues are real.
+\begin{proof} ($\Longrightarrow$)
+
+    \nl By the Complex Spectral Theorem, a normal operator can be expressed as a diagonal matrix consisting of the eigenvalues. Let
+    $$\mathcal M(T) =  \mqty[\dmat{\lambda_1}{\ddots}{\lambda_n}]$$
+    for eigenvalues $\lambda_i$. Then by definition of $T^*$ (conjugate transpose),
+    $$\mathcal M(T^*) = \mqty[\dmat{\bar{\lambda}_1}{\ddots}{\bar{\lambda}_n}].$$
+    By the ($\Longrightarrow$) hypothesis, $T = T^*$, which implies $\lambda_1 = \bar{\lambda}_1, \dots, \lambda_n = \bar{\lambda}_n$, which is only true if $\lambda_i \in \R$. Hence if $T$ is self-adjoint, then all of its eigenvalues are real.
+\end{proof}
+\vspace{1in}
+\begin{proof} ($\Longleftarrow$)
+
+    \nl By the reasoning of the forward direction, we have that 
+    $$\mathcal M(T) =  \mqty[\dmat{\lambda_1}{\ddots}{\lambda_n}] \qquad \text{and} \qquad \mathcal M(T^*) = \mqty[\dmat{\bar{\lambda}_1}{\ddots}{\bar{\lambda}_n}].$$
+    Under the ($\Longleftarrow$) hypothesis, we assume $\lambda_i \in \R$, therefore $\bar{\lambda}_i = \lambda_i$ for every index $i \in [1, n]$. Hence,
+    $$M(T^*) = \mqty[\dmat{\bar{\lambda}_1}{\ddots}{\bar{\lambda}_n}] =  \mqty[\dmat{\lambda_1}{\ddots}{\lambda_n}] = \mathcal M(T),$$
+    which is the definition of self-adjoint.
+
+\end{proof}

@@ -1,0 +1,33 @@
+Define $T \in \mathcal{L}(\mathbf{F}^3)$ by $T(z_1,z_2,z_3) = ( 4z_2 , 5z_3 , z_1 )$. Find (explicitly) an isometry $S \in \mathcal{L}(\mathbf{F}^3)$ such that $T = S\;\sqrt{T^*T}$.
+
+\notab{
+    \soln* It is clear that the matrix of $T$ with respect to the standard basis is 
+    $$\mathcal M(T) = \begin{bmatrix}
+        0 & 4 & 0 \\ 0 & 0 & 5\\ 1 & 0 & 0
+    \end{bmatrix} \wideand \mathcal M(T^*) = \begin{bmatrix}
+        0 & 0 & 1 \\ 4 & 0 & 0 \\ 0 & 5 & 0
+    \end{bmatrix}.$$
+    Further,
+    $$T^*T = \begin{bmatrix}
+        1 & 0 & 0 \\ 0 & 16 & 0 \\ 0 & 0 & 25 
+    \end{bmatrix} \wideand \sqrt{T^*T} = \begin{bmatrix}
+        1 & 0 & 0 \\ 0 & 4 & 0 \\ 0 & 0 & 5 
+    \end{bmatrix}.$$
+    By polar decomposition we know that $T = S\sqrt{T^*T}$, so multiplying on the right by $\pars{\sqrt{T^*T}}^{-1}$ yields $T \pars{\sqrt{T^*T}}^{-1} = S$. Since $T^*T$ is diagonal, the inverse is the inverse of the diagonal entries, hence
+    $$\pars{\sqrt{T^*T}}^{-1} = \begin{bmatrix}
+        1 & 0 & 0 \\ 0 & \frac{1}{4} & 0 \\ 0 & 0 & \frac15 
+    \end{bmatrix}.$$
+    Now, computing $S$ explicity, we have
+    \begin{align*}
+        S &= T \pars{\sqrt{T^*T}}^{-1}\\
+        &= \begin{bmatrix}
+            0 & 4 & 0 \\ 0 & 0 & 5\\ 1 & 0 & 0
+        \end{bmatrix}\begin{bmatrix}
+            1 & 0 & 0 \\ 0 & \frac{1}{4} & 0 \\ 0 & 0 & \frac15 
+        \end{bmatrix}\\
+        &= \begin{bmatrix}
+            0 & 1 & 0 \\ 0 & 0 & 1 \\ 1 & 0 & 0
+        \end{bmatrix}.
+    \end{align*}
+    To show that this is an isometry, we need $\norm{Sv} = \norm{v}$. Which for $v = (v_1, v_2, v_3)$, we have $S(v_1, v_2, v_3) = (v_2, v_3, v_1)$. Clearly $\norm{(v_1, v_2, v_3)} = \sqrt{{v_1}^2 + {v_2}^2 + {v_3}^2} =  \norm{(v_2, v_3, v_1)}$. Hence $S$ is an isometry.
+    }

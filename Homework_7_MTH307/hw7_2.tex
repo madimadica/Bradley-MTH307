@@ -1,0 +1,14 @@
+Suppose $P \in \mathcal{L}(V)$ and $P^2=P$.  Prove that $V = \text{null }P \oplus \text{range } P$.
+\begin{mybox}
+    \begin{proof}
+        Using the given notion that $P^2 = P$ we can simplify as follows:
+            $$
+                  P^2 = P
+                \iff P^2 - P = 0
+                \iff  P(P-I) = 0.$$
+            Hence for all $v \in V$, $P(P-I)v = 0$. This implies that \\$\NULL P \supset \{(P-I)v : v \in V\}$. Thus a typical element $v \in V$ can be rewritten as
+            $$v = \underbrace{Pv}_{\text{range}P} - \underbrace{(P-I)v}_{\text{null}P}.$$
+            Hence $V = \range P + \NULL P$. We need the intersection $\NULL P \cap \range P$, and to do this we need $\NULL P$'s equality. Let $v \in \NULL P$. Then $Pv = 0$ implies that (by the above equation) $v = Pv - (P-I)v = (P-I)(-v)$. Hence $$\NULL P = \{(P-I)v : v \in V\}.$$
+            As such, the intersection of $\NULL{P}$ and $\range{P}$ is when $Pv = (P-I)v = Pv - Iv$. Therefore $0 = -Iv$, implying that $\NULL P \cap \range P = \{\vec{0}\}$. We can apply the definition of a Direct Sum to get that $V = \NULL P \oplus \range P$.
+    \end{proof}
+\end{mybox}

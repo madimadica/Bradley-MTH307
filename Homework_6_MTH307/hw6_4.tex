@@ -1,0 +1,46 @@
+In $\mathbf{R}^2$, let $T$ be the reflection across the line $y=x$.
+\begin{enumerate}
+\item Write the matrix $A$ that represents $T$ relative to the standard basis.
+\begin{mybox}
+        \textbf{Solution:}
+        $$T : \R^2 \to \R^2$$
+        $$T(x,y) = (y,x)$$
+        Computing the images of the standard basis,
+        $$T(e_1) = (0,1) \qquad\text{and}\qquad T(e_2) = (1,0).$$
+        Therefore,
+        $$A = \matx{0}{1}{1}{0}.$$
+\end{mybox}
+
+\newpage
+\item Determine two invariant subspaces $\mathcal{M}$ and $\mathcal{N}$ for $T$ such that $\mathbf{R}^2 = \mathcal{M} \oplus \mathcal{N}$ where neither $\mathcal{M}$ nor $\mathcal{N}$ is the zero subspace.
+\begin{mybox}
+\textbf{Solution: } Let $v \in \R^2$ denoted by $v = \vbrac{x,y}$ such that $v \neq \vec{0}$, then
+\begin{align*}
+        (A-\lambda I_2)v = \vec{0} &\iff \matx{-\lambda}{1}{1}{-\lambda} \vdub{x}{y} = \vdub{0}{0}\\
+        &\iff -\lambda x + y = 0 \quad \text{and} \quad x - \lambda y = 0\\
+        & \iff x = \lambda y  \quad \text{and} \quad  y = \lambda x\\
+        & \iff x = \lambda^2 x  \quad \text{and} \quad y = \lambda^2 y\\
+        & \iff \lambda = \pm 1.
+\end{align*}
+For $\lambda = 1$, $Av = 1v$ implies that $y=x$ and $x=y$, so we get an eigenvectors of $\vdub{1}{1}$.
+
+\nl For $\lambda = -1$, $Av = -v$ implies that $y=-x$ and $x=-y$, so we get an eigenvectors of $\vdub{-1}{1}$.
+
+\nl Therefore we can let $\mathcal{M} = \operatorname{span}\vdub{1}{1}$ and let $\mathcal{N} = \operatorname{span}\vdub{-1}{1}$.
+
+\nl These are linearly independent and invariant under $T$ because $\mathcal{M} \cap \mathcal{N} = \vec{0}$. Therefore, $\R^2 = \mathcal{M} \oplus \mathcal{N}$.
+\end{mybox}
+
+\item Write a basis $\{ u_1, u_2 \}$ for $\mathbf{R}^2$ so that $\mathcal{M} = \text{span } (u_1)$ and  $\mathcal{N} = \text{span } (u_2)$.
+\begin{mybox}
+       \textbf{Solution:} Using the conclusion of part (b), we can let the basis be $$\left\{\vdub{1}{1}, \; \vdub{-1}{1}  \right\}.$$
+\end{mybox}
+
+\item Write the matrix $B$ that represents $T$ relative to the basis $\{ u_1, u_2 \}$.
+\begin{mybox}
+        \textbf{Solution: } 
+        $$T\vdub{1}{1} = \vdub{1}{1} \qquad \text{and} \qquad T\vdub{-1}{1} = \vdub{1}{-1}$$
+        Using these as the columns in matrix B,
+        $$B = \matx{1}{1}{1}{-1}.$$
+\end{mybox}
+\end{enumerate}

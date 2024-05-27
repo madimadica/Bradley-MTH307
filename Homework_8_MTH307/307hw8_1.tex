@@ -1,0 +1,25 @@
+Prove that
+    \[
+        16 \le (a+b+c+d)\left(\frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d} \right)
+    \]
+    for all positive numbers $a,b,c,d$.\\
+    Hint: find two vectors having lots of square roots; compute an inner product and also use Cauchy-Schwarz.
+    \begin{mybox}\textbf{Solution:} Direct proof.
+    \begin{proof}
+        Let scalars $a,b,c,d \in \R^+$ and $\bv, \bw \in \R^4$ such that $\bv := \brac{\sqrt{a}, \sqrt{b}, \sqrt{c}, \sqrt{d}}$ and $\displaystyle \bw := \brac{\over{\sqrt{a}},\over{\sqrt{b}}, \over{\sqrt{c}}, \over{\sqrt{d}}}$. By the Cauchy-Schwarz Inequality, $\abs{\inner{\bv,\bw}} \leq \norm{\bv} \norm{\bw}$.
+
+        \noindent Simplifying the left hand side,
+        \begin{align*}
+            \abs{\inner{\bv,\bw}} &= \abs{\inner{\brac{\sqrt{a}, \sqrt{b}, \sqrt{c}, \sqrt{d}},\; \textstyle \brac{\over{\sqrt{a}},\over{\sqrt{b}}, \over{\sqrt{c}}, \over{\sqrt{d}}}}  }\\
+            &= \abs{ \frac{\sqrt{a}}{\sqrt{a}} + \frac{\sqrt{b}}{\sqrt{b}} + \frac{\sqrt{c}}{\sqrt{c}} + \frac{\sqrt{d}}{\sqrt{d}} }\\
+            &= 4.
+        \end{align*}
+        Simplifying the right hand side,
+        \begin{align*}
+            \norm{\bv} \norm{\bw} &=  \sqrt{\prt a^2 + \prt b^2 + \prt c^2 + \prt d^2 } \cdot \sqrt{ \port a^2 + \port b^2 + \port c^2 + \port d^2 } \\
+            &= \sqrt{a + b + c + d} \cdot \sqrt{\over{a}+\over b + \over c + \over d}.
+        \end{align*}
+
+        \noindent Hence, by Cauchy-Schwarz, $\displaystyle 4 \leq   \sqrt{a + b + c + d} \cdot \sqrt{\over{a}+\over b + \over c + \over d}$. Squaring both sides of this inequality, we see that $\displaystyle 16 \leq (a + b + c + d) \cdot \pars{\over{a}+\over b + \over c + \over d}$.
+    \end{proof}
+\end{mybox}

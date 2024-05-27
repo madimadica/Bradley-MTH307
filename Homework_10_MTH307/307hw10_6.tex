@@ -1,0 +1,19 @@
+(CST) Suppose $\mathbf{F} = \mathbf{C}$ and $T \in \mathcal{L}(V)$. Prove that $T$ is normal if and only if all pairs of eigenvectors corresponding to distinct eigenvalues of $T$ are orthogonal and
+    \[
+        V = E(\lambda_1,T) \oplus \cdots \oplus E(\lambda_m,T)
+    \]
+    where $\lambda_1 , \ldots , \lambda_m$ denote the distinct eigenvalues of $T$.
+
+    \begin{proof} ($\Longrightarrow$)
+
+        \nl Since $T$ is normal, by the Complex Spectral Theorem there exists an orthonormal basis of $V$ consisting of eigenvectors. The eigenvectors corresponding to distinct eigenvalues is a subset of that orthonormal basis, and hence are all orthonormal, and thus orthogonal.
+        
+        \nl By proposition 5.38 (page 156) the sum of eigenspaces for distinct eigenvalues is a direct sum. Hence, $V =  E(\lambda_1,T) \oplus \cdots \oplus E(\lambda_m,T)$.
+
+    \end{proof}
+\vspace{.5in}
+    \begin{proof} ($\Longleftarrow$)
+
+        \nl For every index $i \in [1,m]$ we can form an orthonormal basis of $E(\lambda_i,T)$. Since this basis is formed from vectors inside an eigenspace, then are themselves eigenvectors. Since $V$ is a direct sum of these eigenspaces, of which are orthonormal, we have an orthnormal basis of eigenvectors. Thus, by the Complex Spectral Theorem $[(b) \implies (a)]$, $T$ is normal.
+
+    \end{proof}

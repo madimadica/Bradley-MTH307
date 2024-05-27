@@ -1,0 +1,39 @@
+Define $N \in \mathcal{L}(\mathbf{F}^5)$ by
+    \[
+       N(x_1,x_2,x_3,x_4,x_5) = (2x_2,3x_3,-x_4,4x_5,0).
+    \]
+    Find a square root of $I+N$.
+
+    \soln* The matrix with respect to the standard basis for $N$ is 
+    $$\mathcal{M}(N) = \begin{bmatrix}
+       0 & 2 & 0 & 0 & 0 \\
+       0 & 0 & 3 & 0 & 0 \\
+       0 & 0 & 0 & -1 & 0 \\
+       0 & 0 & 0 & 0 & 4 \\
+       0 & 0 & 0 & 0 & 0
+    \end{bmatrix}
+    \wideand \mathcal{M}(I+N) = \begin{bmatrix}
+      1 & 2 & 0 & 0 & 0 \\
+      0 & 1 & 3 & 0 & 0 \\
+      0 & 0 & 1 & -1 & 0 \\
+      0 & 0 & 0 & 1 & 4 \\
+      0 & 0 & 0 & 0 & 1
+   \end{bmatrix}.$$
+
+   \noindent We are looking for $R^2 = I+N$ for some square root $R$. Since $N$ is nilpotent, applying Theorem 8.31 we have 
+   \begin{align*}
+      & (I + a_1N + a_2N^2 + \cdots + a_{m-1}N^{m-1})\\
+      \times \; & (I + a_1N + a_2N^2 + \cdots + a_{m-1}N^{m-1})\\
+      \hline\\
+      =\;&I + (2a_1N) + \brac{2a_2N^2 + a_1^2N^2} + \brac{
+         2a_3N^3 + 2a_1a_2N^3
+      } + \brac {
+         2a_4 N^4 + 2a_1 a_3 N^4 + {a_2}^2 N^4
+      } + \underbrace{ 0 + \cdots}_{\text{nilpotent}} 
+   \end{align*}
+   To make the right hand side of this equal zero, we want $I + (2a_1 N) = I + N$, hence $a_1 = \dfrac{1}{2}$. 
+   \\ Then for the second term we want $(2a_2 + {a_1}^2) = 0 = 2a_2 + \dfrac{1}{4}$ which implies $a_2 = - \dfrac{1}{8}$.
+   \\For the third term we want $2a_3 + 2a_1a_2 = 0 = 2a_3 - \dfrac{1}{8}$. Hence $a_3 = \dfrac{1}{16}$.
+   \\Finally for the fourth term, we want $2a_4 + 2a_1a_3 + {a_2}^2 = 0 = 2a_4 + \over*{16} + \over*{64}$ so $a_4 = - \dfrac{5}{128}$.
+
+   \nl Then $\sqrt{I+N} = I + \over*{2} N - \over*{8} N^2 + \over*{16} N^3 - \dfrac{5}{128}N^4$.

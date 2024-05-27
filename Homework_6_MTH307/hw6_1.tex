@@ -1,0 +1,89 @@
+Label the following statements as being true or false.
+Provide some justification from the text for your label.
+\begin{enumerate}
+    \item Every linear operator on an $n$-dimensional vector space has $n$ distinct eigenvalues.
+    \begin{mybox}
+        \textbf{Solution - False: } Some eigenvalues can have a multiplicity greater than 1, such as the identity matrix $I_2$ has the eigenvalues $\lambda = 1$ and $\lambda = 1$. Thus, it has a single \textit{distinct} eigenvalue $\lambda = 1$ with multiplicity 2.
+    \end{mybox}
+
+
+
+    \item If a linear operator on a vector space over $\mathbf{R}$ has one eigenvector, then it has an infinite number of eigenvectors.
+    \begin{mybox}
+        \textbf{Solution - True: } Let $v$ be an eigenvector, then any non-zero vector in $\operatorname{span}\{v\}$ is also an eigenvector. (All non-zero scalar multiples of $v$.) There are uncountably infinite non-zero scalars, $c$, in $\R$ or $\C$ such that $cv \in \operatorname{span}\{v\}$, therefore the statement is true. 
+    \end{mybox}
+%3
+\newpage
+    \item There exists a square matrix with no eigenvectors.
+    Eigenvalues must be nonzero scalars.
+    \begin{mybox}
+        \textbf{Solution - True: } Example. Let $T = \brac{
+            \begin{array}{cc}
+              0 & -1  \\
+              1 & 0 \\
+            \end{array}}$ in the field $\R$. Then for some $x,y \in \R$ such that $x \neq 0 \text{ or } y \neq 0$, and for a vector  $v = \vbrac{x,y}$, $\,(T-\lambda I_2)v = \brac{ \begin{array}{cc}
+            -\lambda & -1  \\
+            1 & -\lambda \\
+          \end{array}} \vdub{x}{y} = 0.$ Then we have the following system of equations:
+          $$-\lambda x - y = 0 \hspace{1in} x - \lambda y = 0.$$
+          The second equation can be rewritten as $x = \lambda y$ and substituting into the first we get
+          \begin{align*}
+            -\lambda(\lambda y) - y = 0
+            \iff & \quad -\lambda^2 y - y = 0 \\
+            \iff & \quad -\lambda^2 = 1\\
+            \iff & \quad \lambda = \sqrt{-1} \not \in \R.
+          \end{align*}
+          Thus the first equation yields zero eigenvalues and thus zero eigenvectors. Next, the first equation can be rewritten as $y = -\lambda x$. Substituting that value into the second equation, we get
+          \begin{align*}
+            x=\lambda y
+            \iff & \quad x = -\lambda^2 x \\
+            \iff & \quad 1 = -\lambda^2\\
+            \iff & \quad \lambda = \sqrt{-1} \not \in \R.
+          \end{align*}
+          Therefore neither equation yields an eigenvalue or eigenvector and hence we have an example of a square matrix with no eigenvectors.
+    \end{mybox}
+
+
+    \item Eigenvalues must be nonzero scalars.
+    \begin{mybox}
+        \textbf{Solution - False: } Counterexample. Let $T = \left(
+            \begin{array}{cc}
+              1 & 0  \\
+              0 & 0 \\
+            \end{array}
+          \right)$ in the field $\R$. Then for some $x,y \in \R$ such that $x \neq 0 \text{ or } y \neq 0$, and for a vector  $v = \vbrac{x,y}$, $\,(T-\lambda I_2)v = \brac{ \begin{array}{cc}
+            1 -\lambda & 0  \\
+            0 & -\lambda \\
+          \end{array}} \vdub{x}{y} = 0.$ Then we have the following system of equations:
+          $$(1 -\lambda) x = 0 \hspace{1in} - \lambda y = 0.$$
+          Looking at the second equation, the only way it is true is if $\lambda = 0$, therefore we have a contradiction that there exists no non-zero eigenvalue.
+    \end{mybox}
+
+    \newpage
+    \item Any two eigenvectors are linearly independent.
+    \begin{mybox}
+        \textbf{Solution - False: } Taking the matrix setup from (d), we have that $\lambda = 0$ is an eigenvalue. Computing an eigenvector, we first have
+        $$\matx{1}{0}{0}{0} \vdub{x}{y} = \lambda v = 0v.$$
+        From here we can see that $\vdub{0}{1}$ is a valid eigenvector for $\lambda = 0$ since $Tv = 0v$ holds true. Additionally, $\vdub{0}{2}$ would also be an eigenvector (or any non-zero scalar). But these are linearly dependent, hence a contradiction.
+    \end{mybox}
+
+
+
+    \item The sum of two eigenvalues of a linear operator $T$ is also an eigenvalue of $T$.
+    \begin{mybox}
+        \textbf{Solution - False: } Consider the matrix $\matx{1}{0}{0}{2}.$ It has eigenvalues $\lambda = 1$ and $\lambda = 2$ by the triangular matrix diagonal property. But $2 + 1 = 3$ is not an eigenvalue since we can only have 2 eigenvalues and we already showed them to be 1 and 2.
+    \end{mybox}
+
+    \item Linear operators on infinite-dimensional vectors spaces never have eigenvalues.
+    \begin{mybox}
+        Define $T \in \Lc (\R^{\infty})$ by
+        $$T(x_1, x_2, \dots) = (x_1, 0, \dots).$$
+        Then $T$ has an eigenvalue $\lambda = 1$ with eigenspace of $\operatorname{span}(1, 0, \dots)$. Hence, a contradiction.
+    \end{mybox}
+
+    \item The sum of two eigenvectors of an operator $T$ is always an eigenvector of $T$.
+    \begin{mybox}
+        \textbf{Solution - False: } Using the same setup for $T$ as in part (d), we have $\lambda = 1$ and $\lambda = 2$ as the 2 distinct eigenvalues with $\vdub{1}{0}$ and $\vdub{0}{1}$ as respective eigenvectors. But the sum, $\vdub{1}{0} + \vdub{0}{1} = \vdub{1}{1}$ is not in either eigenspace. Hence a contradiction to the assumption.
+    \end{mybox}
+
+\end{enumerate}

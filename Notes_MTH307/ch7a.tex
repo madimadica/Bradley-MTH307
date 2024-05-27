@@ -1,0 +1,66 @@
+\defnn{adjoint,} $T^*$
+\\Suppose $T \in \L{V,W}$. The \boldit{adjoint} of $T$ is the function $T^* : W \to V$ such that
+$$\inner{Tv,w} = \inner{v,T^*w}$$
+for every $v \in V$ and every $w \in W$.
+
+\header{The adjoint is a linear map}\\
+If $T \in \L{V,W}$, then $T^* \in \L{W,V}$.
+
+\properties{Properties of the adjoint}
+\begin{enumerate}[label=(\alph*)]
+    \item $(S+T)^*=S^* + T^* \fa S,T \in \L{V,W}$
+    \item $\pars{\lambda T}^* = \bar{\lambda}T^* \fa \lambda \in F \text{ and } T \in \L{V,W}$
+    \item $\pars{T^*}^* = T \fa T \in \L{V,W}$
+    \item $I^* = I$, where $I$ is the identity operator on $V$
+    \item $(ST)^* = T^*S^* \fa T \in \L{V,W}$ and $S \in \L{W,U}$ (here $U$ is an inner product space over $\F$).
+\end{enumerate}
+
+\header{Null space and range of $T^*$}
+\begin{enumerate}[label=(\alph*)]
+    \item $\null T^* = \per{(\range T)}$
+    \item $\range T^* = \per{(\null T)}$
+    \item $\null T = \per{(\range T^*)}$
+    \item $\range T = \per{(\null T^*)}$
+\end{enumerate}
+
+\defn{conjugate transpose}
+\\The \boldit{conjugate transpose} of an $m$-by-$n$ matrix is the $n$-by-$m$ matrix obtained by transposing the matrix and taking the complex conjugate of each entry.
+
+\header{The matrix of $T^*$}
+\\Let $T \in \L{V,W}$. Suppose $\thru{e}$ is an orthonormal basis of $V$ and $f_1, \dots, f_m$ is an orthonormal basis of $W$. Then
+$$\mathcal{M}\bigl( T^*, (f_1, \dots, f_m), (\thru e) \bigr)$$
+is the conjugate transpose of 
+$$\mathcal{M}\bigl( T, (\thru e), (f_1, \dots, f_m) \bigr)$$
+
+\defn{self-adjoint}
+\\An operator $T \in \L{V}$ is called \boldit{self-adjoint} if $T = T^*$. In other words, $T \in \L{V}$ is self-adjoint if and only if
+$$\inner{Tv,w} = \inner{v,Tw}$$
+for all $v,w \in V$.
+
+\header{Eigenvalues of self-adjoint operators are real}\\
+Every eigenvalue of a self-adjoint operator is real
+
+\header{Over $\C$, $Tv$ is orthogonal to $v$ for all $v$ only for the 0 operator}\\
+Suppose $V$ is a complex inner product space and $T \in \L V.$ Suppose $$\inner{Tv,v}=0$$ for all $v \in V$. Then $T =0$.
+
+\header{Over $\C$, $\inner{Tv,v}$ is real for all $v$ only for self-adjoint operators}\\
+Suppose $V$ is a complex inner product space and $T \in \L V.$ Then $T$ is self-adjoint if and only if 
+$$\inner{Tv,v} \in \R$$
+for every $v \in V$.
+
+\header{If $T = T^*$ and $\inner{Tv,v} = 0$ for all $v$, then $T = 0$}\\
+Suppose $T$ is a self-adjoint operator on $V$ such that
+$$\inner{Tv, v} = 0$$
+for all $v \in V$. Then $T = 0$.
+
+\defn{normal}
+\\An operator on an inner product space is called \boldit{normal} if it commutes with its adjoint. In other words, $T \in \L V$ is normal if $$TT^* = T^* T.$$
+
+\header{$T$ is normal if and only if $\norm{Tv} = \norm{T^*v}$ for all $v$}\\
+An operator $T \in \L V$ is normal if and only if $$\norm{Tv} = \norm{T^*v}$$ for all $v \in V$.
+
+\header{For $T$ normal, $T$ and $T^*$ have the same eigenvectors}\\
+Suppose $T \in \L V$ is normal and $v \in V$ is an eigenvector of $T$ with eigenvalue $\lambda$. Then $v$ is also an eigenvector of $T^*$ with eigenvalue $\bar{\lambda}$.
+
+\header{Orthogonal eigenvectors for normal operators}\\
+Suppose $T \in \L V$ is normal. Then the eigenvectors of $T$ corresponding to distinct eigenvalues are orthogonal.

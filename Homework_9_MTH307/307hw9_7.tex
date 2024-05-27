@@ -1,0 +1,23 @@
+Suppose $S,T \in \mathcal{L}(V)$ are self-adjoint.  Prove that $ST$ is self-adjoint if and only if $ST = TS$.
+
+\vspace{.1in}
+
+\begin{proof} ($\Longrightarrow$) (If $ST$ is self-adjoint then $ST=TS$.)
+\begin{align*}
+    ST &= (ST)^* \tag{\text{$ST$ self adjoint hypothesis}}\\
+    &= T^* S^* \tag{\text{property e}} \\
+    &= TS. \tag{$T = T^*$ \text{ and } $S=S^*$ \text{ hypothesis}}
+\end{align*}
+Hence if $ST$ is self adjoint then $ST = TS$.
+\end{proof}
+
+\vspace{0.3in}
+\begin{proof} ($\Longleftarrow$) (If $ST = TS$ then $ST$ is self-adjoint.)
+    \begin{align*}
+        (ST)^* &= T^*S^* \tag{property e}\\
+        &= TS \tag{$T=T^*$ and $S=S^*$ hypothesis}\\
+        &= ST. \tag{$ST = TS$ hypothesis}
+    \end{align*}
+    Hence if $ST = TS$ then $(ST)^*=ST$. In other words, $ST$ is self-adjoint.
+    \end{proof}
+    

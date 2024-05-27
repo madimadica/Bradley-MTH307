@@ -1,0 +1,15 @@
+Show that the function that takes $((x_1,x_2) , (y_1,y_2)) \in \mathbf{R}^2 \times \mathbf{R}^2$ to $|x_1y_1| + |x_2y_2|$ is not an inner product on $\mathbf{R}$.
+\begin{mybox}
+    \begin{proof}
+        Let $\phi$ be defined as follows,
+        \begin{center}
+            $\phi : \R^2 \times \R^2 \to \R$ \\
+            $\phi\big( (x_1, x_2), (y_1, y_2) \big) = \abs{x_1y_1} + \abs{x_2y_2}$
+        \end{center}
+        Suppose $\phi$ is an inner product. Then definition of an inner product has homogeneity in the first slot, $\vbrac{\lambda u, v} = \lambda \vbrac{u,v}$. Leting $u = v = e_1$ and $\lambda = -1$, then
+        $$\phi(-e_1, e_1) = \abs{-1 \cdot 1} + \abs{0 \cdot 0} = 1.$$
+        and 
+        $$-\phi(e_1, e_1) = -\pars{\abs{1 \cdot 1} + \abs{0\cdot0}} = -1.$$
+        Since $1 \neq -1$ we have a contradiction to the assumption that $\phi$ is an inner product. Therefore $\phi$ is not an inner product by counterexample.
+\end{proof}
+\end{mybox}

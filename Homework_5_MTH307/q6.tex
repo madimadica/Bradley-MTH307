@@ -1,0 +1,20 @@
+Let $V= \mathbf{R}^{2,2}$ be the vector space of $2 \times 2$ matrices with the usual addition and scalar multiplication of matrices.  Let $W = \mathcal{P}_3(\mathbf{R})$ be the vector space of polynomials of degree less than or equal to three.  Prove that $V$ and $W$ are isomorphic vector spaces.
+\begin{mybox}
+\begin{proof}
+    Let $B$ be a basis for $V$ such that
+    $$B = \left\{ 
+        \matx{1}{0}{0}{0},
+        \matx{0}{1}{0}{0},
+        \matx{0}{0}{1}{0},
+        \matx{0}{0}{0}{1}
+     \right\}.$$
+     Then let $\beta$ be a basis for $W$ such that
+     $$\beta = \left\{ 
+        1,
+        x,
+        x^2,
+        x^3
+     \right\}.$$
+     Then $\dim V = 4$ and $\dim W = 4$. Since $\dim V = \dim W$, then $V$ is isomorphic to $W$ (by 3.59, page 82).
+\end{proof}
+\end{mybox}

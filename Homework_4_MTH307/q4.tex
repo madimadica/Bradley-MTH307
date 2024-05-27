@@ -1,0 +1,18 @@
+Let $T : V \to V$ be a linear map with a one-dimensional range.  Prove that $T^2 = cT$ for some scalar $c$.  (This means that $T(Tv) = cTv$ for all $v \in V$.)\vspace{0.5in}
+\begin{mybox}
+\begin{proof}
+    Fix $v \in V$.
+    
+    \nl If $\rank{T} = 1$ then there is only one element in the basis of the range. Therefore, there exists some element $w \in V$ such that $\operatorname{range}T = \operatorname{span}w$. Then,
+    \[Tv \in \operatorname{range}T = \operatorname{span}w = \{\alpha w : \alpha \in \mathbb{F}\}.\tag{4.1}\]
+    By (4.1), there exists scalars $\beta$ and $\gamma$ in $\mathbb{F}$ such that $Tv = \beta w$ and $Tw = \gamma w$. Therefore,
+    \begin{align}
+        T(Tv) &= T(\beta w) & \text{By }Tv = \beta w\text{.}\notag\\
+        &= \beta Tw & \text{By homogeneity of }T\text{.}\notag\\
+        &= \beta \gamma w & \text{By }Tw = \gamma w\text{.}\notag\\
+        &= \gamma \beta w & \text{By commutativity over }\mathbb{F}\text{.}\notag\\
+        &= \gamma Tv. & \text{By }Tv = \beta w\text{.}\notag
+    \end{align}
+    Letting $c = \gamma$ it has been shown that $T(Tv) = cTv$ (for some scalar $c$) when $T : V \to V$ has a one dimensional range.
+\end{proof}
+\end{mybox}

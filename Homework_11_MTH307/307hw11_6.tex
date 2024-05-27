@@ -1,0 +1,16 @@
+Find the singular values of the differentiation operator $D \in \mathcal{L}(\mathcal{P}_2(\mathbf{R}))$ defined by $Dp = p'$, where the inner product is $\langle p , q \rangle = \int_{-1}^1 p(x)q(x)\;dx$.\\
+    Remark: It might be helpful to compute the matrix for $D$ with respect to the basis $1, x, x^2$ to find eigenvalues (easy) and then compute the matrix for $D$ again using an \emph{orthonormal basis} for $\mathcal{P}_2(\mathbf{R})$ to compute the singular values.  Use some technology for the integrations.
+    
+    \notab{
+\soln Using the orthonormal basis of $\poly{2}$ from Axler's Example 6.33, then $$\displaystyle \mathcal B = \pars{\sqrt{\frac{1}{2}}, \sqrt{\frac32}x, \sqrt{\frac{45}{8}}\pars{x^2-\over*{3}}}.$$ Applying the operator to this basis, $\displaystyle \dv{x}\pars{\sqrt{\over{2}}} = 0$ and  a change of basis on 0 is 0, hence $D(e_1) = 0$. Next, $\displaystyle  \dv{x}\pars{\sqrt{\frac{3}{2}}x} = \sqrt{\frac{3}{2}}$. For a change in basis we have $\displaystyle  a\sqrt{\frac{1}{2}} = \sqrt{\frac{3}{2}}$ which implies $a = \sqrt{3}$. Therefore $\displaystyle  D(e_2) = \pars{\sqrt{3}, 0, 0}$. Finally $\displaystyle  \dv{x} \pars{ \sqrt{\frac{45}{8}} \pars{x^2 - \over{3}} } = \sqrt{\frac{45}{2}}x$. Changing this basis, $\displaystyle  a \sqrt{\frac{3}{2}}x = \sqrt{\frac{45}{2}}x$ implies that $a = \sqrt{15}$. Thus $D(e_3) = \pars{0, \sqrt{15}, 0}$. Therefore, the transformation matrix with respect to an orthonormal basis is
+$$\mathcal{M}(D) = \begin{bmatrix}
+    0 & \sqrt{3} & 0 \\ 0 & 0 & \sqrt{15} \\ 0 & 0 & 0
+\end{bmatrix} \wideand \mathcal{M}(D^*) = \begin{bmatrix}
+    0 & 0 & 0 \\ \sqrt{3} & 0 & 0\\ 0 & \sqrt{15} & 0
+\end{bmatrix}.$$
+And hence,
+$$M(D^*D) = \begin{bmatrix}
+    0 & 0 & 0 \\ 0 & 3 & 0 \\ 0 & 0 & 15
+\end{bmatrix}.$$
+By properties of upper triangular matrices, the eigenvalues of $D^*D$ are 0, 3, and 15. Therefore the singular values are $\sqrt{15}, \sqrt{3}, 0$ by proposition 7.52 (nonnegative square roots). 
+}

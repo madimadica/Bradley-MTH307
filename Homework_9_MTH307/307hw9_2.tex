@@ -1,0 +1,23 @@
+Suppose $V$ is finite-dimensional, $T \in \mathcal{L}(V)$ and $U$ is a subspace of $V$.  Prove that $U$ is invariant under $T$ if and only if $P_UTP_U = TP_U$.
+
+\vspace{0.5in}
+
+\begin{proof} ($\Longrightarrow$) (If $U$ is invariant under $T$ then $P_UTP_U = TP_U$.)
+\\ For any $v \in V$ we have $P_U v \in U$ by properties of $P_U$ (6.55 (d)). By our hypothesis $T(T_Uv) \in U$, therefore
+$$P_U \underbrace{(TP_Uv)}_{\in \; U} = TP_Uv$$
+by property 6.55 (b).
+\end{proof}
+\vspace{.5in}
+\begin{proof} ($\Longleftarrow$) (If $P_UTP_U = TP_U$ then $U$ is invariant under $T$.)
+\\For any vector $u \in U$ we have $Tu = v + w$ for some $v \in U$ and $w \in \per U$. Then we would first have
+\begin{align*}
+    P_UTP_U &= P_UTu\\
+    &= P_U(v+w)\\
+    &= \underbrace{P_Uv}_{\in \; U} + \underbrace{P_Uw}_{\in \; \per U}\\
+    &= v + 0
+    \\ &= v.
+\end{align*}
+Secondly, we would have $TP_Uu = Tu = v + w$. Therefore under our hypothesis, $v = v + w$, which implies $w = 0$. Then $Tu = v + 0 = v \in U$, hence $U$ is invariant under $T$.
+\end{proof}
+
+\nnl Hence $U$ is invariant under $T$ if and only if $P_UTP_U = TP_U$.

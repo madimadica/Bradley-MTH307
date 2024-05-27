@@ -1,0 +1,17 @@
+Suppose $V$ is finite-dimensional and $P \in \mathcal{L}(V)$ is such that (1) $P^2 = P$ and (2) every vector in $\text{null } P$ is orthogonal to every vector in $\text{range }P$. Prove that there exists a subspace $U$ of $V$ such that $P = P_U$.\\
+    Hint:  For $v \in V$, write $v = Pv + (v-Pv)$.
+
+    \vspace{0.5in}
+
+\begin{proof}  We will first show that $V = \range P \oplus \null P$. Let $u \in \range P$ and $w \in \null P$. Then we will show that every $v \in V$ can be expressed as $v = u + w$. Taking $P(v - Pv)$ we have $Pv - P^2v = Pv - Pv$ by hypothesis (1), which is clearly zero. Therefore $(v - Pv) \in \null P$. As for $Pv$, we know that $Pv \in \range P$ by definition of range. Therefore we can rewrite v as the sum of subsets
+$$v = \underbrace{Pv}_{\in \; \range P} + \underbrace{(v-Pv)}_{\in \; \null P}.$$
+To show it is a unique linear combination (direct sum), we need $\null P \cap \range P = \set0$. For every $x \in \null P \cap \range P$, we have $Px = 0$ and $x = Py$ for some $y \in V$. By hypothesis (1), $P^2y = Py = P(Py) = Px = 0$. Thus, $\null P \cap \range P = \set0$ and
+$$v = \range P \oplus \null P.$$
+
+Hence every $v \in V$ can be written as a unique linear combination $v = Pv + (v - Pv)$. By hypothesis (2), we have $\null P \subseteq \pars{\range P}^{\perp}$. For $U := \range P$ (a subspace), then
+$$P_Uv = P_U(Pv + v - Pv) = P_U\underbrace{(Pv)}_{\in \; U} + P_U\underbrace{(v-Pv)}_{\in \; \per U} = Pv + 0 = Pv.$$ 
+%Factoring leads to $P(Px-x) = 0$  
+    %We need to write $v \in V$ as a sum of $z$ That is, the intersection is the zero vector and every $v \in V$ can be written as a linear combination of $\range P$ and $\null P$. 
+
+    %By hypothesis (2) we have $\null P \subset \pars{\range P}^{\perp}$.
+\end{proof}

@@ -1,0 +1,6 @@
+Suppose $T \in \mathcal{L}(V)$ and $T^2 = I$ and $-1$ is not an eigenvalue of $T$.  Prove that $T = I$.
+\begin{mybox}
+    \begin{proof}
+        Since we are given $T^2 = I$, we can subtract $I$ from both sides to obtain $T^2 - I = 0$. Further, we can split this into $$(T+I)((T-I)v) = 0 \quad \text{and} \quad (T-I)((T+I)v)=0.$$ If we choose any $v \in V$ where $v \neq \vec{0}$ and $w \in V$ such that $w = (T-I)v \neq 0$, then $(T+I)w = 0$ by the first equation. Simplifying, this would imply that $Tw = -Iw$ and $-1$ to be an eigenvalue. This contradicts our assumption that $-1$ is \textit{not} an eigenvalue. Hence, $w$ \textit{must} equal 0 to remove this eigenvalue. Therefore $w = 0 = (T-I)v$ then $(T-I)v = 0$. Simplifying this we obtain $Tv = Iv$ for all $v \neq 0$. If $v = 0$ then $T\vec{0} = I\vec{0}$ is certainly true. Hence $Tv = Iv$ for all $v \in V$. By function equivalency we know $T=I$ when $-1$ is \textit{not} an eigenvalue.
+    \end{proof}
+\end{mybox}

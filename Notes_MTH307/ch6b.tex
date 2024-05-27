@@ -1,0 +1,60 @@
+\defnn{orthonormal}
+\begin{itemize}
+    \item A lost of vectors is valled \boldit{orthonormal} if each vector in the list has norm 1 and is orthogonal to all the other vectors in the list.
+    \item In other words, a list $e_1, \dots, e_m$ of vectors in $V$ is orthonormal if
+    $$\inner{e_j, e_k} = \begin{cases} 1 & \text{if } j = k,\\0 & \text{if } j \neq j. \end{cases}$$
+\end{itemize}
+
+\nl Example, the standard basis in $\F^n$. 
+
+\header{The norm of an orthonormal linear combination}\\
+If $e_1, \dots, e_m$ is an orthonormal list of vectors in $V$, then 
+$$\norm{a_1e_e + \cdots + a_m e_m}^2 = \abs{a_1}^2 + \cdots + \abs{a_m}^2$$
+for all $a_1,\dots, a_m \in \F.$
+
+\header{Corollary: An orthonormal list is linearly independent}\\
+Every orthonormal list of vectors is linearly independent.
+
+\defn{orthonormal basis}\\
+An \boldit{orthonormal basis} of $V$ is an orthonormal list of vectors in $V$ that is also a basis of $V$.
+
+\nl For example, the standard basis is an orthonormal basis of $\F^n$.
+
+\header{An orthonormal list of the right length is an orthonormal basis}
+\\Every orthonormal list of vectors in V with length $\dim V$ is an orthonormal basis of $V$.
+
+\header{Writing a vector as linear combination of orthonormal basis}\\
+Suppose $\thru{e}$ is an orthonormal basis of $V$ and $v \in V$. Then
+$$v = \inner{v,e_1}e_1 + \cdots + \inner{v,e_n}e_n$$
+and
+$$\norm v^2 = \abs{\inner{v,e_1}}^2 + \cdots + \abs{\inner{v,e_n}}^2.$$
+
+\header{Gram-Schmidt Procedure}\\
+Suppose $v_1, \dots, v_m$ is a linearly independent list of vectors in $V$. Let $e_1 = \dfrac{v_1}{\norm{v_1}}$. \\For $j = 2, \dots, m$, define $e_j$ inductively by
+$$e_j = \frac{v_j - \inner{v_j,e_1}e_1 - \cdots - \inner{v_j, e_{j-1}}e_{j-1}}{\norm{v_j - \inner{v_j,e_1}e_1 - \cdots - \inner{v_j, e_{j-1}}e_{j-1}}}.$$
+Then $e_1, \dots, e_m$ is an orthonormal list of vectors in $V$ such that
+$$\operatorname{span}(v_1,\dots,v_j) = \operatorname{span}(e_1,\dots,e_j)$$
+for $j = 1,\dots, m$.
+
+\header{Existance of orthonormal basis}\\
+Every finite-dimensional inner product space has an orthonormal basis.
+
+\header{Corollary: Orthonormal list extends to orthonormal basis}\\
+Suppose $V$ is finite-dimensional. Then every orthonormal list of vectors in $V$ can be extended to an orthonormal basis of $V$. 
+
+\header{Upper-triangular matrix with respect to orthonormal basis}\\
+Suppose $T \in \L{V}$. If $T$ has an upper-triangular matrix with respect to some basis of $V$, then $T$ has an upper-triangular matrix with respect to some orthonormal basis of $V$.
+
+\header{Schur's Theorem}\\
+Suppose $V$ is a finite-dimensional complex vector space and $T \in \L{V}$. Then $T$ has an upper-triangular matrix with respect to some orthonormal basis of $V$.
+
+\nnl Because linear maps into a scalar field play a special role, we give them a special name.
+
+\defn{linear functional}
+\\A \boldit{linear functional} on $V$ is a linear map from $V$ to $\F$. In other words, a linear function is an element of $\L{V,\F}.$
+
+\header{Riesz Representation Theorem}\\
+Suppose $V$ is finite-dimensional and $\varphi$ is a linear functional on $V$. Then there is a unique vector $u \in V$ such that
+$$\varphi(v) = \inner{v,u} \FA v \in V,$$
+where
+$$u = \overline{\varphi(e_1)}e_1 + \cdots + \overline{\varphi(e_n)}e_n.$$

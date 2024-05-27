@@ -1,0 +1,382 @@
+\documentclass[12pt]{article}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{diagbox}
+\usepackage{empheq}
+\usepackage{makecell}
+\usepackage[autostyle]{csquotes}
+\usepackage{amssymb, amsthm, linguex, enumerate, amsmath}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{tcolorbox}
+%\usepackage{mathabx}
+\pagestyle{empty}
+\usepackage{amssymb, amsthm, linguex, enumerate, amsmath}
+\textwidth 6.5in
+\hoffset=-.65in
+\textheight=9.5in
+\voffset=-1.in
+\newcommand{\pf}{\mathcal{P}(\mathbf{F})}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Cb}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\Fb}{\mathbf{F}}
+\newcommand{\Rb}{\mathbf{R}}
+\newcommand{\x}{x \in \mathbb{R}}
+\newcommand{\nat}{n \in \mathbb{N}}
+\newcommand{\dx}{\frac{d}{dx}}
+\newcommand{\dxof}[1]{\frac{d}{dx} \left( {#1} \right) }
+\renewcommand{\vector}[1]{\left\langle{#1}\right\rangle}
+\newcommand{\pars}[1]{\left( {#1} \right) }
+\newcommand{\brac}[1]{\left[ {#1} \right] }
+\newcommand{\limit}[3]{\lim_{{#1}\to {#2}} {#3}}
+\newcommand{\xo}{x_0}
+\newcommand{\iid}{independent identically distributed }
+\newcommand{\dble}{differentiable }
+\newcommand{\xbar}{\bar{X}}
+\newcommand{\ybar}{\bar{Y}}
+\newcommand{\OR}{\,\lor\,}
+\newcommand{\AND}{\,\land\,}
+\newcommand{\rv}{random variable }
+\newcommand{\distn}{distribution }
+\newcommand{\cont}{continuous }
+\newcommand{\then}{\,\Rightarrow\,}
+\renewcommand{\emptyset}{\{\,\}}
+\newcommand{\disc}{discontinuous }
+\newcommand{\forx}{\qquad \text{for all } x}
+\newcommand{\cbi}{closed bounded interval }
+\newcommand{\seq}[1]{\{{#1}\}}
+\newcommand{\limn}{\lim_{n\to\infty}}
+\renewcommand{\f}[1]{f^{({#1})}}
+\renewcommand{\sup}[1]{\text{sup}\left\{ {#1} \right\}}
+\renewcommand{\inf}[1]{\text{inf}\left\{ {#1} \right\}}
+\newcommand{\N}[2]{N \left( {#1},{#2} \right)}
+\newcommand{\gammaDist}[2]{\gamma \left( {#1},{#2} \right)}
+\newcommand{\Ndef}{N\left(\mu, \sigma^2\right)} %default normal
+\newcommand{\thru}[1]{{#1}_1, \dots, {#1}_n}
+\newcommand{\yn}{Y_1, \dots, Y_n}
+\renewcommand{\max}[1]{\text{max}\left\{ {#1} \right\}}
+\renewcommand{\min}[1]{\text{min}\left\{ {#1} \right\}}
+\renewcommand{\over}[1]{\frac{1}{{#1}}}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\newcommand*\widefbox[1]{\fbox{\hspace{2em}#1\hspace{2em}}}
+%\usepackage{mathabx}
+\newtcolorbox{mybox}[1][]{colback=white, sharp corners, #1}
+\textwidth 6.5in
+\hoffset=-.65in
+\textheight=9.5in
+\voffset=-1.in
+
+\begin{document}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{Matthew Wilder}
+\fancyhead[RE,LO]{Assignment 2 - MTH 307}
+\fancyfoot[LE,CO]{Page \thepage}
+
+\noindent \textbf{Matthew Wilder}\\MATH 307 - Spring 2022 \\
+Assignment \#2 \\
+Due Friday, 01-28-22, 16:00 CST \\
+
+For each problem, include the statement of the problem. Leave a blank line.  At the beginning of the next line, write \textbf{Solution} or \textbf{Proof} -- as appropriate.
+\begin{enumerate}
+\item Label the following statements as being true or false.
+Provide some justification from the text for your label.
+    \begin{enumerate}
+        \item  If $V$ is a vector space and $W$ is a subset of $V$ that is a vector space, then $W$ is a subspace of $V$.
+        \begin{mybox}
+            \textbf{Solution:}\\\\True, by Definition 1.32 (page 18), $U \subseteq V$ is called a \textbf{subspace} of $V$ if $U$ is also a \textit{vector space}.
+        \end{mybox}
+        \vspace{0.5in}
+        \item The empty set is a subspace of every vector space.
+        \begin{mybox}
+            \textbf{Solution:}\\\\False, by 1.34 (page 18) \textit{Conditions for a subspace}, a subspace must contain the additive identity, $0$, but $0 \not \in \emptyset$. Therefore, the empty set is not a subspace.
+        \end{mybox}
+        \vspace{0.5in}
+        \item If $V$ is a vector space other than the zero vector space $\{0\}$, then $V$ contains a subspace $W$ such that $W \ne V$.
+        \begin{mybox}
+            \textbf{Solution:}\\\\True. $\{0\}$ is a vector space, therefore it is always a subspace of an arbitrary vector space $V$, since by our assumptions $V \supset \{0\}$ and every vector space must contain 0 by definition. Letting $W \equiv \{0\}$ then $|V| > |W| = 1$ for all $V \not = \{0\}$. The set of order 0, the empty set $\emptyset$, is not a subspace by part (b). Thus $V$ cannot have order 1 or 0, and therefore $|V| \geq 2$. The trivial zero vector space is a proper subspace ($W \neq V$) since $|V| \neq |W|$.
+        \end{mybox}
+        \vspace{0.5in}
+        \item The intersection of any two subsets of $V$ is a subspace of $V$.
+        \begin{mybox}
+            \textbf{Solution:}\\\\False. Suppose $V \equiv \R^2$. Then Suppose $U$ and $W$ are subsets of $V$ such that $U \equiv \emptyset$ and $W \equiv \R^2$. Then $U \cap W = \emptyset$, but by 1b the empty set is not a vector space and thus cannot be a subspace by definition of subspace.
+        \end{mybox}
+    \end{enumerate}
+\vspace{3in}
+\item  Prove that the intersection of two subspaces $U$ and $W$ of a vector space $V$ is a subspace of $V$.
+        \begin{mybox}
+            \begin{proof}
+                We need to show that all 3 conditions for a subspace (theorem 1.34) hold for the subset $U \cap W$ of $V$.
+                    \\\\We will first show that $0 \in U \cap W$. Since $0 \in U$ and $0 \in W$, then by the definition of intersection, $0 \in U \cap W$.
+                    \\\\Next we show that $U \cap W$ is closed under addition. Taking two arbitrary vectors, $u, w \in U \cap W$. Then by the definition of intersection, $u, w \in U$ and $u, w \in W$. Since $U$ is a subspace, $u + w \in U$. Similarly, since $W$ is a subspace, $u + w \in W$. Thus $u + w \in U \cap W$ and it is closed under addition. 
+                    \\\\Last, we show that it closed under scalar multiplication. For some scalar $a \in \F$ and $u \in U \cap V$. Then $u \in U$ and $u \in W$. By definition of $U$ and $W$ being subspaces, $au \in U$ and $au \in W$, therefore $au \in U \cap W$ and $U \cap W$ is closed under scalar multiplication.
+                    \\\\All three subspace conditions hold from Theorem 1.34, therefore $U \cap W$ is a subspace of $V$.
+            \end{proof}
+        \end{mybox}
+\item  Prove that the union of two subspaces  $U$ and $W$ of a vector space $V$ is a subspace of $V$ if and only if one of of the subspaces is contained in the other.
+        \begin{mybox}
+            \begin{proof}
+                ($\Longrightarrow$) If $U \cup W$ is a subspace of $V$, then $\pars{U \subseteq W} \OR \pars{W \subseteq U}$.\\
+                \\Suppose the contrary, that is, if $\pars{U \not \subseteq W} \AND \pars{W \not\subseteq U}$, then\\ $\pars{\exists \,\, u \in U \mid u \not\in W} \AND \pars{\exists \,\, w \in W \mid w \not\in U}$.\\
+                \\If $u + w \in U \cup W \, \Rightarrow \, \pars{u + w \in U} \OR \pars{u + w \in W}$ by union definition\vspace{0.1in}\\
+                \textit{Case:} $u + w \in U \then u + w + (-u) = w \in U$ which is a contradiction.
+                \\\textit{Case:} $u + w \in W \then u + w + (-w) = u \in W$ which is a contradiction.
+                \\\\$\therefore \, \pars{U \subseteq W} \OR \pars{W \subseteq U}$\\
+                \vspace{0.25in}\\
+                ($\Longleftarrow$) If $\pars{U \subseteq W} \OR \pars{W \subseteq U}$ then $U \cup W$ is a subspace of $V$ \vspace{0.1in}\\
+                \textit{Case:} $U \subseteq W \then U \cup W = W$, which is by definition a subspace of $V$\\
+                \textit{Case:} $W \subseteq U \then U \cup W = U$, which is by definition a subspace of $V$\\\\
+                $\therefore U \cup W$ is a subspace of $V$
+            \end{proof}
+        \end{mybox}
+\newpage
+\item Let $V$ be the vector space of $2 \times 2$ matrices with the usual operation of addition and scalar multiplication as seen in MTH 207.  (We are \emph{not} considering multiplication of matrices in this exercise.)\\
+    Let $W_1$ be the set of matrices in $V$ of the form
+    $\left[
+      \begin{array}{cc}
+        x & -x \\
+        y & z \\
+      \end{array}
+    \right]$ and let $W_2$ be the set of matrices in $V$ of the form
+    $\left[
+      \begin{array}{cc}
+        a & b \\
+        -a & c \\
+      \end{array}
+      \right]$.
+      \begin{enumerate}
+      \item Prove that $W_1$ and $W_2$ are subspaces of $V$.
+        \begin{mybox}
+            \textbf{Solution:} We will show each separately.
+            Need to show that $W_1$ contains the additive identity, closed under addition, and closed under scalar multiplication (Theorem 1.34).\vspace{0.2in}
+            
+            \noindent \underline{Identity:}\\
+            $$\left[
+              \begin{array}{cc}
+                0 & 0 \\
+                0 & 0 \\
+              \end{array}
+            \right] \in W_1$$\vspace{0.2in}
+            
+            \noindent \underline{Closed under addition:} Let $u, v \in W_1$ be defined as
+            $$u = \left[
+              \begin{array}{cc}
+                x & -x \\
+                y & z \\
+              \end{array}
+            \right] \qquad v = \left[
+              \begin{array}{cc}
+                \alpha & -\alpha \\
+                \beta & \gamma \\
+              \end{array}
+            \right]$$
+            Then $u + v \in W_1$ since
+            $$\left[
+              \begin{array}{cc}
+                x & -x \\
+                y & z \\
+              \end{array}
+            \right] + \left[
+              \begin{array}{cc}
+                \alpha & -\alpha \\
+                \beta & \gamma \\
+              \end{array}
+            \right] = 
+            \left[
+              \begin{array}{cc}
+                x + \alpha & -x-\alpha \\
+                y+\beta & z+\gamma \\
+              \end{array}
+            \right] = 
+            \left[
+              \begin{array}{cc}
+                x + \alpha & -(x+\alpha) \\
+                y+\beta & z+\gamma \\
+              \end{array}
+            \right] \in W_1
+            $$
+            \\\vspace{0.1in}\\
+            \underline{Closed under scalar multiplication:} Let $a \in \F$, $u \in W_1$, then
+            $$au = a \left[
+              \begin{array}{cc}
+                x & -x \\
+                y & z \\
+              \end{array}
+            \right] = \left[
+              \begin{array}{cc}
+                ax & -ax \\
+                ay & az \\
+              \end{array}
+            \right] =
+            \left[
+              \begin{array}{cc}
+                ax & -(ax) \\
+                ay & az \\
+              \end{array}
+            \right] \in W_1$$
+            Therefore $W_1$ is a subspace of $V$ since $W_1 \subseteq V$ and all 3 conditions hold.
+            \end{mybox}
+                    \begin{mybox}
+            \vspace{0.1in}
+            We will now show the same for $W_2$
+            \vspace{0.2in}
+            
+            \noindent \underline{Identity:}\\
+            $$\left[
+              \begin{array}{cc}
+                0 & 0 \\
+                0 & 0 \\
+              \end{array}
+            \right] \in W_2$$
+            \vspace{0.2in}
+            
+            \noindent \underline{Closed under addition:} Let $u, v \in W_2$ be defined as
+            $$u = \left[
+              \begin{array}{cc}
+                a & b \\
+                -a & c \\
+              \end{array}
+            \right] \qquad v = \left[
+              \begin{array}{cc}
+                x & y \\
+                -x & z \\
+              \end{array}
+            \right]$$
+            Then $u + v \in W_2$ since
+            $$\left[
+              \begin{array}{cc}
+                a & b \\
+                -a & c \\
+              \end{array}
+            \right] + \left[
+              \begin{array}{cc}
+                x & y \\
+                -x & z \\
+              \end{array}
+            \right] = 
+            \left[
+              \begin{array}{cc}
+                a + x & b + y \\
+                - a - x & c + z \\
+              \end{array}
+            \right] = 
+            \left[
+              \begin{array}{cc}
+                a + x & b + y \\
+                -(a + x) & c + z \\
+              \end{array}
+            \right] \in W_2
+            $$
+            \vspace{0.2in}
+            
+            \noindent \underline{Closed under scalar multiplication:} Let $r \in \F$, $u \in W_2$, then
+            $$ru = r \left[
+              \begin{array}{cc}
+                a & b \\
+                -a & c \\
+              \end{array}
+            \right] = \left[
+              \begin{array}{cc}
+                ra & rb \\
+                -ra & rc \\
+              \end{array}
+            \right] =
+            \left[
+              \begin{array}{cc}
+                ra & rb \\
+                -(ra) & rc \\
+              \end{array}
+            \right] \in W_2$$
+            Therefore $W_2$ is a subspace of $V$ since $W_2 \subseteq V$ and all 3 conditions hold.
+        \end{mybox}
+    \vspace{1in}
+      \item Describe the subspace $W_1 \cap W_2$.
+      \begin{mybox}
+      \textbf{Solution:} The subspace of $W_1 \cap W_2$ would be all $M_{2,2}(\F)$ of the form
+      $$\left[
+              \begin{array}{rr}
+                x & -x \\
+                -x & y \\
+              \end{array}
+            \right]$$
+            Since $W_1$ requires that $m_{1\,2}$ be $-m_{1\,1}$, whereas row 2 has no restrictions, and $W_2$ requires $m_{2\,1}$ be $-m_{1\,1}$ placing a new restriction on $m_{2\,1}$, and column 2 adds no restrictions. Thus, the  restrictions applied to $W_1 \cap W_2$ are that $m_{1\,1} = -m_{1\,2} = -m_{2\,1} $
+      \end{mybox}
+      \newpage
+      \item Show that the subspace $W_1 + W_2$ is all of $V$.
+      \begin{mybox}
+        \textbf{Solution}. \begin{proof} For $v \in V$, let $v = \begin{bmatrix} v_1 & v_2 \\ v_3 & v_4 \end{bmatrix}$. For $w \in W_1$ and $w_2 \in W_2$. Let $v = w_1 + w_2$, then
+        $$w_1 = \begin{bmatrix} a & -a \\ b & c \end{bmatrix} \qquad w_2 = \begin{bmatrix} d & e \\ -d & f \end{bmatrix}$$
+              
+            $$v = \begin{bmatrix} v_1 & v_2 \\ v_3 & v_4 \end{bmatrix} = \begin{bmatrix} a + d & -a+e \\ b-d & c+f \end{bmatrix} = w_1 + w_2$$ 
+            Therefore,
+            $$v_1 = a+d \qquad v_2 = -a + e \qquad v_3 = b-d \qquad v_4 = c+f$$
+            Let $d = f = 0$ then,
+            $$v_1 = a \qquad v_2 = -a + e \qquad v_3 = b \qquad v_4 = c$$
+            Solving for $a,b,c,d,e,f$ in terms of $v_1, v_2, v_3, v_4$, we get
+            $$a = v_1 \qquad b = v_3 \qquad c = v_4 \qquad d = 0 \qquad e = v_1 + v_2 \qquad f = 0$$
+            From the equations, $v = w_1 + w_2 \,\,\forall\,\,v \in V,\, w_1 \in W_1, \, w_2 \in W_2$. Thus $V \subseteq W_1 + W_2$.
+            Since $w_1, w_2 \in V$ by definition of subset, then \\$w_1 + w_2 \in V \, \therefore \, W_1 + W_2 \subseteq V$.   \\\\Hence, $W_1 + W_2 = V$\end{proof}
+      \end{mybox}
+      \end{enumerate}
+\newpage
+\item  Prove or give a counterexample:  if $U_1, U_2,W$ are subspaces of the vector space $V$ such that $V = U_1 \oplus W$ and $V = U_2 \oplus W$, then $U_1 = U_2$.
+\begin{mybox}
+    \textbf{False} by counterexample.
+    \begin{proof}
+     Let $V = \R^2$, $U_1, U_2, W$ be subspaces such that\\
+     $$U_1 = \{(x,0) : x\in \R \} \qquad U_2 = \{(0,y) : y\in \R \} \qquad W = \{(x,x) : x\in \R \}$$
+     Then the condition that
+     $V = U_1 \oplus W $ and $ V = U_2 \oplus W$ holds. To show that, let $v \in V$, $u_1 \in U_1$, and $w \in W$, then $U_1 \cap W = \{0\}$ and spans $V$ since
+     $$v = \underbrace{(x-y,0)}_{u_1\,\in\, U_1} + \underbrace{(y, y)}_{w\,\in\, W} = (x,y)$$
+     Similarly for $U_2 \oplus W = V$, with $v \in V$, $u_2 \in U_2$, and $w \in W$, with $U_2 \cap W = \{0\}$, it spans $V$ since
+     $$v = \underbrace{(0, y-x)}_{u_2 \,\in\, U_2} + \underbrace{(x, x)}_{w\,\in\, W} = (x,y)$$
+     All the assumed conditions have been satisfied, but $U_1 \neq U_2$ since $U_1 \cap U_2 = \{0\}$. Thus the original claim is false.
+    \end{proof}
+\end{mybox}
+\vspace{1.5in}
+\item  Let $V = \mathbf{R}^3$ -- the usual 3D space from Calc III.  Let $U$ be the $x$-axis.  Define $W$ to be the subspace spanned by $(1,0,1)$.  Show that the usual $xz$-plane is the direct sum $U \oplus W$.
+\begin{mybox}
+    \textbf{Solution: } Rewriting $U$ and $W$ in set notation we get
+    $$U = \{(a,0,0) : a \in \R\} \qquad W = \{(b,0,b) : b \in \R\}$$
+    \\For some $v \in xz$-plane, it can be written as
+    $$v = \underbrace{(x-z, 0, 0)}_{u\,\in\, U} + \underbrace{(z, 0, z)}_{w \,\in\, W} = (x,0,z) \in xz\text{-plane}$$
+    To show that it is a direct sum, we need $U \cap W = \{0\}$. 
+    $$U \cap W = \{(a,0,0)\} \AND \{(b,0,b)\} = \{(a=b, 0, b=0)\} \then a=b=0 \then \{(0,0,0)\}$$
+\end{mybox}\newpage
+\item  Suppose that the vectors $v_1, v_2, v_3, v_4$ span the vector space $V$.  Show that the vectors $v_1-v_2, v_1+v_2, v_3+v_4, v_4$ also span $V$.
+\begin{mybox}
+    \begin{proof} 
+    Let $S$ denote $\operatorname{span}((v_1-v_2), (v_1+v_2), (v_3+v_4), v_4)$ We need to show that $\{v_1, v_2, v_3, v_4\} \in S$
+    $$v_1 = \over{2} \brac{(v_1-v_2) + (v_1 + v_2)} = \over{2}\brac{2v_1} = v_1$$
+        $$\therefore \, v_1 \in S$$
+        \vspace{0.1in}
+    $$v_2 = (v_1+v_2) + \underbrace{(-v_1)}_{\in\, S} = v_2$$
+                $$\therefore \, v_2 \in S$$\vspace{0.1in}
+        $$v_4 \in S \quad \text{ without computation}$$\vspace{0.1in}
+        $$v_3 = (v_3 + v_4) + \underbrace{(-v_4)}_{\in\, S} = v_3$$
+        $$\therefore\, v_3 \in S$$
+        Since $\{v_1, v_2, v_3, v_4\} \in S$ and $\operatorname{span}(v_1, v_2, v_3, v_4) = V$, then $S  \supseteq V$
+        \end{proof}
+\end{mybox}
+\end{enumerate}
+
+\end{document} 

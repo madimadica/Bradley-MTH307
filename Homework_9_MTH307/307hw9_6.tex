@@ -1,0 +1,26 @@
+Suppose $T \in \mathcal{L}(V,W)$. Prove that
+    \begin{enumerate}
+    \item $T$ is injective if and only if $T^*$ is surjective.
+    \begin{proof} ($\Longleftrightarrow$)
+        \\By definition of injective, $\null T = \set 0$.
+        Using 7.7 properties, 
+        \begin{align*}
+            & \null T = \set0 \tag{\text{hypothesis}}\\
+            \iff & (\range T^*)^{\perp} = \set0 \tag{c}\\
+            \iff & \range T^* = \set0^{\perp} = W \tag{\text{perp of both}}\\
+            \iff & T^* \text{ is surjective.} \tag{\text{definition of surjective}}
+        \end{align*}
+    \end{proof}
+
+    \item $T$ is surjective if and only if $T^*$ is injective.
+    \begin{proof} ($\Longleftrightarrow$)
+        \\By definition of injective, $\null T^* = \set 0$.
+        Using 7.7 properties, 
+        \begin{align*}
+            & \null T^* = \set0 \tag{\text{hypothesis}}\\
+            \iff & (\range T)^{\perp} = \set0 \tag{a}\\
+            \iff & (\range T) = \set0^{\perp} = W \tag{\text{perp of both}}\\
+            \iff & T \text{ is surjective.} \tag{\text{definition of surjective}}
+         \end{align*}
+    \end{proof}
+\end{enumerate}

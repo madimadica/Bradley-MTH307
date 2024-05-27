@@ -1,0 +1,19 @@
+Suppose $T \in \mathcal{L}(V)$ is self-adjoint.  Prove that the singular values of $T$ equal the absolute values of the eigenvalues of $T$, repeated appropriately.
+
+\notab{
+    \begin{proof}$\,$\\
+        Since $T$ is a self-adjoint operator, under the Spectral Theorem there exists a diagonal matrix consisting of the eigenvalues for $T$. Hence
+        $$\mathcal M(T) = \begin{bmatrix}
+            \lambda_1 & & \\ & \ddots & \\ & & \lambda_n
+        \end{bmatrix} \wideand \mathcal M(T^*) = \begin{bmatrix}
+            \bar{\lambda_1} & & \\ & \ddots & \\ & & \bar{\lambda_n}
+        \end{bmatrix}$$
+        therefore 
+        $$\mathcal M (T^*T) = \begin{bmatrix}
+            \bar{\lambda_1}\lambda_1 & & \\ & \ddots & \\ & & \bar{\lambda_n}\lambda_n
+        \end{bmatrix} = \begin{bmatrix}
+            \abs{\lambda_1}^2 & & \\ & \ddots & \\ & & \abs{\lambda_n}^2
+        \end{bmatrix}.$$
+        By proposition 7.52 the singular values of $T$ are the square roots of the eigenvalues of $T^*T$, which are clearly $\abs{\lambda_i}^2$. So $\sqrt{\abs{\lambda_i}^2} = \abs{\lambda_i}$ are the singular values. Therefore for each eigenvalue $\lambda_i$ of $T$, there is a corresponding singular value $\abs{\lambda_i}$ of $T$.
+    \end{proof}
+}

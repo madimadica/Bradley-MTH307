@@ -1,0 +1,15 @@
+Give an example of $T \in \mathcal{L}(\mathbf{C}^2)$ such that 0 is the only eigenvalue of $T$ and the singular values of $T$ are 5 , 0.
+
+\soln Define $T(x,y) = (5y, 0)$. Then using the standard basis
+$$\mathcal M(T) = \begin{bmatrix}
+    0 & 5 \\ 0 & 0
+\end{bmatrix} \wideand \mathcal M(T) = \begin{bmatrix}
+    0 & 0 \\ 5 & 0
+\end{bmatrix}.$$
+Therefore
+$$T^*T = \begin{bmatrix}
+    0 & 0 \\ 0 & 25
+\end{bmatrix} \wideand \sqrt{T^*T} = \begin{bmatrix}
+    0 & 0 \\ 0 & 5
+\end{bmatrix}.$$
+Because $T$ is an upper triangular matrix, the diagonal gives us its eigenvalues. Hence 0 is $T$'s eigenvalue with multiplicity 2. Then by diagonal matrix properties, the eigenvalues of $\sqrt{T^*T}$ are 5 and 0. Therefore the singular values of $T$ are 5, 0.

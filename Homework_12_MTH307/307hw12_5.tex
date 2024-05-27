@@ -1,0 +1,27 @@
+Fix $u,  x \in V$ with $u \ne 0$. Define $T \in \mathcal{L}(V)$ by $Tv = \langle v , u \rangle x$ for every $v \in V$.  Prove that
+    \[
+      \sqrt{T^*T}v = \frac{\| x \|}{\| u \|} \langle v , u \rangle u
+    \]
+for every $v \in V$.
+
+\begin{proof} $ $
+
+  \nl First computing $T^*$ we have 
+  \begin{align*}
+    \inner{Tv, w} &= \inner{ \inner{v,u}x, \; w} \tag{substitution with given $Tv = \inner{v,u}x$}\\
+    &= \inner{v,u}\inner{x,w} \tag{homogeneity in the first slot}\\
+    &= \inner{v,\;\innerconj{x,w} u} \tag{second slot conjugate homogeneity}\\
+    &= \inner{v,\; \inner{w,x}u} \tag{conjugate symmetry}\\
+    &= \inner{v, T^*w}. \tag{take adjoint}
+  \end{align*}
+  Therefore $T^*w = \inner{w,x}u.$ Thus 
+  \begin{align*}
+    T^*Tv &= T^*\inner{v,u}x \tag{substitution}\\
+    &= \inner{ \inner{v,u}x,x}u \tag{definition of $T^*$}\\
+    &= \inner{v,u} \inner{x,x}u \tag{homogeneity in first slot}\\
+    &= \inner{v,u} \norm{x}^2 u \\
+    &= \inner{v,u} \norm{x}^2 u \frac{\inner{u,u}}{\norm{u}^2} \tag{fancy 1}\\
+    &= \pfrac{\norm{x}}{\norm{u}}^2 \inner{v,u} \inner{u,u}u
+  \end{align*}
+  $$\text{*not finished*}$$
+\end{proof}

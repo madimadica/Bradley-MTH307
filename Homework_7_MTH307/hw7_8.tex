@@ -1,0 +1,6 @@
+Suppose $T \in \mathcal{L}(V)$ is such that $\|Tv\| \le \|v\|$ for every $v \in V$.  Prove that $T - \sqrt{2} I$ is invertible.
+\begin{mybox}
+    \begin{proof}
+        Suppose that $\lambda = \sqrt2$ is an eigenvalue. Let $u \in V^*$. Then $Tu = \lambda u = \sqrt 2 u$ and $\norm{Tu} = \norm{\sqrt{2} u} = \sqrt{2} \norm{u}$. This contadicts the assumption that \\$\norm{Tv} \le \norm{v}$, hence $\sqrt2$ is not an eigenvalue. Consequestly, $(T-\sqrt{2}I)$ is invertible.
+    \end{proof}
+\end{mybox}

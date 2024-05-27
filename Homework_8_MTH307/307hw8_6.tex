@@ -1,0 +1,105 @@
+Suppose $U$ is the subspace of $\mathbf{R}^4$ defined by
+    \[
+        U = \text{span }((1,2,3,-4), (-5,4,3,2)).
+    \]
+    Find an orthonormal basis of $U$ and an orthonormal basis of $U^\perp$.
+    
+    \nnl \textbf{Solution: } Applying Gram Schmidt 4 times. 
+    
+    \nl Before we do any Gram-Schmidt-ing we need to extend $U$ to a basis for $\R^4$. We'll choose $\hat{i}$ and $\hat{j}$ and verify that these are infact linear independent, thus forming a basis for $\R^4$. To do this, we will apply the definition of linearly independent and show that the zero vector is only obtainable from 0 coefficients.
+    $$\vec{0} = a \vfour{1}{2}{3}{-4} + b \vfour{-5}{4}{3}{2} + c \underbrace{\vfour1000}_{\textstyle \hat{i}} + d \underbrace{\vfour0100}_{\textstyle \hat{j}}$$
+    Therefore
+    \begin{align*}
+        a - 5b + c &= 0\\
+        2a + 4b + d &= 0\\
+        3a + 3b &= 0\\
+        -4a + 2b &= 0.
+    \end{align*}
+    Which, the last 2 rows imply that $b = -a$ and $b = 2a$. Thus $2a = -a$ which is only possible if $a=0$. Similarly, since $b=-a=-0$, $b=0$. By the first row, $0 - 5(0) + c = 0$ implies $c=0$. Similarly, the second row $2(0) + 4(0) + d = 0$ implies $d=0$. Hence, $a = b = c = d = 0$ and thus the set is linearly independent and forms a basis of $\R^4$.
+
+    \nl Denote the basis $\set{(1,2,3,-1),\;(-5,4,3,2),\;\hat{i},\;\hat{j} }$ by $\set{\bv_1,\bv_2,\bv_3,\bv_4}$
+
+    \nnl For our first application,
+    \begin{align*}
+        \ev1 &= \dfrac{\bv_1}{\norm{\bv_1}} = \dfrac{\bv_1}{\sqrt{ \bv_1 \cdot \bv_1}} = \dfrac{(1,2,3,-4)}{\sqrt{(1,2,3,-4)\cdot (1,2,3,-4)}} = \dfrac{(1,2,3,-4)}{\sqrt{1^2+2^2+3^2+(-4)^2}} \\&= \over{\sqrt{30}}(1,2,3,-4).
+    \end{align*}
+
+    \nl For the second application, let $\bu_2$ denote $\bv_2 - \inner{\bv_2, \ev1} \ev1$.
+
+    \nl We will first compute the value of $\bu_2$.
+    \begin{align*}
+        \bu_2 &= \bv_2 - \inner{\bv_2, \ev1} \ev1 \\&= \bv_2 -( \bv_2 \cdot \ev1 )\ev1\\
+        &= \bv_2 - \over{\sqrt{30}}(-5\cdot 1 + 4 \cdot 2 + 3 \cdot 3 + 2 \cdot (-4))\ev1\\
+        &= \bv_2 - \frac{4}{\sqrt{30}}\ev1\\
+        &= (-5,4,3,2) - \frac{4}{\sqrt{30}}\pars{\over{\sqrt{30}}(1,2,3,-4)}\\
+        &=  (-5,4,3,2) - \frac{4}{30}(1,2,3,-4)\\
+        &= \pars{
+            -\frac{77}{15},\;
+            \frac{56}{15},\;
+            \frac{39}{15},\;
+            \frac{38}{15}
+        }\\
+        &= \over{15}\pars{-77,\; 56,\; 39,\; 38}
+    \end{align*}
+    Then
+    \begin{align*}
+        \ev2 &= \frac{\bu_2}{\norm{\bu_2}} = \frac{\bu_2}{\sqrt{\bu_2\cdot\bu_2}} = \bu_2 \cdot \frac{1}{\sqrt{\bu_2\cdot \bu_2}}\\
+        &= \bu_2 \cdot \over{\sqrt{ \over{15}\pars{-77,\; 56,\; 39,\; 38} \cdot  \over{15}\pars{-77,\; 56,\; 39,\; 38}}}\\
+        &= \bu_2 \cdot \frac{15}{\sqrt{\pars{-77,\; 56,\; 39,\; 38} \cdot \pars{-77,\; 56,\; 39,\; 38}}}\\
+        &= \bu_2 \cdot \frac{15}{\sqrt{\num{12030}}}\\
+        &=  \over{15}\pars{-77,\; 56,\; 39,\; 38} \cdot \frac{15}{\sqrt{\num{12030}}}\\
+        &= \over{\sqrt{\num{12030}}}\pars{-77,\; 56,\; 39,\; 38}
+    \end{align*}
+
+    \nl For the third application, let $\bu_3$ denote $\bv_3 - \inner{\bv_3, \ev1}\ev1 - \inner{\bv_3, \ev2} \ev2$. Computing $\bu_3$,
+    \begin{align*}
+        \bu_3 &= \bv_3 - \inner{\bv_3, \ev1}\ev1 - \inner{\bv_3, \ev2} \ev2\\
+        &= \bv_3 - \pars{\bv_3 \cdot \ev1}\ev1 - \pars{\bv_3\cdot \ev2} \ev2\\
+        &= \bv_3 - \pars{1\cdot \over{\sqrt{30}} + 0 + 0 + 0}\ev1 - \pars{1 \cdot \frac{-77}{\sqrt{\num{12030}}}+0+0+0} \ev2\\
+        &= \bv_3 - \pover{\sqrt{30}}\pover{\sqrt{30}}(1,2,3,-4) - \pfrac{-77}{\sqrt{\num{12030}}}\pover{\sqrt{\num{12030}}}\pars{-77,\; 56,\; 39,\; 38}\\
+        &= \bv_3 - \over{30}\pars{1,2,3,-4} + \frac{77}{\num{12030}}(-77,56,39,38)\\
+        &= (1,0,0,0) - \over{30}\pars{1,2,3,-4} + \frac{77}{\num{12030}}(-77,56,39,38)\\
+        &= \frac{\num{12030}}{\num{12030}} \hat{i} - \frac{401}{\num{12030}}(1,2,3,-4) + \frac{77}{\num{12030}}(-77,56,39,38)\\
+        &= \over{\num{12030}}(5700, 3510, 1800, 4530)\\
+        &= \over{401}\pars{190, 117, 60, 151}
+    \end{align*}
+    Then
+    \begin{align*}
+        \ev3 &= \frac{\bu_3}{\norm{\bu_3}} = \frac{\bu_3}{\sqrt{\bu_3 \cdot \bu_3}} = \bu_3 \cdot \over{\sqrt{\bu_3 \cdot \bu_3}}
+        \\ &= \bu_3 \over{\sqrt{ \over{401}\pars{190, 117, 60, 151} \cdot \over{401}\pars{190, 117, 60, 151} }}\\
+        &= 401\bu_3 \cdot \over{\sqrt{\pars{190, 117, 60, 151}\cdot \pars{190, 117, 60, 151}}} \\
+        &= 401\bu_3 \cdot \over{\sqrt{190^2 + 117^2 + 60^2 + 151^2}} \\
+        &= 401\bu_3 \cdot \over{\sqrt{\num{76190}}} \\
+        &= \over{401}\pars{190, 117, 60, 151} \cdot \frac{401}{\sqrt{\num{76190}}}
+        \\ &= \over{\sqrt{\num{76190}}}\pars{190, 117, 60, 151}
+    \end{align*}
+
+    \newpage \noindent Lastly, for $\ev4$, let $\bu_4$ denote $\bv_4 - \inner{\bv_4, \ev1}\ev1  - \inner{\bv_4, \ev2}\ev2  - \inner{\bv_4, \ev3}\ev3$. Computing $\bu_4$,
+    \begin{align*}
+        \bu_4 &= \bv_4 - \inner{\bv_4, \ev1}\ev1  - \inner{\bv_4, \ev2}\ev2  - \inner{\bv_4, \ev3}\ev3\\
+        &= \hat{j} - \inner{\hat{j}, \ev1}\ev1  - \inner{\hat{j}, \ev2}\ev2  - \inner{\hat{j}, \ev3}\ev3\\
+        &= \hat{j} - (\hat{j} \cdot \ev1)\ev1 - (\hat{j} \cdot \ev2)\ev2 - (\hat{j}\cdot \ev3)\ev3\\
+        &= \hat{j} - \pfrac{2}{\sqrt{30}}\ev1 - \pfrac{56}{\sqrt{\num{12030}}}\ev2 - \pfrac{117}{\sqrt{\num{76190}}}\ev3\\
+        &= \hat{j} - \pfrac{2}{30} (1,2,3,-4)
+        - \pfrac{56}{\num{12030}} \pars{-77,\; 56,\; 39,\; 38}
+        - \pfrac{117}{\num{76190}}\pars{190, 117, 60, 151}
+        \\
+        &= \hat{j} - \pfrac{1}{15} (1,2,3,-4)
+        - \pfrac{28}{6015} \pars{-77,\; 56,\; 39,\; 38}
+        - \pfrac{117}{\num{76190}}\pars{190, 117, 60, 151} \\
+        &= \frac{\num{228570}}{\num{228570}}\hat{j} - \pfrac{15238}{\num{228570}}(1,2,3,-4) - \pfrac{1444}{\num{228570}}\pars{-77,\; 56,\; 39,\; 38} \\ & \hspace{2.7in} - \pfrac{351}{\num{228570}}\pars{190, 117, 60, 151} \\
+        &= \over{\num{228570}} (29260,\; 76173,\; -123090, \;-46921)
+    \end{align*}
+    Then computing $\ev4$,
+    \begin{align*}
+        \ev4 &= \frac{\bu_4}{\norm{\bu_4}} = \frac{\bu_4}{\sqrt{\bu_4 \cdot \bu_4}} = \bu_4 \cdot \frac{1}{\sqrt{\bu_4 \cdot \bu_4}}\\
+        &= 228570\bu_4 \cdot \over{\sqrt{29260^2 + 76173^2 + (-123090)^2+(-46921)^2}}\\
+        &= 228570\bu_4 \cdot \over{\sqrt{\num{24011201870}}}\\
+        &= \frac{228570}{228570} (29260,\; 76173,\; -123090, \;-46921) \cdot \over{\sqrt{\num{24011201870}}}\\
+        &=  \over{\sqrt{\num{24011201870}}} (29260,\; 76173,\; -123090, \;-46921)
+    \end{align*}
+    Hence our orthonormal basis of $U$ is 
+    $$\set{ \over{\sqrt{30}}(1,2,3,-4), \quad  \over{\sqrt{\num{12030}}}\pars{-77,\; 56,\; 39,\; 38} }$$
+    
+    \nnl And our orthonormal basis of $U^{\perp}$ is
+    $$\set{\over{\sqrt{\num{76190}}}\pars{190, 117, 60, 151}, \quad \over{\sqrt{\num{24011201870}}} (29260,\; 76173,\; -123090, \;-46921) }$$

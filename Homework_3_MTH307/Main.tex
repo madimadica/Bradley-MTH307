@@ -1,0 +1,597 @@
+\documentclass[12pt]{article}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{diagbox}
+\usepackage{empheq}
+\usepackage{makecell}
+\usepackage[autostyle]{csquotes}
+\usepackage{amssymb, amsthm, linguex, enumerate, amsmath}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{tcolorbox}
+%\usepackage{mathabx}
+\pagestyle{empty}
+\usepackage{amssymb, amsthm, linguex, enumerate, amsmath}
+\textwidth 6.5in
+\hoffset=-.65in
+\textheight=9.5in
+\voffset=-1.in
+\newcommand{\pf}{\mathcal{P}(\mathbf{F})}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Cb}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\Fb}{\mathbf{F}}
+\newcommand{\Rb}{\mathbf{R}}
+\newcommand{\x}{x \in \mathbb{R}}
+\newcommand{\nat}{n \in \mathbb{N}}
+\newcommand{\dx}{\frac{d}{dx}}
+\newcommand{\dxof}[1]{\frac{d}{dx} \left( {#1} \right) }
+\renewcommand{\vector}[1]{\left\langle{#1}\right\rangle}
+\newcommand{\pars}[1]{\left( {#1} \right) }
+\newcommand{\brac}[1]{\left[ {#1} \right] }
+\newcommand{\limit}[3]{\lim_{{#1}\to {#2}} {#3}}
+\newcommand{\xo}{x_0}
+\newcommand{\iid}{independent identically distributed }
+\newcommand{\dble}{differentiable }
+\newcommand{\xbar}{\bar{X}}
+\newcommand{\ybar}{\bar{Y}}
+\newcommand{\OR}{\,\lor\,}
+\newcommand{\AND}{\,\land\,}
+\newcommand{\rv}{random variable }
+\newcommand{\distn}{distribution }
+\newcommand{\cont}{continuous }
+\newcommand{\then}{\,\Rightarrow\,}
+\renewcommand{\emptyset}{\{\,\}}
+\newcommand{\disc}{discontinuous }
+\newcommand{\forx}{\qquad \text{for all } x}
+\newcommand{\cbi}{closed bounded interval }
+\newcommand{\seq}[1]{\{{#1}\}}
+\newcommand{\limn}{\lim_{n\to\infty}}
+\renewcommand{\f}[1]{f^{({#1})}}
+\renewcommand{\sup}[1]{\text{sup}\left\{ {#1} \right\}}
+\renewcommand{\inf}[1]{\text{inf}\left\{ {#1} \right\}}
+\newcommand{\N}[2]{N \left( {#1},{#2} \right)}
+\newcommand{\gammaDist}[2]{\gamma \left( {#1},{#2} \right)}
+\newcommand{\Ndef}{N\left(\mu, \sigma^2\right)} %default normal
+\newcommand{\thru}[1]{{#1}_1, \dots, {#1}_n}
+\newcommand{\yn}{Y_1, \dots, Y_n}
+\renewcommand{\max}[1]{\text{max}\left\{ {#1} \right\}}
+\renewcommand{\min}[1]{\text{min}\left\{ {#1} \right\}}
+\renewcommand{\over}[1]{\frac{1}{{#1}}}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\newcommand*\widefbox[1]{\fbox{\hspace{2em}#1\hspace{2em}}}
+%\usepackage{mathabx}
+\newtcolorbox{mybox}[1][]{colback=white, sharp corners, #1}
+\textwidth 6.5in
+\hoffset=-.65in
+\textheight=9.5in
+\voffset=-1.in
+\newcommand{\T}[2]{T\big({#1}\big)({#2})}
+\newcommand{\func}[2]{\big({#1}\big)({#2})}
+\newcommand{\dimn}[1]{\operatorname{dim}({#1})}
+\begin{document}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{Matthew Wilder}
+\fancyhead[RE,LO]{Assignment 3 - MTH 307}
+\fancyfoot[LE,CO]{Page \thepage}
+
+\noindent \textbf{Matthew Wilder}\\MATH 307 - Spring 2022 \\
+Assignment \#3 \\
+Due Friday, 02-04-22, 16:00 CST \\
+
+For each problem, include the statement of the problem. Leave a blank line.  At the beginning of the next line, write \textbf{Solution} or \textbf{Proof} -- as appropriate.
+
+\begin{enumerate}
+\item  Suppose that the vectors $v_1, v_2, v_3, v_4$ are a basis for $V$.  Show that the vectors \\
+    $v_1-v_2, v_1+v_2, v_3+v_4, v_4$ also form a basis for $V$.
+\begin{mybox}
+    \textbf{Solution:}
+    Let $S \equiv \operatorname{span}\{(v_1-v_2), (v_1+v_2), (v_3+v_4), v_4\}$ We need to show that $\{v_1, v_2, v_3, v_4\} \in S$
+    $$\over{2} \Big[ \underbrace{(v_1-v_2)}_{\in\,S} + \underbrace{(v_1 + v_2)}_{\in\,S}\Big] = \over{2}\brac{2v_1} = v_1$$
+        $$\text{Therefore } \, v_1 \in S$$
+        \vspace{0.3in}
+    $$\underbrace{(v_1+v_2)}_{\in\,S} + \underbrace{(-v_1)}_{\in\, S} = v_2$$
+                $$\text{Therefore } \, v_2 \in S$$\vspace{0.3in}
+        $$\underbrace{1v_4}_{\in\,S} = v_4$$$$\text{Therefore }\, v_4 \in S$$\vspace{0.3in}
+        $$\underbrace{(v_3 + v_4)}_{\in\,S} + \underbrace{(-v_4)}_{\in\, S} = v_3$$
+        $$\text{Therefore }\, v_3 \in S$$\vspace{0.2in}\\
+        Since $v_1, v_2, v_3, v_4 \in S$ and is a basis, then $S \equiv V$. Theorem 2.31 says every spanning list contains a basis, and Theorem 2.35 says that all bases must have the same length. Since the length of the basis $\{v_1, v_2, v_3, v_4\}$ is 4, and the length of spanning list $\{(v_1-v_2), (v_1+v_2), (v_3+v_4), v_4\}$ is 4, that spanning list must also form a basis for $V$.
+\end{mybox}
+\newpage
+\item   Suppose that the vectors $v_1, v_2, v_3, v_4$ is a basis for $V$.  Let $U$ be a subspace of $V$.  Assume $v_1, v_2 \in U$ but neither $v_3$ nor $v_4$ are in $U$.  Is $v_1, v_2$ a basis for $U$?  Justify.
+\begin{mybox}
+    \textbf{Solution}. No. $v_1, v_2$ will not always form a basis for $U$
+    \begin{proof}
+        Let $V \equiv \R^4$ and $v_1, v_2, v_3, v_4$ be defined as follows,
+        \begin{align}
+            v_1 &= (1, 0, 0, 0) \notag\\
+            v_2 &= (0, 1, 0, 0) \notag\\
+            v_3 &= (0, 0, 1, 0) \notag\\
+            v_4 &= (0, 0, 0, 1) \notag
+        \end{align}
+        
+        This is the trivial basis, since for some $(w, x, y, z) \in \R^4$
+        $$\begin{pmatrix} w \\x \\y\\z \end{pmatrix} = 
+    a \underbrace{
+        \begin{pmatrix}
+            1 \\ 0 \\ 0 \\ 0 \\
+        \end{pmatrix}
+    }_{v_1}
+    + b
+    \underbrace{
+        \begin{pmatrix}
+            0 \\ 1 \\ 0 \\ 0 \\
+        \end{pmatrix}
+    }_{v_2}
+    + c
+    \underbrace{
+        \begin{pmatrix}
+            0 \\ 0 \\ 1 \\ 0 \\
+        \end{pmatrix}
+    }_{v_3} 
+    + d
+    \underbrace{
+        \begin{pmatrix}
+            0 \\ 0 \\ 0 \\ 1 \\
+        \end{pmatrix}
+    }_{v_4} 
+    $$
+    $$a = w \qquad b = x \qquad c = y \qquad d = z$$
+    %
+    $$\begin{pmatrix} w \\x \\y\\z \end{pmatrix} = 
+    w \underbrace{
+        \begin{pmatrix}
+            1 \\ 0 \\ 0 \\ 0 \\
+        \end{pmatrix}
+    }_{v_1}
+    + x
+    \underbrace{
+        \begin{pmatrix}
+            0 \\ 1 \\ 0 \\ 0 \\
+        \end{pmatrix}
+    }_{v_2}
+    + y
+    \underbrace{
+        \begin{pmatrix}
+            0 \\ 0 \\ 1 \\ 0 \\
+        \end{pmatrix}
+    }_{v_3} 
+    + z
+    \underbrace{
+        \begin{pmatrix}
+            0 \\ 0 \\ 0 \\ 1 \\
+        \end{pmatrix}
+    }_{v_4} 
+    $$
+    
+        Then we let $U \equiv \{(u_1, u_2, u_3, u_4) \mid u_3 = u_4\}$. Thus, $v_1 \in U$ and $v_2 \in U$ holds since $0 = 0$. But $v_3 \not \in U$ since $1 \neq 0$ and similarly $v_4 \not \in U$ since $0 \neq 1$. $v_1$ and $v_2$ do not span $U$ since, for example, no such $av_1 + bv_2 = (1,1,1,1) \in U$, which violates the definition of a basis being a \textit{list of vectors in V that is linearly independent and \underline{spans} V}. Thus $v_1, v_2$ is \textbf{not} a basis for $U$.
+    \end{proof}
+\end{mybox}
+\newpage
+\item Let $v_1 = (-1,1,2) \in \mathbf{R}^3$.  Construct two bases for $\mathbf{R}^3$:  $\{v_1, v_2,v_3\}$ and $\{v_1, v_2', v_3'\}$ so that $\{v_2, v_3, v_3'\}$ is also a basis.\vspace{0.5in}\\
+    \textbf{Solution:} Let $B_1$ and $B_2$ be bases of $\R^3$ such that
+    $$B_1 = \{v_1, v_2, v_3\} = 
+    \left\{\begin{pmatrix}
+        -1 \\ 1 \\ 2 \\ 
+    \end{pmatrix}, 
+    \begin{pmatrix}
+        1 \\ 0 \\ 0 \\ 
+    \end{pmatrix}, 
+    \begin{pmatrix}
+        0 \\ 1 \\ 0 \\ 
+    \end{pmatrix} 
+    \right\}$$
+    
+    $$B_2 = \{v_1, v_2', v_3'\} = 
+    \left\{\begin{pmatrix}
+        -1 \\ 1 \\ 2 \\ 
+    \end{pmatrix}, 
+    \begin{pmatrix}
+        1 \\ 0 \\ 0 \\ 
+    \end{pmatrix}, 
+    \begin{pmatrix}
+        0 \\ 0 \\ 1 \\ 
+    \end{pmatrix} 
+    \right\}$$
+    Then, from the problem statement, let $B_3$ be a third basis for $\R^3$ such that
+    $$B_3 = \{v_2, v_3, v_3'\} = 
+    \left\{\begin{pmatrix}
+        1 \\ 0 \\ 0 \\ 
+    \end{pmatrix}, 
+    \begin{pmatrix}
+        0 \\ 1 \\ 0 \\ 
+    \end{pmatrix}, 
+    \begin{pmatrix}
+        0 \\ 0 \\ 1 \\ 
+    \end{pmatrix} 
+    \right\}$$
+    
+    Then, $\operatorname{span}B_1 = \R^3$ since
+    $$\begin{pmatrix}
+            x \\ y \\ z \\ 
+        \end{pmatrix} = a \underbrace{
+        \begin{pmatrix}
+            -1 \\ 1 \\ 2 \\ 
+        \end{pmatrix}
+    }_{v_1}
+    + b
+    \underbrace{
+        \begin{pmatrix}
+            1 \\ 0 \\ 0 \\ 
+        \end{pmatrix}
+    }_{v_2}
+    + c
+    \underbrace{
+        \begin{pmatrix}
+            0 \\ 1 \\ 0 \\ 
+        \end{pmatrix}
+    }_{v_3} 
+    \in \operatorname{span}B_1
+    $$
+    Which implies that 
+    \begin{align}x &= -a + b\notag\\ y &= a + c \notag\\ z &= 2a\notag\end{align} 
+     Solving for $a,b,$ and $c$ in terms of $x, y,$ and $z$. We get
+    \begin{align}a &= \frac{z}{2} \notag\\ b &= x + \frac{z}{2} \notag\\ c &= y - \frac{z}{2}\notag\end{align}
+    Therefore, substituting back, we get
+    $$\begin{pmatrix}
+            x \\ y \\ z \\ 
+        \end{pmatrix} = \frac{z}{2} \underbrace{
+        \begin{pmatrix}
+            -1 \\ 1 \\ 2 \\ 
+        \end{pmatrix}
+    }_{v_1}
+    + \frac{2x+z}{2}
+    \underbrace{
+        \begin{pmatrix}
+            1 \\ 0 \\ 0 \\ 
+        \end{pmatrix}
+    }_{v_2}
+    + \frac{2y-z}{2}
+    \underbrace{
+        \begin{pmatrix}
+            0 \\ 1 \\ 0 \\ 
+        \end{pmatrix}
+    }_{v_3} 
+    \in \operatorname{span}B_1
+    $$
+    Since $\operatorname{span}B_1 = \R^3$, the length of $B_1$ is 3, and $\operatorname{dim} \R^3 = 3$, then by Theorem 2.42, $B_1$ is a basis of $\R^3$ since $3=3$.
+    \vspace{0.5in}\\
+    
+    
+    
+    Next, $\operatorname{span}B_2 = \R^3$ since
+    $$\begin{pmatrix}
+            x \\ y \\ z \\ 
+        \end{pmatrix} = a \underbrace{
+        \begin{pmatrix}
+            -1 \\ 1 \\ 2 \\ 
+        \end{pmatrix}
+    }_{v_1}
+    + b
+    \underbrace{
+        \begin{pmatrix}
+            1 \\ 0 \\ 0 \\ 
+        \end{pmatrix}
+    }_{v_2'}
+    + c
+    \underbrace{
+        \begin{pmatrix}
+            0 \\ 0 \\ 1 \\ 
+        \end{pmatrix}
+    }_{v_3'} 
+    \in \operatorname{span}B_2
+    $$
+    Which implies that \begin{align}x &= -a + b\notag\\ y &= a \notag\\ z &= 2a + c\notag\end{align} Solving for $a,b,$ and $c$ in terms of $x, y,$ and $z$. We get
+    \begin{align}a &= y\notag\\ b &= x+y \notag\\ c &= z - 2y\notag\end{align}
+    Therefore,
+    $$\begin{pmatrix}
+            x \\ y \\ z \\ 
+        \end{pmatrix} = y \underbrace{
+        \begin{pmatrix}
+            -1 \\ 1 \\ 2 \\ 
+        \end{pmatrix}
+    }_{v_1}
+    + (x+y)
+    \underbrace{
+        \begin{pmatrix}
+            1 \\ 0 \\ 0 \\ 
+        \end{pmatrix}
+    }_{v_2'}
+    + (z-2y)
+    \underbrace{
+        \begin{pmatrix}
+            0 \\ 0 \\ 1 \\ 
+        \end{pmatrix}
+    }_{v_3'} \in \operatorname{span}B_2$$
+    Because $\operatorname{span}B_2 = \R^3$, and the length of $B_2$ equals $\operatorname{dim}\R^3$, by Theorem 2.42, $B_2$ is a basis of $\R^3$
+    \vspace{1in}\\\begin{center}
+        (continued to next page)
+    \end{center}
+    \newpage
+    Lastly, $\operatorname{span}B_3 = \R^3$ since
+    $$\begin{pmatrix}
+            x \\ y \\ z \\ 
+        \end{pmatrix} = a \underbrace{
+        \begin{pmatrix}
+            1 \\ 0 \\ 0 \\ 
+        \end{pmatrix}
+    }_{v_2}
+    + b
+    \underbrace{
+        \begin{pmatrix}
+            0 \\ 1 \\ 0 \\ 
+        \end{pmatrix}
+    }_{v_3}
+    + c
+    \underbrace{
+        \begin{pmatrix}
+            0 \\ 0 \\ 1 \\ 
+        \end{pmatrix}
+    }_{v_3'} 
+    \in \operatorname{span}B_3
+    $$
+    Which implies that \begin{align}x &= a\notag\\ y &= b \notag\\ z &= c\notag\end{align}
+    Substituting in for $a,b$ and $c$ we get,
+    $$\begin{pmatrix}
+            x \\ y \\ z \\ 
+        \end{pmatrix} = x \underbrace{
+        \begin{pmatrix}
+            1 \\ 0 \\ 0 \\ 
+        \end{pmatrix}
+    }_{v_2}
+    + y
+    \underbrace{
+        \begin{pmatrix}
+            0 \\ 1 \\ 0 \\ 
+        \end{pmatrix}
+    }_{v_3}
+    + z
+    \underbrace{
+        \begin{pmatrix}
+            0 \\ 0 \\ 1 \\ 
+        \end{pmatrix}
+    }_{v_3'} \in \operatorname{span}B_3$$
+    Because $\operatorname{span}B_3 = \R^3$, and the length of $B_3$ equals $\operatorname{dim}\R^3$, by Theorem 2.42, $B_3$ is a basis of $\R^3$
+    \vspace{0.5in}
+
+\newpage
+\item
+    \begin{enumerate}
+        \item Under what conditions on the scalar $\xi$ do the vectors $(1,1,1)$ and $(1, \xi , \xi^2 )$ form a basis for $\mathbf{R}^3$?
+        \begin{mybox}
+            \textbf{Solution:} Under no condition does $\xi$ form a basis for the two vectors. If we assumed that we choose a $\xi$ such that $\{(1,1,1)\,, (1,\xi, \xi^2)\}$ is linearly independent (a requirement for a basis), then by Theorem 2.39 the length of the list must equal the dimension of $V$. In this instance, $$\operatorname{dim}\R^3 = 3 \neq 2 = \big|\{(1,1,1)\,, (1,\xi, \xi^2)\}\big|$$ Hence, no $\xi$ will form a basis of $\R^3$ since the length would be less than the dimension of $\R^3$ anyways.
+        \end{mybox}
+        \vspace{2in}
+        \item Under what conditions on the scalar $\xi$ do the vectors\\ $(0,1,\xi)$, $(\xi , 0,1 )$, and $(\xi,1,1+\xi)$  form a basis for $\mathbf{R}^3$?
+        \begin{mybox}
+            \textbf{Solution:} Let $v_1 = (0,1,\xi)$, $v_2 = (\xi , 0,1 )$, and $v_3 = (\xi,1,1+\xi)$. Under no condition does $\xi$ form a basis because for every $\xi \in \R$, $v_3$ is a linear combination of $v_1 + v_2$. 
+            $$\underbrace{(0,1,\xi)}_{v_1} + \underbrace{(\xi,0,1)}_{v_2} = \underbrace{(\xi, 1, 1 + \xi)}_{v_3}$$
+            Hence, the set of vectors is linearly \textbf{dependent}, and by definition of a basis, cannot form a basis.
+        \end{mybox}
+    \end{enumerate}
+\newpage
+\item Let $V = \mathcal{P}(\mathbf{R})$ be the vector space of all polynomials with real coefficients.  If $p$ is any polynomial, let $Tp$ be the polynomial defined by $(Tp)(x) = p(x+1) - p(x)$.  Show that $T$ is a linear transformation.
+\begin{mybox}
+    \textbf{Solution: } \\First we will show additivity,
+    \begin{align}
+        \T{f+g}{x} &= \func{f+g}{x+1} - \func{f+g}{x} \notag\\
+        &= f(x+1) + g(x+1) - \Big(f(x) + g(x) \Big)\notag\\
+        &= f(x+1) + g(x+1) - f(x) - g(x) \notag\\
+        &= f(x+1) - f(x) + g(x+1) - g(x) \notag
+    \end{align}
+    \begin{align}
+        {Tf(x)} + {Tg(x)} &= {f(x+1) - f(x)} + {g(x+1) - g(x)} \notag
+    \end{align}
+    Since $\T{f+g}{x} = {Tf(x)} + {Tg(x)}$, addition is preserved.\vspace{0.5in}\\
+    Now we will show homogeneity,
+    \begin{align}
+        \T{\lambda f}{x} &= \func{\lambda f}{x+1} - \func{\lambda f}{x} \notag\\
+        &= \lambda f(x+1) - \lambda f(x) \notag
+    \end{align}
+        \begin{align}
+        \lambda \pars{ Tf(x)} &= \lambda \pars{ f(x+1) - f(x) } \notag \\
+        &= \lambda f(x+1) - \lambda f(x) \notag
+    \end{align}
+    Since $\T{\lambda f}{x} = \lambda Tf(x)$, homogeneity is preserved.
+    \\\\
+    These two conditions together satisfy the definition of a linear map. Therefore $T$ is a linear transformation.
+\end{mybox}
+\newpage
+\item Let $V = \mathcal{P}_4(\mathbf{R})$, the vector space of polynomials of degree at most four. \\ Let $U = \{p \in V : p(1)=p(3)\}$
+    \begin{enumerate}
+        \item Find a basis of $U$.
+        \begin{mybox}
+            \textbf{Solution: } Since $p(1)=p(3)$, we can start by finding $p(x) : p(1)=p(3)=0$ and then adding the constant function $p(x) = c$ to remove the zero constraint and return to $U$. Let $S \subset U$ such that $S \equiv \{p(x) \in V : p(1) = p(3) = 0\}$
+            $$(x-1)(x-3) \in  S \in U$$
+            $$x(x-1)(x-3) \in  S \in U$$
+            $$x^2(x-1)(x-3) \in S\in U$$
+            $$1 \in U$$
+            We can show that the list $\{1,\, (x-1)(x-3),\, x(x-1)(x-3),\, x^2(x-1)(x-3)\}$ is linearly independent since
+            $$a + b(x-1)(x-3) + cx(x-1)(x-3) + dx^2(x-1)(x-3) = 0$$
+            Since there is no degree 4 term on the RHS, $d=0$, similarly since there are no degree 3 terms on the RHS, $c = 0$, no degree 2 terms on the RHS implies $b = 0$, and thus we are left with $a = 0$. So the only wait to obtain the zero polynomial is trivially, thus the list is linearly independent. This means that
+            $\operatorname{dim}U \geq 4$. But since $U \subseteq P$, $\operatorname{dim} U \leq \operatorname{dim}V = 5$ (by 2.38). Suppose that $\operatorname{dim}U = 5$, then $x \in U$, which is a contradiction. Therefore $\operatorname{dim}U \leq 4$. But by the linear independence of the former list of elements, $\operatorname{dim}U \geq 4$. Hence $4 \leq \operatorname{dim}U \leq 4$, and thus $\operatorname{dim}U = 4$. Then by Theorem 2.39 $\{1,\, (x-1)(x-3),\, x(x-1)(x-3),\, x^2(x-1)(x-3)\}$ is a basis for $U$ since it is linearly independent and its length equals $\operatorname{dim}U$.
+        \end{mybox}
+        \vspace{1.25in}
+        \item Extend the basis in (a) to a basis of $V$.
+        \begin{mybox}
+            \textbf{Solution: } Using the explanation from part (a) that said $x \not \in U$. Thus we can add $x$ to the list and maintain linear independence.\\
+            Let $L \equiv \{1,\, x,\, (x-1)(x-3),\, x(x-1)(x-3),\, x^2(x-1)(x-3)\}$
+            Then $|L| = 5$, and $\operatorname{dim}V = 5$. Since $L$ is linearly independent, and $|L| = \operatorname{dim}V$, then $L$ is a basis by Theorem 2.39.
+        \end{mybox}
+        \newpage
+        \item Find a subspace $W$ of $V$ so that $V=U \oplus W$.
+        \begin{mybox}
+            Let $W = \operatorname{span}(x)$, then by Theorem 2.43,
+            $$\dimn{U+W} = \operatorname{dim}U + \operatorname{dim}W - \dimn{U\cap W}$$
+            By part (a), $\operatorname{dim}U = 4$. We can easily see that $\operatorname{dim}W = 1$. $U \cap W = \{0\}$ and $\dimn{0} = 0$. Therefore, substituting back in we see that
+            $$\dimn{U+W} = 4 + 1 - 0 = 5$$
+            But because $U \cap W = \{0\}$, $U \oplus W = U + W$ (by 1.45). \\Hence, $\dimn{U \oplus W} = \dimn{U + W} = 5$. And we know that $\operatorname{dim}V = 5$. Therefore, $$\dimn{U \oplus W} = \dim V$$
+            And since $U \oplus W \subseteq V$,$$U \oplus W = V$$
+        \end{mybox}
+    \end{enumerate}
+\newpage
+\item Suppose $a,b,c \in \mathbf{R}$.  Define $T: \mathcal{P}(\mathbf{R}) \to \mathbf{R}^3$ by
+    \[
+    Tp = \left( 2p(5)-5p'(1) + a p(1)p(3)\; , \;\int_1^4 x^2p(x)\;dx + b e^{p(0)}\; , \; p(2)+c\right).
+    \]
+    Show that $T$ is linear if and only if $a=b=c=0$.
+    \begin{proof} ($\Longrightarrow$) If $T$ is linear, then $a = b = c = 0$.
+    \begin{align}
+        T(p+q) &= \begin{pmatrix}
+            2(p+q)(5)-5(p+q)'(1) + a(p+q)(1)\cdot (p+q)(3) \\
+            \int_1^4 x^2 (p+q)(x)\,dx + be^{(p+q)(0)} \\
+            (p+q)(2) + c \\ 
+        \end{pmatrix}
+        \notag\\
+        &= \begin{pmatrix}
+            2p(5) + 2q(5) -5p'(1) -5q'(1) + a\brac{\big(p(1)+q(1)\big)\big(p(3)+q(3)\big)} \\
+            \int_1^4 x^2 p(x)+x^2q(x)\,dx + be^{p(0)+q(0)} \\
+            p(2)+q(2) + c \\ 
+        \end{pmatrix} \notag\\
+        &= \begin{pmatrix}
+            2p(5) + 2q(5) -5p'(1) -5q'(1) + a\brac{\big(p(1)+q(1)\big)\big(p(3)+q(3)\big)} \\
+            \int_1^4 x^2 p(x)\,dx + \int_1^4 x^2q(x)\,dx + be^{p(0)+q(0)} \\
+            p(2)+q(2) + c \\
+        \end{pmatrix} \notag
+    \end{align}
+    \begin{align}
+        Tp + Tq &= \begin{pmatrix}
+            2p(5)-5p'(1) + ap(1)p(3) \\
+            \int_1^4 x^2 p(x)\,dx + be^{p(0)} \\
+            p(2) + c \\ 
+        \end{pmatrix} + 
+        \begin{pmatrix}
+            2q(5)-5q'(1) + aq(1)q(3) \\
+            \int_1^4 x^2 q(x)\,dx + be^{q(0)} \\
+            q(2) + c \\ 
+        \end{pmatrix}
+        \notag\\
+        &= \begin{pmatrix}
+            2p(5) + 2q(5) -5p'(1) -5q'(1) + ap(1)p(3) + aq(1)q(3) \\
+            \int_1^4 x^2 p(x)\,dx + \int_1^4 x^2 q(x)\,dx + be^{p(0)} + be^{q(0)}\\
+            p(2) + c + q(2) + c \\ 
+        \end{pmatrix}\notag\\
+        &= \begin{pmatrix}
+            2p(5) + 2q(5) -5p'(1) -5q'(1) + ap(1)p(3) + aq(1)q(3) \\
+            \int_1^4 x^2 p(x)\,dx + \int_1^4 x^2 q(x)\,dx + be^{p(0)} + be^{q(0)}\\
+            p(2) + c + q(2) + c \\ 
+        \end{pmatrix}\notag\\
+        &= \begin{pmatrix}
+            2p(5) + 2q(5) -5p'(1) -5q'(1) + ap(1)p(3) + aq(1)q(3) \\
+            \int_1^4 x^2 p(x)\,dx + \int_1^4 x^2 q(x)\,dx + 2be^{p(0)}\\
+            p(2) + q(2) + 2c \\ 
+        \end{pmatrix}\notag
+    \end{align}
+    In order for additivity to hold, each component must be equal. For the 1st component,
+    $$2p(5) + 2q(5) -5p'(1) -5q'(1) + a\brac{\big(p(1)+q(1)\big)\big(p(3)+q(3)\big)}$$$$= 2p(5) + 2q(5) -5p'(1) -5q'(1) + ap(1)p(3) + aq(1)q(3)$$
+    Simplifying, we get
+    $$a\brac{\big(p(1)+q(1)\big)\big(p(3)+q(3)\big)} = ap(1)p(3) + aq(1)q(3)$$
+    Distributing the left hand side we get
+    $$ap(1)p(3) + aq(1)q(3) + ap(1)q(3) + aq(1)p(3) = ap(1)p(3) + aq(1)q(3)$$
+    Simlifying further we reach,
+    $$ap(1)q(3) + aq(1)p(3) = 0$$
+    Thus, for the first component to hold linearity under addition, $a$ must be 0.
+    \vspace{0.3in}\\
+    For the second component, linearity implies that
+    $$\int_1^4 x^2 p(x)\,dx + \int_1^4 x^2q(x)\,dx + be^{p(0)+q(0)} = \int_1^4 x^2 p(x)\,dx + \int_1^4 x^2 q(x)\,dx + 2be^{p(0)}$$
+    Simplifying out the integrals leaves us with
+    $$be^{p(0)+q(0)} = 2be^{p(0)+q(0)}$$
+    Which implies $b = 0$ for linearity.
+    \vspace{0.3in}\\
+    For the third component, linearity implies that
+    $$p(2) + q(2) + c = p(2) + q(2) + 2c$$
+    Simplifying for
+    $$c = 2c$$
+    Implies that $c = 0$ to preserve linearity.\\\\
+    Therefore, in order for addition to be linear, $a = b = c = 0$. It suffices to show just addition since it restricts all 3 variables to one value.
+    \end{proof}
+    \begin{proof} ($\Longleftarrow$) If $a=b=c=0$ then $T$ is linear.
+    That means that
+    $$Tp = \left( 2p(5)-5p'(1)\,,\,\int_1^4 x^2p(x)\,dx\,,\, p(2)\right).$$
+    It has been shown in the forward direction that this holds for additivity when \\$a = b = c = 0$. Thus, we only need to show the remaining property of homogeneity.
+    \begin{align}
+        T(\lambda p) &= \left( 2\lambda p(5)-5\lambda p'(1)\,,\,\int_1^4 x^2\lambda p(x)\,dx\,,\, \lambda p(2)\right) \notag\\
+        &= \left( 2\lambda p(5)-5\lambda p'(1)\,,\,\lambda\int_1^4 x^2 p(x)\,dx\,,\, \lambda p(2)\right) \notag
+    \end{align}
+    \begin{align}
+        \lambda \pars{ Tp } &= \lambda \pars{ 2p(5) - 5p'(1)\,,\,\int_1^4 x^2p(x)\,dx\,,\,p(2) } \notag \\
+        &=  \pars{ 2\lambda p(5) - 5\lambda p'(1)\,,\,\lambda \int_1^4 x^2p(x)\,dx\,,\,\lambda p(2) } \notag
+    \end{align}
+    Hence, $T(\lambda p) = \lambda(Tp)$ and therefore $T$ is linear by definition.
+    \end{proof}
+    It has been shown that $T$ is linear if and only if $a = b = c = 0$
+    \newpage
+\item \begin{enumerate}
+        \item Find an example of a function $\varphi : \mathbf{R}^2 \to \mathbf{R}$ that is homogeneous but not additive (and hence not linear).
+        \begin{mybox}
+        \textbf{Solution: } Let $\phi : \R^2 \to R$ by defined as,
+        $$\phi(x,y) = \sqrt{x^3 + y^3}$$
+        Then it is homogeneous since
+        \begin{align}
+            \phi(\lambda(x,y) ) &= \phi(\lambda x, \lambda y) \notag\\
+            &= \sqrt[3]{(\lambda x)^3 + (\lambda y)^3} \notag\\
+            &= \sqrt[3]{\lambda^3 x^3 + \lambda^3 y^3} \notag\\
+            &= \sqrt[3]{\lambda^3(x^3+y^3)} \notag\\
+            &= \lambda \sqrt[3]{x^3+y^3} \notag\\
+            &= \lambda \phi(x,y)\notag
+        \end{align}
+        However, it is not additive because if we take $v_1 = (x_1, y_1) = (1,0)$ and $v_2 = (x_2, y_2) = (0,1)$ then
+        \begin{align}
+            \phi(v_1 + v_2) &= \phi((1,0) + (0,1)) \notag\\
+            &= \phi(1,1) \notag\\
+            &= \sqrt[3]{1^3+1^3} \notag\\
+            &= \sqrt[3]{2}\notag
+        \end{align}
+        And
+        \begin{align}
+           \phi(v_1) + \phi(v_2) &= \phi(1,0) + \phi(0,1) \notag\\
+           &= \sqrt[3]{1^3 + 0^3} + \sqrt[3]{0^3 + 1^3} \notag\\
+           &= \sqrt[3]{1} + \sqrt[3]{1} \notag\\
+           &= 2\notag
+        \end{align}
+        Therefore $\phi(v_1+v_2) \neq \phi(v_1) + \phi(v_2)$. Hence $\phi$ is not additive.
+        \end{mybox}
+        \newpage
+        \item Find an example of a function $\varphi : \mathbf{C}^2 \to \mathbf{C}$ that is additive but not homogeneous (and hence not linear).
+        \begin{mybox}
+        \textbf{Solution: }
+        $$\phi : \C^2 \to C$$
+        $$(a+bi\,,\;c+di) \to ai+b$$
+        This is additive because if we 
+        \\Let $x = (a_1+b_1i\,,\; c_1+d_1i)$ and
+        \\Let $y = (a_2+b_2i\,,\; c_2+d_2i)$
+        \begin{align}
+            \phi(x+y) &= \phi((a_1+a_2)+(b_1+b_2)i\,,\; (c_1+c_2)+(d_1+d_2)i)\notag\\
+            &= (b_1+b_2) + (a_1+a_2)i \notag\\
+            &= b_1 + a_1i + b_2 + a_2i \notag\\
+            &= \phi(x) + \phi(y)\notag
+        \end{align}
+        But it is not homogeneous because if we let $\lambda = i \in \C$, $a = 1$, $b = c = d = 0$, then
+        $$\phi(\lambda (1, 0)) = \phi(i(1,\,0)) = \phi(i,\, 0) = 1$$
+        But 
+        $$\lambda(\phi(1,0)) = i(\phi(1,0)) = i(i) = -1$$
+        Therefore $\lambda(\phi(v)) \neq \phi(\lambda v)$, hence $\phi$ is not homogeneous.
+        \end{mybox}
+    \end{enumerate}
+
+\end{enumerate}
+\end{document} 

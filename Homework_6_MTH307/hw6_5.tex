@@ -1,0 +1,75 @@
+\begin{enumerate}
+    \item Let $V = \mathbf{R}^2$. Find eigenvalues and eigenvectors for the linear operator $T$ defined by $T(x,y) = (2y , x)$.
+    \begin{mybox}
+        Let $A$ be a transformation matrix for T, then
+        $$A = \brac{T(e_1) \quad T(e_2)} = \matx{0}{2}{1}{0}.$$
+
+        \nl Let $v \in \R^2$ denoted by $v = \vbrac{x,y}$ such that $v \neq \vec{0}$, then
+        \begin{align*}
+                (A-\lambda I_2)v = \vec{0} &\iff \matx{-\lambda}{2}{1}{-\lambda} \vdub{x}{y} = \vdub{0}{0}\\
+                &\iff -\lambda x + 2y = 0 \quad \text{and} \quad x - \lambda y = 0\\
+                & \iff 2y = \lambda x  \quad \text{and} \quad x = \lambda y\\
+                & \iff 2y = \lambda^2 y  \quad \text{and} \quad x = \frac{\lambda^2x}{2}\\
+                & \iff 2 = \lambda^2  \quad \text{and} \quad 1 = \frac{\lambda^2}{2}\\
+                & \iff \lambda = \pm \sqrt{2}.
+        \end{align*}
+        Therefore the eigenvalues are $\lambda = \sqrt{2}$ and $\lambda = -\sqrt{2}$. 
+
+        \nnl Computing eigenvectors for $\lambda = \sqrt{2}$, 
+        \begin{align*}
+            Av = \lambda v & \iff \matx{0}{2}{1}{0} \vdub{x}{y} = \vdub{x\sqrt{2}}{y\sqrt{2}}\\
+            &\iff 2y = x\sqrt{2} \quad \text{and} \quad x = y\sqrt{2}
+        \end{align*}
+        Which we can therefore conclude an eigenvector $\vdub{2}{\sqrt{2}}$ for $\lambda = \sqrt{2}$.
+
+        \nl Computing eigenvectors for $\lambda = -\sqrt{2}$, 
+        \begin{align*}
+            Av = \lambda v & \iff \matx0210 \vdub{x}{y} = \vdub{-x\sqrt{2}}{-y\sqrt{2}}\\
+            &\iff 2y = -x\sqrt{2} \quad \text{and} \quad x = -y\sqrt{2}
+        \end{align*}
+        Which we can therefore conclude an eigenvector $\vdub{2}{-\sqrt{2}}$ for $\lambda = -\sqrt{2}$.
+    \end{mybox}
+
+
+
+
+
+
+
+
+
+
+\newpage
+    \item Let $V = \mathbf{R}^2$. Find eigenvalues and eigenvectors for the linear operator $T$ defined by $T(x,y) = (-2y , x)$.
+    \begin{mybox}
+        Let $A$ be a transformation matrix for T, then
+        $$A = \brac{T(e_1) \quad T(e_2)} = \matx{0}{-2}{1}{0}.$$
+
+        \nl Let $v \in \R^2$ denoted by $v = \vbrac{x,y}$ such that $v \neq \vec{0}$, then
+        \begin{align*}
+                (A-\lambda I_2)v = \vec{0} &\iff \matx{-\lambda}{-2}{1}{-\lambda} \vdub{x}{y} = \vdub{0}{0}\\
+                &\iff -\lambda x - 2y = 0 \quad \text{and} \quad x - \lambda y = 0\\
+                & \iff 2y = -x\lambda  \quad \text{and} \quad x = \lambda y\\
+                & \iff 2y = -\lambda^2 y  \quad \text{and} \quad x = -\frac{\lambda^2x}{2}\\
+                & \iff 2 = -\lambda^2  \quad \text{and} \quad 1 = -\frac{\lambda^2}{2}\\
+                & \iff \lambda = -\pm \sqrt{2}\\
+                & \iff \lambda = \pm \sqrt{2}.
+        \end{align*}
+        Therefore the eigenvalues are $\lambda = \sqrt{2}$ and $\lambda = -\sqrt{2}$. 
+
+        \nnl Computing eigenvectors for $\lambda = \sqrt{2}$, 
+        \begin{align*}
+            Av = \lambda v & \iff \matx{0}{2}{1}{0} \vdub{x}{y} = \vdub{x\sqrt{2}}{y\sqrt{2}}\\
+            &\iff 2y = x\sqrt{2} \quad \text{and} \quad x = y\sqrt{2}
+        \end{align*}
+        Which we can therefore conclude an eigenvector $\vdub{2}{\sqrt{2}}$ for $\lambda = \sqrt{2}$.
+
+        \nl Computing eigenvectors for $\lambda = -\sqrt{2}$, 
+        \begin{align*}
+            Av = \lambda v & \iff \matx0210 \vdub{x}{y} = \vdub{-x\sqrt{2}}{-y\sqrt{2}}\\
+            &\iff 2y = -x\sqrt{2} \quad \text{and} \quad x = -y\sqrt{2}
+        \end{align*}
+        Which we can therefore conclude an eigenvector $\vdub{2}{-\sqrt{2}}$ for $\lambda = -\sqrt{2}$.
+    \end{mybox}
+
+    \end{enumerate}

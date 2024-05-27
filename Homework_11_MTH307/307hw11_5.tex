@@ -1,0 +1,16 @@
+Suppose $T \in \mathcal{L}(V)$.  Prove that there exists an isometry $S \in \mathcal{L}(V)$ such that
+    \[
+        T = \sqrt{TT^*}\;S.
+    \]
+
+    \notab{
+\begin{proof}$\,$\\
+    By Polar Decomposition, there exists an isometry $S_1 \in \L{V}$ such that $T^* = S_1\sqrt{(T^*)^*T^*} = S_1 \sqrt{TT^*}$. Taking the adjoint of both sides, 
+    \begin{align*}
+        & T^* = S_1 \sqrt{TT^*} \\
+        \iff & (T^*)^* = \pars{S_1 \sqrt{TT^*}}^* \tag{adjoint both sides}\\
+        \iff & T = \pars{\sqrt{TT^*}}^*{S_1}^* \tag{distribution of adjoint}
+    \end{align*}
+    Because $T^*T$ is a positive operator for any $T \in \L{V}$, then by property (b) of positive operators, $T^*T$ is self-adjoint. Similarly, the square root of a positive operator is self-adjoint so $\sqrt{T^*T}$ is self-adjoint. Therefore, $T = \pars{\sqrt{TT^*}}^*{S_1}^* = \sqrt{TT^*} {S_1}^*$. Since $S_1$ is an isometry, then ${S_1}^*$ is also an isometry by property (g). Therefore, there exists some isometry $S$ such that $T = \sqrt{TT^*}S$.
+\end{proof} 
+}

@@ -1,0 +1,18 @@
+Find an example of a positive matrix some of whose entries are negative.
+
+\notab{
+    \soln* Let $\displaystyle A := \begin{bmatrix}
+        1 & -1 \\ -1 & 1
+    \end{bmatrix}$ and $v = \displaystyle \vvec{x}{y}$ for some $x$ and $y$. Then
+    \begin{align*}
+        \inner{Av,v} &= \inner {\begin{bmatrix}
+            1 & -1 \\ -1 & 1
+        \end{bmatrix}
+        \vvec{x}{y},\; \vvec{x}{y}}\\ 
+        &= \inner{ \vvec{x-y}{-x+y},\; \vvec{x}{y}}\\
+        &= x^2 -2xy + y^2\\
+        &= (x-y)^2\\
+        &\geq 0
+    \end{align*}
+    Since $\inner{Av,v} \geq 0$ for all $v = \vvec{x}{y}$ then $A$ is positive, and it has a negative entry.
+}

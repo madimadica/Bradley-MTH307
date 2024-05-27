@@ -1,0 +1,17 @@
+Show that even though all its entries are positive, the matrix
+        $A=\left( \begin{array} {c c c} 2 & 2  \\ 2 & 1  \end{array} \right)$
+        is not positive.
+
+        \notab{
+            \soln* Let $\displaystyle v := \vvec{0.1}{-0.1}$. Then
+            \begin{align*}
+                \inner{Av,v} &= \inner {\begin{bmatrix}
+                    2 & 2 \\ 2 & 1
+                \end{bmatrix}
+                \vvec{0.1}{-0.1},\; \vvec{0.1}{-0.1}}\\ 
+                &= \inner{ \vvec{0}{0.1},\; \vvec{0.1}{-0.1}}\\
+                &= 0\cdot 0.1 + 0.1 \cdot (-0.1)\\
+                &= -0.01.
+            \end{align*}
+            Therefore $A$ is not positive by counterexample.
+    }

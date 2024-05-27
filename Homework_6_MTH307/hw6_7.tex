@@ -1,0 +1,20 @@
+Show that the operator $T \in \mathcal{L}(\mathbf{C}^\infty)$ defined by
+        \[
+        T(z_1,z_2, \ldots) = (0,z_1,z_2, \ldots)
+        \]
+        has no eigenvalues.
+        \begin{mybox}
+                \begin{proof}
+                        Let $v \in \C^{\infty}$ such that $v\neq \vec0$. Denote $v$ by $v = (z_1,z_2, \ldots)$ for some $z_i \in \C$.  By the definition of an eigenvalue, we would have
+                        \begin{align*}
+                                Tv &= \lambda v & \text{Definition of eigenvalue.}\\
+                                T(z_1, z_2, \dots)  &= \lambda(z_1, z_2, \dots)& \text{Substitute in for }v.\\
+                                (0, z_1, \dots) &= (\lambda z_1, \lambda z_2, \dots) & \text{Definition of } T \text{ and distribution of }\lambda. 
+                        \end{align*}
+                        Which implies that $\lambda z_1 = 0$ and $z_i = \lambda z_{i+1}$ (for index $i \geq 1$). Therefore $\lambda = 0$ or $\lambda \neq 0$.
+
+                        \nl Case 1: $\lambda = 0$. Means that $z_1 = 0$ and by $z_i = \lambda z_{i+1}$ we would have \\$0 = z_1 = z_2 = \dots$. This is a contradiction to the eigenvalue assumption that $v \neq \vec0$. 
+
+                        \nnl Case 2: $\lambda \neq 0$. Means that $z_1 \neq 0$ and by $z_i = \lambda z_{i+1}$ we would have \\$0 = z_1 = z_2 = \dots$. This is a contradiction to the assumption that $z_1 \neq 0$. 
+                \end{proof}
+        \end{mybox}

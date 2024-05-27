@@ -1,0 +1,27 @@
+Suppose that $T$ is a normal operator on $V$ and that 3 and 4 are eigenvalues of $T$.  Prove that there exists a vector $v \in V$ such that $\|v\| = \sqrt{2}$ and $\|Tv\| = 5$. 
+\begin{proof} \,\\
+Let $v_1, v_2 \in V$ be the eigenvectors corresponding to the eigenvalues 3 and 4 respectively. Then, by proposition 7.22 (since $T$ is normal and 3 and 4 are distinct eigenvalues), $v_1$ and $v_2$ are orthogonal. Let $e_1, e_2 \in V$ be eigenvectors of $T$ such that $e_1 := \dfrac{v_1}{\norm{v_1}} \in E(3, T)$ and $e_2 := \dfrac{v_2}{\norm{v_2}} \in E(4, T)$. Then, $\set{e_1, e_2}$ is a set of orthonormal eigenvectors of $T$ in $V$.
+
+\nl Let $v \in V$ denote the linear combination $v = e_1 + e_2$. Applying the Pythagorean Theorem (since $e_1$ and $e_2$ are orthogonal), we get that
+\begin{align*}
+    \norm{v} &= \sqrt{\norm{v}^2} \tag{Algebra}\\
+        &= \sqrt{\norm{e_1 + e_2}^2} \tag{Substitution}\\
+        &= \sqrt{\norm{e_1}^2 + \norm{e_2}^2} \tag{Pythagorean Theorem}\\
+        &= \sqrt{1 + 1} \tag{normalized vectors}\\
+        &= \sqrt{2}.
+\end{align*}
+Therefore, there exists a vector $v \in V$ such that $\norm{v} = \sqrt{2}$.
+
+\nl We will now show that $\norm{Tv} = 5$. Using the previous $v, e_1, e_2 \in V$, then
+\begin{align*}
+    \norm{Tv} &= \sqrt{\norm{Tv}^2} \tag{Algebra}\\
+    &= \sqrt{\norm{Te_1 + Te_2}^2} \tag{Substitution and linearity}\\
+    &= \sqrt{\norm{Te_1}^2 + \norm{Te_2}^2} \tag{Pythagorean Theorem}\\
+    &= \sqrt{ \norm{3 e_1}^2 + \norm{4 e_2}^2} \tag{$Tv = \lambda v$}\\
+    &= \sqrt{ \pars{\abs3 \norm{e_1}}^2 + \pars{\abs4 \norm{e_2}}^2 } \tag{Property of norms}\\
+    &= \sqrt{ 9 \norm{e_1}^2 + 16 \norm{e_2}^2} \tag{Simplify}\\
+    &= \sqrt{ 9 \sqrt{1^2} + 16 \sqrt{1^2}} \tag{Normalized vectors}\\
+    &= 5\tag{Simplify} \\
+\end{align*}
+Hence, for $v \in V$ such that $v = e_1+e_2$, then $\norm{Tv} = 5$. Therefore, there exists a vector $v \in V$ such that $\norm v = \sqrt2$ and $\norm{Tv} = 5$.
+\end{proof}

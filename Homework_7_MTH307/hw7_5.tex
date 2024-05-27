@@ -1,0 +1,10 @@
+Suppose $V$ is a finite-dimensional complex vector space and $T \in \mathcal{L}(V)$.  Define a function $f: \mathbf{C} \to \mathbf{R}$ by
+    \[
+        f(\lambda) = \dim \text{range}(T- \lambda I).
+    \]
+    Prove that $f$ is not a continuous function.
+    \begin{mybox}
+        \begin{proof}
+            Let $\dim V = n$. \\Because we are in a finite dimensional \textit{complex} vector space we are guaranteed the existance of some eigenvalue $\lambda_0$ for $T$ (when $T$ is not the zero transformation). Since $T-\lambda_0 I$ is not surjective, then $f(\lambda_0) = \rank T \leq n-1$ by the rank-nullity theorem (FTLM). If $\lambda_1$ is not an eigenvalue, then $T - \lambda_1 I$ implies $T = \lambda_1 I$. Since $\lambda_1$ is not an eigenvalue $(T-\lambda_1 I)$ is surjective. Hence $f(\lambda_1) = n$ by rank-nullity. We will assume that the output of $\dim$ is a nonnegative integer ($\operatorname{dim} = 0, 1, 2, \dots$). Since we have $f = n$ and $f \leq n-1$ for 2 different values, $f$ is discontinuous. (The only way to be continuous is if $f$ is constant.)  %where $\dim (T-\lambda_0 I) = \dim \{0\} = 0$, then $$\rank (T-\lambda_0 I) = \dim V - \nullity (T-\lambda_0 I) = \dim V = n.$$ Hence $f(\lambda_0) = n$. 
+    \end{proof}
+    \end{mybox}

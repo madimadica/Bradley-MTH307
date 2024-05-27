@@ -1,0 +1,60 @@
+Let $V$ be a finite-dimensional vector space and let $A,B,C,D \in \mathcal{L}(V)$.  Assume that $A+B$ and $A-B$ are invertible.  Show that there exist $X,Y$ so that
+    \begin{align*}
+    AX + BY &= C \\
+    BX + AY &= D.
+    \end{align*}
+\begin{proof}
+    Adding the two equations together, and using the property that $(A+B)^{-1}$ exists, we get
+    \begin{align*}
+        & AX + BY + BX + AY = C + D\\
+        \Longleftrightarrow \;& A(X+Y) + B(X + Y) = C + D\\
+        \Longleftrightarrow \;& (A+B)(X+Y) = C + D\\
+        \Longleftrightarrow \;& (A+B)^{-1}(A+B)(X+Y) = (A+B)^{-1}(C+D)\\
+        \Longleftrightarrow \;& X+Y = (A+B)^{-1}(C+D).
+    \end{align*}
+    Subtracting the two equations from each other and using the property that \\$(A-B)^{-1}$ exists, we get
+    \begin{align*}
+        & AX + BY - BX - AY = C - D\\
+        \Longleftrightarrow \;& AX - AY - BX + BY = C - D\\
+        \Longleftrightarrow \;& AX - AY - (BX - BY) = C - D\\
+        \Longleftrightarrow \;& A(X-Y) - B(X-Y) = C - D\\
+        \Longleftrightarrow \;& (A-B)(X-Y) = C - D\\
+        \Longleftrightarrow \;& (A-B)^{-1}(A-B)(X-Y) = (A-B)^{-1}(C-D)\\
+        \Longleftrightarrow \;& X-Y = (A-B)^{-1}(C-D).
+    \end{align*}
+    Adding the results from each system together,
+    \begin{align*}
+        & X+Y + X-Y= (A+B)^{-1}(C+D) + (A-B)^{-1}(C-D)\\
+        \Longleftrightarrow \;& 2X  = (A+B)^{-1}(C+D) + (A-B)^{-1}(C-D)\\
+        \Longleftrightarrow \;& X  = \frac{(A+B)^{-1}(C+D) + (A-B)^{-1}(C-D)}{2}.
+    \end{align*}
+    From our first system of equations,
+    \begin{align*}
+        & X + Y = (A+B)^{-1}(C+D)\\
+        \Longleftrightarrow \;& Y = (A+B)^{-1}(C+D) - X\\
+        \Longleftrightarrow \;& Y = (A+B)^{-1}(C+D) - \frac{(A+B)^{-1}(C+D) + (A-B)^{-1}(C-D)}{2}\\
+        \Longleftrightarrow \;& Y = \frac{2(A+B)^{-1}(C+D)}{2} + \frac{-(A+B)^{-1}(C+D) - (A-B)^{-1}(C-D)}{2}\\
+        \Longleftrightarrow \;& Y = \frac{2(A+B)^{-1}(C+D) -(A+B)^{-1}(C+D) - (A-B)^{-1}(C-D)}{2}\\
+        \Longleftrightarrow \;& Y = \frac{(A+B)^{-1}(C+D) - (A-B)^{-1}(C-D)}{2}.
+    \end{align*}
+    Meanwhile, back at the ranch, we can write $C$ as
+    \begin{align*}
+        C &=\brac{\frac{(C+D) +(C-D)}{2}}\\
+        &= \brac{\frac{(A+B)(A+B)^{-1}(C+D) + (A-B)(A-B)^{-1}(C-D)}{2}}\\
+        &= \brac{\frac{A(A+B)^{-1}(C+D) + B(A+B)^{-1}(C+D) + A(A-B)^{-1}(C-D) - B(A-B)^{-1}(C-D)}{2}}\\
+        &= \brac{\frac{A(A+B)^{-1}(C+D) + A(A-B)^{-1}(C-D) + B(A+B)^{-1}(C+D) - B(A-B)^{-1}(C-D)}{2}}\\
+        &= A\brac{\frac{(A+B)^{-1}(C+D) + (A-B)^{-1}(C-D)}{2}} + B\brac{\frac{(A+B)^{-1}(C+D) - (A-B)^{-1}(C-D)}{2}}\\
+        &= AX + BY.
+    \end{align*}
+    Smilarly, we can write $D$ as
+    \begin{align*}
+        D &= \brac{\frac{(C+D) - (C-D) }{2}}\\
+        &= \brac{\frac{(A+B)(A+B)^{-1}(C+D) - (A-B)(A-B)^{-1}(C-D) }{2}}\\
+        &= \brac{\frac{(A+B)(A+B)^{-1}(C+D) + (B-A)(A-B)^{-1}(C-D) }{2}}\\
+        &= \brac{\frac{B(A+B)^{-1}(C+D) + A (A+B)^{-1}(C+D) + B(A-B)^{-1}(C-D)  -A (A-B)^{-1}(C-D)}{2}}\\
+        &= \brac{\frac{B(A+B)^{-1}(C+D) + B(A-B)^{-1}(C-D) + A (A+B)^{-1}(C+D) -A (A-B)^{-1}(C-D)}{2}}\\
+        &= B \brac{\frac{(A+B)^{-1}(C+D) + (A-B)^{-1}(C-D)}{2}} + A \brac{\frac{(A+B)^{-1}(C+D) - (A-B)^{-1}(C-D)}{2}}\\
+        &= BX + AY.
+    \end{align*}
+    Therefore $AX + BY = C$ and $BX + AY = D$ have been shown.
+\end{proof}

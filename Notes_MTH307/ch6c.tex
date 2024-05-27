@@ -1,0 +1,50 @@
+
+\defnn{orthogonal complement,} $\per U$
+\\If $U$ is a subset of $V$, then the \boldit{orthogonal complement} of $U$, denoted $\per U$, is the set of all vectors in $V$ that are orthogonal to every vector in $U$:
+$$\per U = \set{v \in V : \inner{v,u} = 0 \fe u \in U}.$$
+\noindent For example, if $U$ is a line in $\R^3$ then $\per U$ is the plain containing $0$ that is perpendicular to $U$. If $U$ was a plane in $\R^3$ then $\per U$ is a line passing through $0$ that is perpendicular to $U$.
+
+\properties{Basic properties of orthogonal complement}
+\begin{enumerate}[label=(\alph*)]
+    \item If $U$ is a subset of $V$, then $\per U$ is a subspace of $V$. 
+    \item $\per{\set{0}} = V$.
+    \item $\per V = \set 0$.
+    \item If $U$ is a subset of $V$, then $U \cap \per U \subseteq \set0$.
+    \item If $U$ and $W$ are subsets of $V$ and $U \subseteq W$, then $\per W \subseteq \per U$. 
+\end{enumerate}
+
+\header{Direct sum of a subspace and its orthogonal complement}\\
+Suppose $U$ is a finite-dimensional subspace of $V$. Then
+$$V = U \oplus \per U$$
+
+\header{Dimension of the orthogonal complement}\\
+Suppose $V$ is finite-dimensional and $U$ is a subspace of $V$. Then 
+$$\dim \per U = \dim V - \dim U.$$
+
+\header{The orthogonal complement of the orthogonal complement}\\
+Suppose $U$ is a finite-dimensional subspace of $V$. Then 
+$$U = \per{\pars{\per U}}.$$
+
+\defn{orthogonal projection,} $P_U$
+\\Suppose $U$ is a finite-dimensional subspace of $V$. The \boldit{orthogonal projection} of $V$ onto $U$ is the operator $P_U \in \L{V}$ defined as follows:
+\begin{center}For $v\in V$, write $v = u + w$, where $u \in U$ and $w \in \per U$. Then $P_Uv = u.$\end{center}
+
+\properties{Properties of the orthogonal projection $P_U$}\\
+Suppose $U$ is a finite-dimensional subspace of $V$ and $v\in V$. Then
+\begin{enumerate}[label=(\alph*)]
+    \item $P_U \in \L{V}$
+    \item $P_U u = u \FA u \in U$
+    \item $P_Uw = 0 \FA w \in \per U$
+    \item $\range P_U = U$
+    \item $\null P_U = \per U$
+    \item $v - P_Uv \in \per U$
+    \item ${P_U}^2 = P_U$
+    \item $\norm{P_Uv} \leq \norm v$
+    \item for every orthonormal basis $e_1, \dots, e_m$ of $U$,
+    $$P_Uv = \inner{v,e_1}e_1 + \cdots + \inner{v,e_m}e_m.$$
+\end{enumerate}
+
+\header{Minimizing the distance to a subspace}\\
+Suppose $U$ is a finite-dimensional subspace of $V$, $v \in V$, and $u \in U$. Then 
+$$\norm{v - P_Uv} \leq \norm{v-u}.$$
+Furthurmore, the inequality is an equality if and only if $u = P_Uv$.

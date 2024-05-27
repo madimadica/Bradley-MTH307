@@ -1,0 +1,12 @@
+Prove or give a counterexample:  If $T \in \mathcal{L}(V)$ and there exists an orthonormal basis $e_1, \ldots , e_n$ of  $V$ such that $\|Te_i\| = 1$ for each $e_i$, then $T$ is an isometry.
+
+\notab{
+\soln* Let $T = \begin{bmatrix}
+    1 & 1 \\ 0 & 0
+\end{bmatrix}$. Then $\norm{Te_1} = \norm{\vvec{1}{0}} = 1$ and $\norm{Te_2} = \norm{\vvec{1}{0}} = 1$. As such, the hypothesis are fulfilled but $T^2 = \begin{bmatrix}
+    1 & 1 \\ 0 & 0
+\end{bmatrix} \begin{bmatrix}
+    1 & 1 \\ 0 & 0
+\end{bmatrix} = \begin{bmatrix}
+    1 & 1 \\ 0 & 0
+\end{bmatrix} \neq I_2$. Hence $T$ is not an isometry and the assumption is false by counterexample.}

@@ -1,0 +1,33 @@
+\begin{enumerate}
+    \item Suppose that $T$ is a self-adjoint operator on a finite-dimensional inner product space and that 2 and 3 are the only eigenvalues of $T$.  Prove that $T^2-5T+6I=0$.
+    \begin{proof}$\;$\\
+        Because self-adjoint implies normal, then regardless of if $\F = \R$ or $\F = \C$, $V$ has an orthonormal basis consisting of eigenvectors of $T$ of which has a diagonal matrix representation by either Spectral Theorem. Hence by direct proof, 
+        \begin{align*}
+            T^2 - 5T + 6I &= (T-2I)(T-3I)\\
+            &= \brac{ \mqty(\dmat[]{2}{\ddots}{2}{3}{\ddots}{3}) - 2I} \cdot \brac{\mqty(\dmat[]{2}{\ddots}{2}{3}{\ddots}{3}) - 3I}\\
+            &= \mqty(\dmat[]{0}{\ddots}{0}{1}{\ddots}{1}) \cdot \mqty(\dmat[]{-1}{\ddots}{-1}{0}{\ddots}{0})\\
+            &= \mqty(\dmat[]{0 \cdot -1}{\ddots}{0 \cdot -1}{1 \cdot 0}{\ddots}{1\cdot 0})\\
+            &= \mqty(\dmat{0}{\ddots}{0})\\
+            &= 0
+        \end{align*}
+        Therefore $T^2-5T+6I=0$ (the zero transformation) for all $v \in V$  if $2$ and $3$ are the only eigenvalues.
+    \end{proof}
+    \newpage
+    \item Give an example of an operator $T \in \mathcal{L}(\mathbf{C}^3)$ such that 2 and 3 are the only eigenvalues of $T$ and $T^2-5T+6I \ne 0$.
+
+    \nnl \textbf{Solution: }
+        
+        \nl Let the transformation matrix of operator $T$ be be denoted by 
+        $$\mathcal M(T) := \begin{bmatrix} 2 & \pi & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 3 \end{bmatrix}.$$
+        Then, it is clear by properties of upper-triangular matrices that $2$ (with multiplicity 2), and 3 are the eigenvalues of $T$. Additionally, $T^2 = \displaystyle \begin{bmatrix} 4 & 4\pi & 0 \\ 0 & 4 & 0 \\ 0 & 0 & 9 \end{bmatrix}$, and $5T$ and $6I$ are obvious.
+        Hence, 
+        \begin{align*}
+            T^2 - 5T + 6I &= \begin{bmatrix} 4 & 4\pi & 0 \\ 0 & 4 & 0 \\ 0 & 0 & 9 \end{bmatrix} - \begin{bmatrix} 10 & 5\pi & 0 \\ 0 & 10 & 0 \\ 0 & 0 & 15 \end{bmatrix} + \mqty[\dmat[0]{6}{6}{6}]\\
+            &= \begin{bmatrix}
+                0 & -\pi & 0\\
+                0 & 0 & 0\\
+                0 & 0 & 0 
+            \end{bmatrix}
+        \end{align*}
+        Which certainly is not the zero transformation.
+    \end{enumerate}

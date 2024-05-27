@@ -1,0 +1,22 @@
+Suppose $P \in \mathcal{L}(V)$ is such that $P^2 = P$.  Prove that there is a subspace $U$ of $V$ such that $P = P_U$ if and only if $P$ is self-adjoint.
+\vspace{0.3in}
+
+\begin{proof} ($\Longrightarrow$) (If there is a subspace $U$ of $V$ such that $P=P_U$ then $P$ is self-adjoint)\\
+
+
+\end{proof}
+
+\vspace{0.3in}
+
+\begin{proof} ($\Longleftarrow$) (If $P$ is self-adjoint then there exists a subspace $U$ of $V$ such that $P = P_U$)\\
+Since $P$ is self-adjoint under the hypothesis, $V = \range P + \null P$. By the logic of problem \#1, $V = \range P \oplus \null P$. Let $U := \range P$ and $v \in V.$ Then for some $u \in U$ and some $w \in \per U$, $v = u +w$. We have $Pw = 0$ by null space definition. So
+\begin{align*}
+    P_Uv &= P_U(u + w)\\
+    &= P_Uu + P_Uw\\
+    &= u + 0\\
+    &= u\\
+    &= Pu + 0\\
+    &= Pu + Pw\\
+    &= Pv.
+\end{align*}
+\end{proof}

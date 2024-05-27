@@ -1,0 +1,8 @@
+Suppose $T \in \mathcal{L}(V)$ has a diagonal matrix $A$ with respect to some basis of $V$ and that $\lambda \in \mathbf{F}$.  Prove that $\lambda$ appears on the diagonal of $A$ precisely $\dim E(\lambda , T)$ times.
+\begin{mybox}
+    \begin{proof}
+        Let $m = \dim V$ and $\{v_1, \dots, v_m\}$ be a basis for $V$. Then denote the diagonal entries of $A$ by $\lambda_1, \dots, \lambda_n$. 
+
+        \nl A basis for the eigenspace is every $v_i \in V$ such that $(T-\lambda_i I)v_i = \vec{0}$ with $i \in [1,m]$. This is true only when $\lambda_i = \lambda$. We can build a basis for $E(\lambda, T)$ by appending $v_i$ each time $\lambda_i = \lambda$. Since the dimention is the number of elements in a basis, $\dim E(\lambda,T)$ is exactly equal to the number of times $\lambda = \lambda_i$; the number of times $\lambda$ appeared on the diagonal of $A$.
+    \end{proof}
+\end{mybox}

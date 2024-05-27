@@ -1,0 +1,32 @@
+\defn{invariant subspace}\\
+Suppose $T \in \L{V}$. A subspace $U$ of $V$ is called \boldit{invariant} under $T$ if $u \in U$ implies $Tu \in U$.
+
+\defn{eigenvalue}\\
+Suppose $T \in \L{V}$. A number $\lambda \in \F$ is called an \boldit{eigenvalue} of $T$ if there exists $v \in V$ such that $v \neq 0$ and $Tv = \lambda v$.
+
+\header{Equivalent conditions to be an eigenvalue}\\
+Suppose $V$ is finite-dimensional, $T \in \L{V}$, and $\lambda \in \F$. Then TFAE:
+\begin{enumerate}[label=(\alph*)]
+    \item $\lambda$ is an eigenvalue of $T$.
+    \item $T - \lambda I$ is not injective.
+    \item $T - \lambda I$ is not surjective.
+    \item $T - \lambda I$ is not invertible.
+\end{enumerate}
+
+\defn{eigenvector}\\
+Suppose $T \in \L{V}$ and $\lambda \in \F$ is an eigenvalue of $T$. A vector $v \in V$ is called an \boldit{eigenvector} of $T$ corresponding to $\lambda$ if $v \neq 0$ and $Tv = \lambda v$.
+
+\header{Linearly independent eigenvectors}\\
+Let $T \in \L{V}$. Suppose $\lambda_1, \dots, \lambda_m$ are distinct eigenvalues of $T$ and $v_1, \dots, v_m$ are corresponding eigenvectors. Then $v_1, \dots, v_m$ is linearly independent.
+
+\header{Number of eigenvalues}\\
+Suppose $V$ is finite-dimensional. Then each operator on $V$ has at most $\dim V$ distinct eigenvalues.
+
+\defn{$T|_U$ \textbf{and} $T/U$}\\
+Suppose $T \in \L{V}$ and $U$ is a subspace of $V$ invariant under $T$. 
+\begin{itemize}
+    \item The \boldit{restriction operation} $T|_U \in \L{U}$ is defined by 
+    $$T|_U(u) = Tu \; \forall \; u \in U.$$
+    \item The \boldit{quotient operator} $T/U \in \L{V/U}$ is defined by
+    $$(T/U)(v+U) = Tv + U \; \forall \; v \in V.$$
+\end{itemize}

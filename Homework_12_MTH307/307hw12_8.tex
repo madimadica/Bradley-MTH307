@@ -1,0 +1,16 @@
+Suppose $T \in \mathcal{L}(\mathbf{C}^2)$ is defined by $T(x,y) = (-4y,x)$. Find the singular values of $T$.
+
+\soln The transformation matrix for $T$ with respect to the standard basis is 
+$$\mathcal{M}(T) = \begin{bmatrix}
+    0 & -4 \\ 1 & 0
+\end{bmatrix} \wideand \mathcal{M}(T^*) = \begin{bmatrix}
+    0 & 1 \\ -4 & 0
+\end{bmatrix}.$$
+Then
+$$T^*T = \begin{bmatrix}
+    1 & 0 \\ 0 & 16
+\end{bmatrix} \wideand \sqrt{T^*T} = \begin{bmatrix}
+    1 & 0 \\ 0 & 4
+\end{bmatrix}.
+$$
+As such, the eigenvalues of $\sqrt{T^*T}$ are the singular values by definition. Since the eigenvalues of a diagonal matrix are the diagonals, then the singular values are 4, 1.

@@ -1,0 +1,26 @@
+Suppose $T_1 , T_2$ are normal operators on $\mathbf{F}^3$ and both operators have 2 , 5 , 7 as eigenvalues. Prove that there exists an isometry $S \in \mathcal{L}(\mathbf{F}^3)$ such that $T_1 = S^*T_2S$.
+
+\begin{proof} $ $
+    
+    \nl By Theorem 7.22, since $T_1$ are normal, then the eigenvectors of $T_1$ corresponding to distinct eigenvalues are orthogonal. Since there are 3 distinct eigenvalues (namely 2, 5, and 7) and $\dim V = 3$, then we have an orthonormal basis for $\F^3$ consisting of the eigenvectors corresponding to distinct eigenvalues from $T_1$. Similarly $T_2$ has an orthonormal basis of eigenvectors corresponding to 2, 5, and 7.
+
+    \nl Let $B_1 := \{e_1, e_2, e_3\}$ be an orthonormal basis for $\F^3$ corresponding to $T_1$'s eigenvectors. Similarly, let $B_2 := \{f_1, f_2, f_3\}$ be an orthonormal basis for $\F^3$ corresponding to $T_2$'s eigenvectors. For $S \in \L{\F^3}$, define $Se_i = f_i$ for $i = 1, 2, 3$. Then for the orthonormal basis $e_1, e_2, e_3$ of $\F^3$, $Se_1, \dots, Se_n = f_1, \dots, f_n$ is an orthonormal basis. Hence (d) $\Rightarrow$ (a) of 7.42 shows $S$ is an isometry. 
+
+    \nl Therefore $S^*$ is an isometry and $S^* = S^{-1}$. Thus $S^*f_i = S^{-1}f_i = e_i$. Then, recall that $T_1 e_i = \lambda_i e_i$ and $T_2 f_i = \lambda_i f_i$. Then
+    \begin{align*}
+        T_1e_i &= \lambda_i e_i \tag{eigenvalues for eigenvectors}\\
+        &= \lambda_i (S^* f_i) \tag{substitution}\\
+        &= S^* (\lambda_i f_i) \tag{linearity}\\
+        &= S^* (T_2 f_i) \tag{substitution}\\
+        &= S^* (T_2 S e_i) \tag{substitution}
+    \end{align*}
+    Hence $T_1 e_i = S^* T_2 e_i$. Since $e_i$ forms a [orthonormal] basis $B_1$ for $\F^3$, then for any vector $v \in \F^3$ we have $v = a_1e_1 + a_2e_2 + a_3e_3$. So by linearity, 
+    \begin{align*}
+        T_1 v & = T_1 (a_1e_1 + a_2e_2 + a_3e_3) \tag{substitution of $v$}\\
+        &= a_1(T_1 e_1) + a_2(T_1 e_2) + a_3(T_1 e_3) \tag{linearity}\\
+        &= a_1(S^*T_2S e_1) + a_2(S^*T_2S e_2) + a_3(S^*T_2S e_3) \tag{substitution of $T_1 e_i = S^*T_2Se_i$}\\
+        &= S^*T_2S(a_1e_1 + a_2 e_2 + a_3 e_3) \tag{linearity}\\
+        &= S^*T_2S v \tag{substitution of $v$}
+    \end{align*}
+    Hence $T_1 = S^*T_2S$ and $S$ is an isometry.
+\end{proof}

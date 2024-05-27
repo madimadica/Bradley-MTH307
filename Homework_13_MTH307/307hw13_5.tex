@@ -1,0 +1,8 @@
+Suppose that $T \in \mathcal{L}(V)$ is not nilpotent.  Let $n = \dim V$.  Show that \\ $V = \text{null }T^{n-1} \oplus \text{range }T^{n-1}$.
+
+\begin{proof}
+    Since $T$ is not nilpotent we know $\operatorname{null}T^n \oplus \range T^n = V$ by theorem. We know that $\operatorname{null}T \neq V$ by the subset chaining. (Since if it equalled $V$ then it would have to be nilpotent (which its not by hypothesis).) We claim that $\operatorname{null} T^{n-1} = \operatorname{null} T^n$ implies that $\dim \range T^{n-1} = \dim \range T^n$. \\Suppose that $\operatorname{null} T^{n-1} \neq \operatorname{null} T^n$. Then $\{0\} = \operatorname{null}I \subset \operatorname{null}T \subset \cdots \subset \operatorname{null} T^{n-1} \subset \operatorname{null}T^n$, which would imply that $T$ is nilpotent (since the sequence continues till $\dim V$). Hence a contradiction to the not-nilpotent hypothesis. That is, we know \textit{at least} $\operatorname{null} T^{n-1} = \null T^n$, and by rank-nullity theorem, $\range T^{n-1} = \range T^n$. Hence we can substitute into the known equation with 
+    $$\underbrace{\operatorname{null}T^n}_{= \; \operatorname{null}T^{n-1}} \oplus \underbrace{\range T^n}_{= \; \range T^{n-1}} = V$$
+    to obtain 
+    $$V = \text{null }T^{n-1} \oplus \text{range }T^{n-1}.$$
+\end{proof}

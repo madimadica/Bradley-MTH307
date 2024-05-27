@@ -1,0 +1,13 @@
+Suppose $\norm{u} = \norm{v} = 1$ and $\vbrac{u,v} = 1$.  Prove that $u = v$.
+\begin{mybox}
+    \begin{proof}
+        By the Cauchy-Schwarz Inequality, because $\abs{\vbrac{u,v}} = \norm u \norm v = 1$, we get that $u = cv$ for some scalar $c \in \F$. Substituting $u = cv$ into $\vbrac{u,v}$,
+        \begin{align*}
+            1 &= \vbrac{u,v} \\ &= \vbrac{cv,v}\\
+            &= c \vbrac{v,v}\\
+            &= c \cdot 1 \\
+            &= c.
+        \end{align*}
+        Therefore $c = 1$ and $u = 1 \cdot v$ implies $u = v$.
+    \end{proof}
+\end{mybox}

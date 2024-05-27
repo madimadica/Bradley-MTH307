@@ -1,0 +1,181 @@
+\defn{norm}\\The length of a vector $x$ is called the \textbf{norm} of $x$ denoted $\norm{x}$ The norm is non-linear. 
+$$\norm{x} = \sqrt{x_1^2 + \cdots + x_n^2}.$$
+
+
+\defn{dot product} \\ For $x,y \in \R^n$, the \textbf{\textit{dot product}} of $x$ and $y$, denoted $x \cdot y$ (or $x.y$) is defined by
+$$x \cdot y = x_1y_1 + \cdots + x_ny_n,$$
+where $x = (x_1, \dots , x_n)$ and $y = (y_1, \dots , y_n)$.
+
+\nl Note that the dot product of two vectors in $\R^n$ is a scalar (number (i.e. 1, 7, 5.3, $\pi$)), not another vector.
+$$x \cdot x = \norm{x}^2 \FA x \in \R^n$$
+
+\properties{dot product properties} For a dot product on $\R^n$,
+\begin{enumerate}[label=(\alph*)]
+    \item $x \cdot x \geq 0 \FA x \in \R^n$
+    \item $x \cdot x = 0 \iff x = 0$
+    \item For a fixed $y \in \R^n$, the map from $\R^n \to \R$ that sends $x \in \R^n$ to $x \cdot y$ is linear
+    \item $x \cdot y = y \cdot x \FA x,y \in \R^n \quad \text{(commutative)}$
+\end{enumerate}
+
+\defn{$\Re z,\; \Im z$}\\Suppose $z = a + bi$ where $a, b \in \R$.
+\begin{itemize}
+    \item The \boldit{real part} of $z$, denoted $\Re z$, is defined by $\Re z = a$.
+    \item The \boldit{imaginary part} of $z$, denoted $\Im z$, is defined by $\Im z = b$.
+\end{itemize}
+
+\nl Thus for every $z \in \C$, we have
+$$z = \Re z + (\Im z) i.$$
+
+\defn{complex conjugate}\\Suppose $z \in \C$. The \boldit{complex conjugate} of $z \in \C$, denoted $\bar{z}$, is defined by
+$$\bar{z} = \Re z - (\Im z)i.$$
+
+\defn{absolute value}\\Suppose $z \in \C$. The \boldit{absolute value} of $z \in \C$, denoted $\abs{z}$, is defined by $$\abs{z} = \sqrt{(\Re z)^2 + (\Im z)^2}.$$
+
+\properties{Complex properties}
+\begin{itemize}
+    \item sum of $z$ and $\bar{z}$ $$z + \bar{z} = 2 \Re z$$
+    \item difference of $z$ and $\bar{z}$ $$z - \bar{z} = 2(\Im z)i$$
+    \item product of $z$ and $\bar{z}$ $$z  \bar{z} = \abs{z}^2$$
+    \item additivity and multiplicativity of complex conjugate $$\overline{w+z} = \bar{w} + \bar{z} \qquad \text{and} \qquad \overline{wz} = \bar{w} \bar{z}$$
+    \item conjugate of a conjugate $$\overline{\bar{z}} = z$$
+    \item real and imaginary parts are bounded by $\abs{z}$ $$\abs{\Re z} \leq \abs{z} \qquad \text{and} \qquad \abs{\Im z} \leq \abs{z}$$
+    \item absolute value of a complex conjugate $$\abs{\bar{z}} = \bar{z}$$
+    \item multiplicativity of absolute value $$\abs{wz} = \abs{w} \abs{z}$$
+    \item Triangle Inequality $$\abs{w + z} \leq \abs{w} + \abs{z}$$
+\end{itemize}
+    
+
+\nl Recall that for $\lambda = a + bi$ where $a,b \in \R$, then
+
+\begin{itemize}
+    \item The absolute value of $\lambda$, denoted $\abs{\lambda}$, is defined as $$\abs{\lambda} = \sqrt{a^2 + b^2}.$$
+    \item The complex conjugate of $\lambda$, denoted $\bar{\lambda}$, is defined as $$\bar{\lambda} = a - bi.$$
+    \item The absolute value squared is defined as $$\abs{\lambda}^2 = \lambda \bar{\lambda}$$
+\end{itemize}
+
+\nl For $z = (\thru{z}) \in \C^n$, we define the norm of $z$ by
+$$\norm{z} = \sqrt{\abs{z_1}^2 + \cdots + \abs{z_n}^2}.$$
+
+\nl These absolute values are needed because we want $\norm{z}$ to be a nonnegative scalar. Note that 
+$$\norm{z}^2 = z_1 \overline{z_1} + \cdots + z_n \overline{z_n}.$$
+
+\nl We want to think of $\norm{z}^2$ as an inner product of $z$ with itself, like we did in $\R^n$. The equation above suggests that for $w = (\thru{w}) \in \C^n$, the inner product of $w$ with $z$ should be
+$$\inner{w,z} = w_1 \overline{z_1} + \cdots + w_n \overline{z_n}$$
+$$\inner{z,w} = z_1 \overline{w_1} + \cdots + z_n \overline{w_n}$$
+
+\nl If $\lambda \in \C$ then the notation $\lambda \geq 0$ means that $\lambda$ is a non-negative real number.
+
+\nl We use the common notation $\inner{u,v}$ with angle brackets tod enote an inner product. Parenthesis can also be used, but then $(u,v)$ becomes confusing.
+
+\defn{inner product}
+\\An \boldit{inner product} on $V$ is a function that takes each ordered pair $(u,v)$ of elements of $V$ to a number $\inner{u,v} \in \F$ and has the following properties:
+
+\nl \textbf{positivity: } 
+
+$\inner{v,v} \geq 0 \FA v \in V$
+
+\nl \textbf{definiteness: }
+
+$\inner{v,v} = 0 \iff v = 0$
+
+\nl \textbf{additivity in the first slot: }
+
+$\inner{u+v, w} = \inner{u,w} + \inner{v,w} \FA u,v,w \in V$
+
+\nl \textbf{homogeneity in the first slot: }
+
+$\inner{\lambda u, v} = \lambda \inner{u,v} \FA \lambda \in \F \text{ and } u,v \in V$
+
+\nl \textbf{conjugate symmetry: }
+
+$\inner{u,v} = \conj{\inner{v,u}} \FA u,v\in V$
+
+\nnnl Note: $x = \bar{x} \FA x \in \R$
+
+\nl \textbf{Examples:}
+
+\nl A \boldit{Euclidean inner product} on $\F^n$ is defined by
+$$\inner{(\thru{w}),\; (\thru{z})} = w_1 \overline{z_1} + \cdots + w_n \overline{z_n}.$$
+
+\nnl If $c_1,\dots,c_n$ are all positive numbers, then an inner product can be defined on $\F^n$ by
+$$\inner{(\thru{w}),\; (\thru{z})} = c_1 w_1 \overline{z_1} + \cdots + c_n w_n \overline{z_n}.$$
+
+\nnl An inner product can be defined on the vector space of continuous real-valued functions on the interval $[-1,\,1]$ by
+$$\inner{f,g} = \int_{-1}^1 f(x)g(x)\,dx.$$
+
+\nnl An inner product can be defined on $\mathcal{P}(\R)$ by 
+$$\inner{p,q} = \int_0^{\infty} p(x)q(x)e^{-x}\,dx$$
+
+\defn{inner product space}\\
+An \boldit{inner product space} is a vector space $V$ along with an inner product on $V$.
+
+\nl Unless otherwise stated, you can assume the inner product on $\F^n$ is defined as $$\inner{w,z} = w_1 \overline{z_1} + \cdots + w_n \overline{z_n}$$
+
+\nnl \textbf{Notation}: For the rest of this chapter, $V$ denotes an inner product space over $\F$.
+
+\properties{Basic properties of an inner product}
+\begin{enumerate}[label=(\alph*)]
+    \item For each fixed $u \in V$, the function that takes $v$ to $\inner{v,u}$ is a linear map from $V$ to $\F$.
+    \item $\inner{0,u} = 0 \FA u \in V$
+    \item $\inner{u,0} = 0 \FA u \in V$
+    \item $\inner{u, v+w} = \inner{u,v} + \inner{u,w} \FA u,v,w \in V$
+    \item $\inner{u,\lambda v} = \bar{\lambda} \inner{u,v} \FA \lambda \in \F \text{ and } u,v\in V$
+    \item $\inner{u,v} = 0 \iff \inner{v,u} = 0 \FA u,v \in V$
+\end{enumerate}
+
+\defn{norm}
+\\For $v \in V$, the \boldit{norm} of $v$, denoted $\norm{v}$, is defined by
+$$\norm{v} = \sqrt{\inner{v,v}}.$$
+
+\nl In other words, $\norm{v}^2 = \inner{v,v}$.
+
+\properties{Basic properties of the norm}\\
+Suppose $v \in V$. Then 
+\begin{enumerate}[label=(\alph*)]
+    \item $\norm{v} = 0 \iff v = 0$.
+    \item $\norm{\lambda v} = \abs{\lambda}\norm{v} \FA \lambda \in \F$.
+\end{enumerate}
+
+\nl \textbf{Examples:}
+
+\begin{enumerate}[label=(\alph*)]
+    \item If $(\thru{z}) \in \F^n$ (with the usual Euclidean inner product), then
+    $$\norm{(\thru{z})} = \sqrt{\abs{z_1}^2 + \cdots + \abs{z_n}^2}.$$
+    \item In the vector space of continuous real-valued functions on $[1,\,-1]$ (with the inner product defined as $\inner{f,g} = \int_{-1}^1 f(x)g(x)\,dx$), then
+    $$\norm{f} = \displaystyle \sqrt{\int_{-1}^1 \Bigl(f(x)\Bigr)^2\,dx}.$$
+\end{enumerate}
+
+\defn{orthogonal}
+\\Two vectors $u,v \in V$ are called \boldit{orthogonal} if $\inner{u,v} = 0$.
+
+\nl Instead of saying \say{$u$ and $v$ are orthogonal}, we sometimes say \say{$u$ is orthogonal to $v$}.
+
+\nl For two vectors $u,v \in \R^2$, then $$\inner{u,v} = \norm{u}\norm{v}\cos \theta,$$
+where $\theta$ is the angle between the two vectors. If $\theta = 90^{\circ} = \frac{\pi}{2} \text{ radians}$ then $\cos \theta = 0$. That is, if $u$ and $v$ are perpendicular the inner product is 0.
+
+\header{Orthogonality and 0}
+\begin{enumerate}[label=(\alph*)]
+    \item 0 is orthogonal to every vector in $V$.
+    \item 0 is the only vector in $V$ that is orthogonal to itself.
+\end{enumerate}
+
+\header{Pythagorean Theorem} \\ If $u$ and $v$ are orthogonal vectors in $V$. Then
+$$\norm{u + v}^2 = \norm{u}^2 + \norm{v}^2$$
+The converse is true if $V$ is a real inner product space. That is, if $\norm{u + v}^2 = \norm{u}^2 + \norm{v}^2$ then $u$ and $v$ are orthogonal.
+
+\header{An orthogonal decomposition}
+\\Suppose $u,v \in V$, with $v \neq 0$. Set $c = \dfrac{\inner{u,v}}{\norm v^2}$ and $w = u - \dfrac{\inner{u,v}}{\norm v^2}v$. Then 
+$$\inner{w,v} = 0 \qquad \text{ and } \qquad u = cv + w.$$
+
+\header{Cauchy-Schwarz Inequality}\\
+Suppose $u,v\in V$. Then
+$$\abs{\inner{u,v}} \leq \norm u \norm v.$$
+Further, this is an \textit{equality} if and only if $u$ and $v$ are scalar multiples of one another. 
+
+\header{Triangle Inequality}\\
+Suppose $u,v \in V$. Then 
+$$\norm{u+v}\leq \norm u + \norm v.$$
+This is an equality if and only if $u,v$ are a nonnegative multiples of the other.
+
+\header{Parallelogram Equality}
+\\Suppose $u,v \in V$. Then $$\norm{u+v}^2 + \norm{u-v}^2 = 2 \pars{\norm u^2 + \norm v^2}.$$

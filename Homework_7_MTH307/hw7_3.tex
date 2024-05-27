@@ -1,0 +1,13 @@
+Suppose $T \in \mathcal{L}(V)$ and $v$ is an eigenvector of $T$ with eigenvalue $\lambda$.  Suppose $p \in \mathcal{P}(\mathbf{R})$.  Prove that $p(T)v = p(\lambda)v$.
+\begin{mybox}
+    \begin{proof}
+        Let $p$ be of the form $p(z) = a_0 + a_1 z + \cdots + a_m z^m$. Then we have
+        \begin{align*}
+            p(T)v &= \pars{a_0 T^0 + a_1 T^1 + \cdots + a_m T^m}v & p(T)\text{ definition} \\
+            &= a_0 T^0v + a_1 T^1v + \cdots + a_m T^mv & \text{linearity of } T\\
+            &= a_0 \lambda^0 v + a_1 \lambda^1v + \cdots + a_m \lambda^mv & Tv = \lambda v\\
+            &= ( a_0 + a_1 \lambda + \cdots + a_m \lambda^m )v & \text{linearity}\\
+            &= p(\lambda)v & \text{definition of } p
+        \end{align*}
+    \end{proof}
+\end{mybox}

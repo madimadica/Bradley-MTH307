@@ -1,0 +1,22 @@
+\begin{enumerate}
+    \item Find linear map $T : \mathbf{R}^4 \to \mathbf{R}^4$ so that range $T = \text{null } T$.\vspace{0.4in}
+    \begin{mybox}
+        \textbf{Solution: } Define $T : \R^4 \to \R^4$ by
+        $$T(a, \,b,\,c,\,d) = (0,\,0,\,a,\,b).$$
+        
+        \nl Then $\operatorname{range}\,T = \{(0,\;0,\;c,\;d) \mid c,\, d \in \R\}$ \\and $\operatorname{null}\,T = \{(0,\;0,\;c,\;d) \mid c,\, d \in \R\}$.
+        
+        \nl Therefore $\operatorname{range}\,T = \operatorname{null}\,T$.
+    \end{mybox}
+    \vspace{1in}
+    \item Show that there is no linear map $T : \mathbf{R}^5 \to \mathbf{R}^5$ so that range $T = \text{null } T$.\vspace{0.4in}
+    \begin{mybox}
+        \textbf{Solution: } Suppose there exists a transformation $T$ from $\R^5 \to \R^5$ such that $\operatorname{range}\,T = \operatorname{null}\,T$. Then this implies that $\rank{T} = \nullity{T}$. By the Fundemental Theorem of Linear Maps,
+        $$\dimn{V} = \nullity{T} + \rank{T}.$$
+        Because $V = \R^5$ and $\dimn{\R^5} = 5$, we can substitute in for $\dimn{V}$ to get
+        $$5 = \nullity{T} + \rank{T}.$$
+        Now, if we let $x = \rank{T} = \nullity{T}$, then we can substitute in to obtain
+        $$5 = x + x.$$
+        Solving for x, we see that $x = 2.5$. Hence, if such a map $T$ existed, then $\rank{T} = \nullity{T} = 2.5$. But a fractal dimension is not possible in our course, therefore no such map $T$ can exist.
+    \end{mybox}
+    \end{enumerate}

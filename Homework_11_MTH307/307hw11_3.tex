@@ -1,0 +1,18 @@
+Consider the three statements:
+    \begin{enumerate}
+        \item $T$ is self-adjoint
+        \item $T$ is an isometry
+        \item $T^2=I$ (such a $T$ is called an \emph{involution})
+    \end{enumerate}
+    Prove that if an operator has any two of the properties, then it has the third one as well.
+
+    \notab{
+\begin{proof} (a $\land$ b $\implies$ c)\\
+    Suppose $T$ is a self-adjoint isometry. Then $T^*T = I$ by properties of an isometry. Then using self-adjoint, $I = T^*T = TT = T^2$. 
+\end{proof} \vspace{.25in}
+\begin{proof} (a $\land$ c $\implies$ b)\\
+    Suppose $T$ is self-adjoint and $T^2 = I$. Then $I = T^2 = TT = T^*T$. Therefore it has been shown since $T^*T = I$ is an equivalent condition of an isometry.
+\end{proof}\vspace{.25in}
+\begin{proof} (b $\land$ c $\implies$ a)\\
+    Suppose $T$ is an isometry and $T^2 = I$. Then $T^*T = I$ by properties of an isometry. And since $I = T^2$ by hypothesis, then $T^*T = T^2 = TT$. Multiplying by $T$ on the right, we have $$T^*T = TT \iff T^*TT = TTT \iff T^*T^2 = TT^2 \iff T^*I = TI \iff T^* = T.$$ Therefore $T$ is self-adjoint.  
+\end{proof} }

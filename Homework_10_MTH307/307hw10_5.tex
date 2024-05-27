@@ -1,0 +1,26 @@
+Consider the statement: If $T \in \mathcal{L}(V)$ and there exists an orthonormal basis $e_1, \ldots , e_n$ of $V$ such that $\|Te_j\| = \|T^*e_j\|$ for each $j$, then $T$ is normal.  Show that a counterexample to the statement is given by the matrix
+    $T = \left(
+  \begin{array}{cc}
+    0 & 1  \\
+    -1 & 2  \\
+  \end{array}
+\right)$ with respect to the standard basis in $\mathbf{R}^2$.
+
+\nnl \textbf{Solution:}
+
+\nl We have $\mathcal M(T^*) = \mat{0}{-1}{1}{2}$. Then,
+
+\nl For $e_1$, 
+$$\norm{Te_1} = \norm{ \mat{0}{1}{-1}{2} \vdouble10 } = \norm{ \vdouble{0}{-1} } = 1,$$
+and
+$$\norm{T^*e_1} = \norm{ \mat{0}{-1}{1}{2} \vdouble10 } = \norm{\vdouble01} = 1.$$
+So $\norm{Te_1} = \norm{T^*e_1}$ holds. As for $e_2$,
+
+$$\norm{Te_2} = \norm{ \mat{0}{1}{-1}{2} \vdouble01 } = \norm{ \vdouble12 } = 5,$$
+and
+$$\norm{T^*e_1} = \norm{ \mat{0}{-1}{1}{2} \vdouble01 } = \norm{\vdouble{-1}{2}} = 5.$$
+So $\norm{Te_2} = \norm{T^*e_2}$ holds, and hence the hypothesis $\norm{Te_j} = \norm{T^*e_j}$ holds for each $j$. The conclusion then states that $T$ is normal, that is $TT^* = T^*T$. Checking this,
+$$TT^* = \mat{0}{1}{-1}{2} \cdot \mat{0}{-1}{1}{2} = \mat{1}{-2}{-2}{5},$$
+and 
+$$T^*T = \mat{0}{-1}{1}{2} \cdot \mat{0}{1}{-1}{2} = \mat1225.$$
+Since $TT^* \neq T^*T$, then $T$ is \textbf{not} normal. Hence, a counterexample.

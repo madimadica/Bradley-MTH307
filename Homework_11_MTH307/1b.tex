@@ -1,0 +1,26 @@
+Find all $\alpha$ such that
+        $A=\left( \begin{array} {c c c} \alpha & 1 & 1 \\ 1 & 0 & 0 \\1 & 0 & 0 \end{array} \right)$ is positive.
+
+\notab{
+        \soln* Let $v$ be an arbitrary vector defined as $v = \vvec{x}{y}{z}$. Computing $\inner{Av,v}$, we obtain 
+        \begin{align*}
+            \inner{Av,v} &= \inner {\begin{bmatrix}
+                \alpha & 1 & 1\\
+                1 & 0 & 0\\
+                1 & 0 & 0
+            \end{bmatrix}
+            \vvec{x}{y}{z}, \vvec{x}{y}{z} }\\
+            &= \inner{\vvec{\alpha x + y + z}{x}{x}, \vvec{x,y,z}}\\
+            &= \alpha^2 + 2xy + 2xz
+        \end{align*}
+        Fix  $x = 1$ and $z = 0$, then $\inner{Av,v} = \alpha + 2y$. We will show that it is always possibly to make this negative. Hence,
+         $$\inner{Av,v} = \alpha + 2y < 0 \iff 2y < -\alpha \iff y < -\frac{\alpha}{2}.$$
+         Therefore we choose $\displaystyle y = -\frac{\alpha}{2} + \varepsilon$ for some $\varepsilon > 0$. Choosing $\varepsilon = 1$, then $v =\displaystyle \pars{1,\; -\frac{\alpha}{2} - 1, 0}$. Then 
+         \begin{align*}
+             \inner{Av, v} &= \alpha (1)^2 + 2(1)\pars{-\frac{\alpha}{2} - 1} + 2(1)(0)\\
+             &= \alpha - \frac{2\alpha}{2} - 2\\
+             &= -2
+             \\ &< 0.
+         \end{align*}
+         Therefore, for any given $\alpha$, we can choose a $v$ such that $\inner{Av,v} < 0$ for that $v$. Hence, for every $\alpha$, $A$ is not a positive matrix. In other words, there exists no $\alpha$ such that $A$ is positive.
+}

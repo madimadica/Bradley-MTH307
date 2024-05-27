@@ -1,0 +1,344 @@
+\documentclass[12pt]{article}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+%\usepackage{mathabx}
+\pagestyle{empty}
+\usepackage{amssymb, amsthm, linguex, enumerate, amsmath}
+\textwidth 6.5in
+\hoffset=-.65in
+\textheight=9.5in
+\voffset=-1.in
+\newcommand{\pf}{\mathcal{P}(\mathbf{F})}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Cb}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\Fb}{\mathbf{F}}
+\newcommand{\Rb}{\mathbf{R}}
+\newcommand{\x}{x \in \mathbb{R}}
+\newcommand{\nat}{n \in \mathbb{N}}
+\newcommand{\dx}{\frac{d}{dx}}
+\newcommand{\dxof}[1]{\frac{d}{dx} \left( {#1} \right) }
+\renewcommand{\vector}[1]{\left\langle{#1}\right\rangle}
+\newcommand{\pars}[1]{\left( {#1} \right) }
+\newcommand{\brac}[1]{\left[ {#1} \right] }
+\newcommand{\limit}[3]{\lim_{{#1}\to {#2}} {#3}}
+\newcommand{\xo}{x_0}
+\newcommand{\iid}{independent identically distributed }
+\newcommand{\dble}{differentiable }
+\newcommand{\xbar}{\bar{X}}
+\newcommand{\ybar}{\bar{Y}}
+\newcommand{\rv}{random variable }
+\newcommand{\distn}{distribution }
+\newcommand{\cont}{continuous }
+\newcommand{\disc}{discontinuous }
+\newcommand{\forx}{\qquad \text{for all } x}
+\newcommand{\cbi}{closed bounded interval }
+\newcommand{\seq}[1]{\{{#1}\}}
+\newcommand{\limn}{\lim_{n\to\infty}}
+\renewcommand{\f}[1]{f^{({#1})}}
+\renewcommand{\sup}[1]{\text{sup}\left\{ {#1} \right\}}
+\renewcommand{\inf}[1]{\text{inf}\left\{ {#1} \right\}}
+\newcommand{\N}[2]{N \left( {#1},{#2} \right)}
+\newcommand{\gammaDist}[2]{\gamma \left( {#1},{#2} \right)}
+\newcommand{\Ndef}{N\left(\mu, \sigma^2\right)} %default normal
+\newcommand{\thru}[1]{{#1}_1, \dots, {#1}_n}
+\newcommand{\yn}{Y_1, \dots, Y_n}
+\renewcommand{\max}[1]{\text{max}\left\{ {#1} \right\}}
+\renewcommand{\min}[1]{\text{min}\left\{ {#1} \right\}}
+\renewcommand{\over}[1]{\frac{1}{{#1}}}
+
+
+\begin{document}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{Matthew Wilderr}
+\fancyhead[RE,LO]{Assignment 1 - MTH 307}
+\fancyfoot[LE,CO]{\thepage}
+
+\noindent \textbf{Matthew Wilder}\\MATH 307 - Spring 2022 \\
+Assignment \#1 \\
+Due Friday, January 21, 2022, 4:00 PM CST \\
+
+For each problem, include the statement of the problem. Leave a blank line.  At the beginning of the next line, write \textbf{Solution} or \textbf{Proof} -- as appropriate.
+
+\begin{enumerate}
+%\item (\S , \# )
+\item Label the following statements as being true or false.
+Provide some justification from the text for your label.
+    \begin{enumerate}
+    %a
+        \item Every vector space contains a zero vector.\\
+            \\\textbf{True} by definition\\\\\textbf{Solution}. Every vector space contains an additive identity, denoted by $0$, by the 3rd part of the definition of a \textit{vector space} (pg. 12, def 1.19).\vspace{.4in}
+            %b
+        \item A vector space may have more than one zero vector.\\
+            \\\textbf{False} by contradiction.
+            \begin{proof}
+                    Suppose there exists two zero vectors, $0$ and $0'$, in a vector space $V$. Then
+                    \begin{align}
+                        0 &= 0 + 0' & \text{definition of identity}\notag\\
+                        &= 0' + 0 & \text{commutative} \notag\\
+                        &= 0' & \text{definition of identity}\notag
+                    \end{align}
+                    Implies $0 = 0'$, which contradicts the assumption.
+            \end{proof}\vspace{.4in}
+            %c
+        \item In any vector space $au=bu$ implies that $a=b$.
+        \\\\\textbf{False} by contradiction.
+        \begin{proof} Let $a, b \in \R$ and $u \in V$ such that $V$ operates under normal addition and scalar multiplication in $\R^2$. Then,
+        Let $a = 1$, $b = 2$, and $u = \vector{0,0}$
+            $$au = bu$$ %given
+            $$1 \vector{0,0}  = 2 \vector{0,0} $$
+            $$\vector{1 \cdot 0, 1 \cdot 0} = \vector{2 \cdot 0, 2 \cdot 0}$$
+            $$\vector{0,0} = \vector{0,0}$$
+            But $1 \not = 2$. Therefore, false by contradiction.
+        \end{proof}\vspace{.4in}
+        %d
+        \item In any vector space $au=av$ implies that $u=v$.
+        \\\\\textbf{False} by contradiction.
+        \begin{proof}
+            Let $a = 0$ and $u, v \in V$ such that V operates under normal addition and scalar multiplication in $\R^2$. Let $u = \vector{1,1}$ and $v = \vector{2, 2}$, then
+            $$au = vu$$
+            $$0 \vector{1,1} = 0 \vector{2,2}$$
+            $$\vector{0 \cdot 1, 0 \cdot 1} = \vector{0 \cdot 2, 0 \cdot 2}$$
+            $$\vector{0,0} = \vector{0,0}$$
+            But $u \not = v$, therefore false by contradiction
+        \end{proof}\vspace{.4in}
+        %e
+        \item In $\mathcal{P}(\mathbf{F})$ only polynomials of the same degree may be added.\\\\
+        \textbf{False.} by counterexample
+            \begin{proof}
+                    Let $f(x) = 1$ and $g(x) = x$, then $f, g \in \pf$
+                    $$(f+g)(x) = f(x) + g(x) = x + 1 \in \pf$$
+                    But $\deg{f} = 0 \not = \deg{g} = 1$, therefore it is false by contradiction.
+            \end{proof}\vspace{.4in}
+            %f
+        \item If $f$ and $g$ are polynomials of degree $n$, then $f+g$ is a polynomial of degree $n$.\\\\
+            \textbf{False.} by counterexample.
+            \begin{proof}
+                    Let $$f(x) = x^2 + 1\qquad \text{and} \qquad g(x) = -x^2$$
+                    Then $(f+g)(x) = 1$, and 
+                    $$\deg{f} = 2 \qquad \deg{g} = 2 \qquad \deg{(f+g)}=0$$
+                    But $0 \not = 2$, therefore it is false by counterexample.
+            \end{proof}\vspace{0.4in}
+            %g
+        \item If $f$ is a polynomial of degree $n$ and $c$ is a nonzero scalar, then $cf$ is a polynomial of degree $n$.
+        \\\\\textbf{True.}
+        \begin{proof}
+            Define $$f : \R \to \R\, \text{ by }\, f(x) = a_0x^0 + a_1x^1 + \cdots + a_nx^n$$ for some sequence $\{a_n\}$, then\\
+            $$cf = ca_0x^0 + ca_1x^1 + \cdots + ca_nx^n ,\qquad c \not = 0$$
+            Because $c \not = 0$, no new zero terms are introduced in the sequence, thus the highest power remains unchanged. Therefore $\deg{(f)} = \deg{(cf)}$
+        \end{proof}\vspace{0.4in}
+        %h
+        \item A nonzero element of $\mathbf{F}$ may be considered to be an element of $\mathcal{P}(\mathbf{F})$ having degree zero.\\\\
+        \textbf{True}
+        \begin{proof}
+            Let $a \in \Fb$ then define $$f: \R\to\R\, \text{ by } \,f(x) = a = ax^0, \qquad a \not = 0$$Then $f \in \pf$. And because $a \not = 0$, then $\deg{(f)} = 0$
+        \end{proof}\vspace{0.4in}
+        %i
+        \item Two functions in $\mathbf{F}^S$ are equal if and only if they have the same values at each element of $S$.\\\\
+        \textbf{True}
+        \\\\\textbf{Solution}\\\\
+        If $f, g \in \mathbf{F}^S$ and $f(x) = g(x) \quad \forall \quad x \in S$, then by the definition of a function, $f = g$
+    \end{enumerate}\vspace{0.3in}
+\item Let $v_1, \ldots, v_4$ be four vectors in a vector space $V$. Verify $(v_1 + v_2) +( v_3+v_4) = [v_2+(v_3+v_1)]+v_4$.  Use the definition, properties, and theorems on pp.12-15 to justify each step in the transitions from the LHS to the RHS.
+\begin{proof}
+    Recall:\\
+    Commutativity: $u+v=v+u$ \\
+    Associativity: $(u+v) + w = u + (v+w)$
+    \begin{align}
+        (v_1 + v_2) +( v_3+v_4) &= (v_3+v_4) + (v_1 + v_2) \notag && \text{by commutativity}
+        \\&= (v_4+v_3) + (v_1 + v_2) \notag && \text{by commutativity}\\
+        &= v_4 + [v_3 + (v_1 + v_2)] \notag && \text{by associativity}\\
+        &= v_4 + [(v_3 + v_1 ) + v_2] \notag && \text{by associativity}\\
+        &= v_4 + [v_2 + (v_3 + v_1 )] \notag && \text{by commutativity}\\
+        &= [v_2 + (v_3 + v_1 )] + v_4 \notag && \text{by commutativity}\notag
+    \end{align}
+\end{proof}
+
+%problem 3
+\item Which vectors in $\mathbf{R}^3$ are linear combinations of $(1,0,-1), (0,1,1), (1,1,1)$?
+\\\\All vectors in $\Rb^3$ are linear combinations
+\begin{align}
+    a \begin{bmatrix}
+           1 \\
+           0 \\
+           -1
+         \end{bmatrix}
+          +b \begin{bmatrix}
+           0 \\
+           1 \\
+           1
+         \end{bmatrix}
+        + c \begin{bmatrix}
+           1 \\
+           1 \\
+           1
+         \end{bmatrix}
+        = \begin{bmatrix}
+           x \\
+           y \\
+           z
+         \end{bmatrix}
+  \end{align}
+  $$a + c = x \qquad b + c = y \qquad -a + b + c = z$$
+
+\begin{proof} Write the vectors in the column space of a matrix augmented with the identity.
+   $$\left[
+  \begin{matrix}
+    1 & 0 & 1 \\
+    0 & 1 & 1 \\
+    -1 & 1 & 1 \\
+  \end{matrix}
+  \left|
+    \,
+    \begin{matrix}
+      1 & 0 & 0  \\
+      0 & 1 & 0  \\
+      0 & 0 & 1  \\
+    \end{matrix}
+  \right.
+\right]$$
+Then, row reduce into the form
+   $$\left[
+  \begin{matrix}
+      1 & 0 & 0  \\
+      0 & 1 & 0  \\
+      0 & 0 & 1  \\
+  \end{matrix}
+  \left|
+    \,
+    \begin{matrix}
+      0 & 1 & -1  \\
+      -1 & 2 & -1  \\
+      1 & -1 & 1  \\
+    \end{matrix}
+  \right.
+\right]$$
+Which is $I_3$, thus the vectors are linearly independent. A list of $n$ linearly independent vectors in $\Rb^n$ span $\Rb^n$, thus these vectors span all of $\Rb^3$. Further, \textit{every} vector in $\Rb^3$ is a linear combination of $(1,0,-1), (0,1,1), \text{and}\, (1,1,1)$
+\end{proof}
+%Problem 4
+\item Let $V = \mathbf{R}^2$ with \emph{new} operations
+\begin{align*}
+    (x,y)+(x_1,y_1) &= (x+x_1,y+y_1) \\
+    c(x,y) &=(cx,y)
+\end{align*}
+Is $V$ a vector space?  Justify.\\\\
+\textbf{No}, it is \textbf{\textit{not}} a vector space. It fails the 2nd distributive law test. 
+\begin{proof}
+    Let $\vector{x,y} = \vector{1,1}$, $a = 1$, $b = 1$.
+    Then,
+    $$(a+b)v = av + bv$$
+    $$(1+1)\vector{1,1} = 1\vector{1,1} + 1\vector{1,1}$$
+    $$2\vector{1,1} = \vector{1,1} = \vector{1,1}$$
+    $$\vector{2,1} \not= \vector{2,2}$$
+    Therefore, false by counterexample.
+\end{proof}\vspace{0.4in}
+%5
+\item Let $V = \mathbf{R}^2$ with \emph{new} operations
+\begin{align*}
+    (x,y)+(x_1,y_1) &= (x+x_1,0) \\
+    a(x,y) &=(ax,0)
+\end{align*}
+Is $V$ a vector space?  Justify.
+\\\\\textbf{No} it is \textbf{\textit{not}} a vector space. The default multiplicative identity is $\vector{1,1}$.
+\begin{proof}
+    By definition of a vector space, $1v = v \,\, \forall \,\, v \in V$
+    \\Let $v = \vector{1,1}$ then
+    $$1\vector{1,1} = \vector{1,1}$$
+    $$\vector{1,0} \not= \vector{1,1}$$
+    False by counterexample.
+\end{proof}\vspace{0.4in}
+%6
+\item Consider $\mathbf{R}^n$ with new operations
+\begin{align*}
+    v \boxplus w &= v-w \\
+    a \cdot v &= -a v
+\end{align*}
+Which of the parts of the definition of vector space are satisfied with these new operations?
+\\\\
+    \underline{Commutativity:} \textbf{Fails}
+    $$v \boxplus w = w \boxplus v$$
+    $$v-w \not = w-v$$
+    \\
+    \underline{Associativity:} \textbf{Holds}
+    $$(u \boxplus v) \boxplus w = u \boxplus (v \boxplus w)$$
+    $$u - v \boxplus w = u \boxplus v - w$$
+    $$u - v - w = u - v - w$$
+    \\
+    \underline{Additive identity:} \textbf{Holds}
+    $$\Vec{0} = \vector{0_1, \dots, 0_n}\, \text{in} \, \R^n$$
+    $$\vector{v_1,\dots,v_n} \boxplus \Vec{0} = \vector{v_1-0,\dots, v_n-0} = \vector{v_1,\dots, v_n}$$
+    \\
+    \underline{Additive inverse:} \textbf{Holds}
+    $$v = \vector{v_1, \dots, v_n} = -v$$
+    $$v \boxplus (-v) = 0$$
+    $$v \boxplus v = 0$$
+    $$v - v = 0$$
+    $$0 = 0$$
+    \\
+    \underline{Multiplicative identity:} \textbf{Holds}
+    $$1_V = -1$$
+    $$1_V \cdot \vector{v_1, \dots, v_n} = -1 \cdot \vector{v_1, \dots, v_n}$$
+    $$1_V \cdot \vector{v_1, \dots, v_n} = \vector{-(-1)v_1, \dots, -(-1)v_n}$$
+    $$1_V \cdot \vector{v_1, \dots, v_n} = \vector{v_1, \dots, v_n} $$
+    \\
+    \underline{First Distributive Property:} \textbf{Holds}
+    $$a\cdot \pars{\vector{v_1,\dots, v_n} \boxplus \vector{w_1,\dots, w_n}} = a\vector{v_1,\dots, v_n} \boxplus a\vector{w_1,\dots, w_n}$$
+    $$a \cdot \vector{v_1-w_1, \dots, v_n - w_n} = \vector{-av_1, \dots, -av_n} \boxplus \vector{-aw_1, \dots, -aw_n}$$
+    $$\vector{-a(v_1-w_1), \dots, -a(v_n - w_n)} = \vector{-av_1 + aw_1, \dots, - av_n + aw_n}$$
+    $$\vector{-av_1+aw_1, \dots, -av_n + aw_n} = \vector{-av_1 + aw_1, \dots, - av_n + aw_n}$$
+    \\
+    \underline{Second Distributive Property:} \textbf{Fails}
+    $$(a+b)\cdot \vector{v_1, \dots, v_n} = a\cdot \vector{v_1, \dots, v_n} \boxplus b\cdot \vector{v_1, \dots, v_n}$$
+    $$\vector{-(a+b)v_1, \dots, -(a+b)v_n} = \vector{-av_1, \dots, -av_n} \boxplus \vector{-bv_1, \dots, -bv_n}$$
+    $$\vector{-av_1-bv_1, \dots, -av_n-bv_n} = \vector{-av_1 - (-bv_1), \dots, -av_n - (-bv_n)}$$
+        $$\vector{-av_1-bv_1, \dots, -av_n-bv_n} \not= \vector{-av_1 +bv_1, \dots, -av_n + bv_n}$$
+\vspace{0.4in}
+
+\item Which subsets of $\mathcal{P}(\mathbf{R})$ form a vector space?  Justify.
+    \begin{enumerate}
+    \item All $p(x)$ such that $p(0)=1$.\\
+    \\\textbf{Not} a vector space. Let $p(x) = 1$, then under scalar multiplication with 2, $2p(x) = 2$ so it is not closed under its operations.
+    \vspace{0.4in}
+    \item All $p(x)$ such that $p(0)=0$.\\
+    \\\textbf{It is} a vector space.
+    \\Let $S$ denote the set of all $p(x)$ such that $p(0)=0$.
+    \\\\Closed under addition\\Let $f, g \in S$, then we show $f+g \in S$
+    $$(f+g)(0) = f(0) + g(0) = 0 + 0 = 0$$
+    Therefore, $(f+g) \in S$ and is closed under addition\\
+    \\Closed under scalar multiplication
+    \\For $f \in S$ we show that $cf \in S$
+    $$f(0) = 0$$
+    $$cf(0) = c\cdot 0 = 0$$
+    Therefore, $cf\in p(x)$ is closed under scalar multiplication
+    \vspace{0.4in}
+    \item All $p(x)$ such that $2p(0)-3p(1)=0$.
+    \\\\\textbf{It is} a vector space.
+    \\Let $S$ denote all $p(x)$ such that $2p(0)-3p(1)=0$
+    \\\\Closed under addition\\Let $f, g$ be functions in $\in S$
+    \begin{align}
+        2(f+g)(0) -  3(f+g)(1) & = 
+    2[f(0) + g(0)] - 3[f(1)+g(1)] \notag\\
+    &= 2f(0) + 2g(0) - 3f(1) - 3g(1) \notag\\
+    &= [2f(0) - 3f(1)] + [2g(0) - 3g(1)] \notag\\
+    &= 0 + 0 \notag\\ 
+    &= 0 \notag
+    \end{align}
+    
+    Therefore, $(f+g) \in S$ and is closed under addition\\
+    \\Closed under scalar multiplication.\\Let $p \in S$, then we snow that $c\cdot p \in S$
+    \begin{align}
+        [2cp(0) - 3cp(1)] &= c[2p(0) - 3p(1)] \notag\\ &= c[0] \notag\\ &= 0 \notag
+    \end{align}    Therefore, it is closed under scalar multiplication
+    \vspace{0.4in}
+    \end{enumerate}
+
+
+\end{enumerate}
+
+\end{document} 

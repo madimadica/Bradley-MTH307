@@ -1,0 +1,37 @@
+Suppose $T \in \mathcal{L}(V)$, for an inner product space $V$. For $u , v \in V$, define the function of two variables $\langle u , v \rangle_T$ by
+    \[
+        \langle u , v \rangle_T = \langle Tu , v \rangle.
+    \]
+Prove that $\langle \cdot , \cdot \rangle_T$ is an inner product on $V$ if and only if $T$ is an invertible positive operator (with respect to the original inner product $\langle \cdot , \cdot \rangle \; $).
+
+\begin{proof} ($\Longrightarrow$)\\
+    Suppose $\inner{\cdot, \cdot}_T$ is an inner product, we will show that $T$ is an invertible positive operator (with respect to the original $\inner{\cdot, \cdot}$). By positivity of inner products, $\inner{Tv,v} = \inner{v,v}_T \geq 0$, so $\inner{Tv,v} \geq 0$. For self-adjoint, 
+    \begin{align*}
+        \inner{Tu,v} &= \inner{u,v}_T\\
+        &= \innerconj{v,u}_T\\
+        &= \innerconj{Tv,u}\\
+        &= \inner{u,Tv}.
+    \end{align*}
+    Therefore $T$ is self-adjoint and hence $T$ is a positive operator.
+    
+    \nl For invertibility, $\inner{v,v}_T = 0$ if and only if $v=0$, so $\inner{v,v}_T = \inner{Tv,v} = 0$ if and only if $v = 0^\dagger  $. Suppose $Tv = 0$ for some $v \neq 0$. Then $\inner{Tv,v} = \inner{0,v} = 0$. Hence, a contradiction to $^\dagger $. Thus $Tv = 0$ if and only if $v = 0$ and $\nullspace T = \{0\}$. Therefore $T$ is injective and hence invertible. 
+\end{proof}
+
+\begin{proof} ($\Longleftarrow$)\\
+    Suppose $T$ is an invertible positive operator (with respect to the original $\inner{\cdot, \cdot}$). We will show that $\inner{\cdot, \cdot}_T$ is an inner product. That is, positivity, definiteness, additivity, homogeneity, and symmetry.
+    %
+    \notab{\textbf{positivity}}
+    Since $T$ is positive we know that $\inner{Tv, v} \geq 0$. Since $\inner{v,v}_T = \inner{Tv,v}$ then $\inner{v,v}_T \geq 0$.
+    %
+    \notab{\textbf{definiteness}}
+    By $T$'s positivity, $R^2 = T$ for a positive square root $R$ of $T$. Then $\inner{Tv,v} = \inner{R^2v, v} = \inner{Rv, Rv}$. As shown in \#1, since $T$ is positive and invertible then $R$ is also invertible and hence injective. So $Rv = 0$ if and only if $v = 0$ and hence $\inner{Rv,Rv} = \inner{Tv, v} = \inner{v,v}_T = 0$ if and only if $v = 0$. 
+    %
+    \notab{\textbf{additivity in the first slot}}
+    Directly, $\inner{u+v,w}_T = \inner{T(u+v), w} = \inner{Tu,w} + \inner{Tv,w} = \inner{u,w}_T + \inner{v,w}_T$.
+    %
+    \notab{\textbf{homogeneity in first slot}}
+    Directly, $\inner{\lambda u, v}_T = \inner{\lambda Tu,v} = \lambda \inner{Tu,v} = \lambda \inner{u,v}_T$.
+    %
+    \notab{\textbf{conjugate symmetry}}
+    Directly with $T$ self-adjoint, $\inner{u,v}_T = \inner{Tu,v} = \innerconj{v,Tu} = \innerconj{Tv, u} = \innerconj{v,u}_T$.
+\end{proof}

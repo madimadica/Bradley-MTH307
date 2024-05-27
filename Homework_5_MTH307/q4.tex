@@ -1,0 +1,19 @@
+Let $V$ be a 2-dimensional vector space and let $A \in \mathcal{L}(V)$ be invertible.  Show that there is a polynomial $p$ so that $A^{-1} = p(A)$.
+\begin{mybox}
+Let matrix $A$ be of the form
+$$A = \matx{a}{b}{c}{d}$$
+Then the characteristic polynomial of $A$ is
+$$A^2 - \operatorname{Tr}(A)A + \det(A)A^0 = 0$$
+Simplifying and solving for $A^{-1}$,
+\begin{align*}
+    &A^2 - \operatorname{tr}(A)A + \det(A)A^0 = 0\\
+    \iff & A^2 - (a + d)A + (ad-bc)A^0 = 0\\
+    \iff & A^2A^{-1} - (a+d)AA^{-1} + (ad-bc)A^0A^{-1} = 0A^{-1}\\
+    \iff & A - (a+d)I_2 + (ad-bc)A^{-1} = 0\\
+    \iff & (ad-bc)A^{-1} = (a+d)I_2 - A\\
+    \iff & A^{-1} = \frac{(a+d)I_2}{ad-bc} - \frac{A}{ad-bc}\\
+    \iff & A^{-1} = A^0\frac{a+d}{ad-bc} - A\frac{1}{ad-bc}
+\end{align*}
+Therefore
+$$A^{-1} = p(A) = A^0\frac{a+d}{ad-bc} - A\frac{1}{ad-bc}$$
+\end{mybox}

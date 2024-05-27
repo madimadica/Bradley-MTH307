@@ -1,0 +1,9 @@
+If $T \in \mathcal{L}(V)$ is self-adjoint and if $T^2v = 0$, then $Tv=0$
+\vspace{.2in}
+
+\begin{proof} If we have $T^2v = 0$, then this is equivilent to $T(Tv) = 0$. Taking the inner product of $Tv$ with itself, $\inner{Tv, Tv}$, we will show this is zero. By our hypothesis, 
+    \begin{align*}
+        \inner{Tv, Tv} &= \inner{v, T^*Tv} \\ &= \inner{v, T^2 v} \\ &= \inner{v,0} \qquad \text{ by  hypothesis} \\ &= 0. 
+    \end{align*}
+    Hence $\inner{Tv, Tv} = 0$, which implies that $Tv = 0$.
+\end{proof}

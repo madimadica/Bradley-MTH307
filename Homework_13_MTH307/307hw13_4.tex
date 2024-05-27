@@ -1,0 +1,32 @@
+Suppose that $T \in \mathcal{L}(\mathbf{C}^3)$ is defined by $T(z_1,z_2,z_3) = (z_2,z_3,0)$. Prove that $T$ has no square root.  More precisely, prove that there does not exist $S \in \mathcal{L}(\mathbf{C}^3)$ such that $S^2 = T$.
+
+\begin{proof} (By contradiction)\\
+    Suppose there exists a square root $S$ such that $S^2 = T$. Since $S^2 = T$, with the matrix of $T$ with respect to the standard basis being
+    $$\mathcal M (T) = \begin{bmatrix}
+        0 & 1 & 0 \\
+        0 & 0 & 1 \\
+        0 & 0 & 0 
+    \end{bmatrix},$$
+    Then by commutivity $TS = (S^2)S = S(S^2) = ST$. Denote $S$ by some matrix 
+    $$\mathcal{M}(S) := \begin{bmatrix}
+        a & b & c \\ d & e & f \\ g & h & j
+    \end{bmatrix}.$$
+    So 
+    $$TS = \begin{bmatrix}
+        d & e & f \\ g & h & j \\ 0 & 0 & 0
+    \end{bmatrix} \wideand ST = \begin{bmatrix}
+        0 & a & b \\ 0 & d & e \\ 0 & g & h
+    \end{bmatrix}.$$
+    As such, $d = g = h = 0$ by commutivity. Similarly, $$a = e = j := x_1 \wideand b = f := x_2.$$
+    Substituting back into $S$,
+    $$S := \begin{bmatrix}
+        x_1 & x_2 & c \\ 0 & x_1 & x_2\\ 0 & 0 & x_1
+    \end{bmatrix} \wideand S^2 = \begin{bmatrix}
+        {x_1}^2 & 2x_1x_2 & 2cx_1 + {x_2}^2 \\ 0 & {x_1}^2 & 2x_1x_2 \\ 0 & 0 & {x_1}^2
+    \end{bmatrix} \underbrace{=}_{\text{assumption}} \begin{bmatrix}
+        0 & 1 & 0 \\
+        0 & 0 & 1 \\
+        0 & 0 & 0 
+    \end{bmatrix} = T.$$
+    By our assumption, $S^2 = T$, so all entries must match. In particular, ${x_1}^2$ must equal 0. As such, $S^2_{1,2} = 2x_1x_2 = 0 \neq T_{1,2}$. Hence a contradiction. 
+\end{proof}

@@ -1,0 +1,70 @@
+Convert $\mathcal{P}_2([0,1])$ into an inner product space by writing $\langle p,q \rangle = \int_0^1 p(x)\overline{q(x)} \; dx$ for $p,q \in \mathcal{P}_2([0,1])$. Find a complete orthonormal set in that space.
+
+\nnl \textbf{Solution:} Direct computation via Gram Schmidt.
+
+    \nl Let $\poly{2}{[0,1]}$ have the ordered basis $\set{1,x,x^2}$ denoted by $\set{v_1,v_2,v_3}$. Using the Gram Schmidt process, we will compute $e_1, e_2$ and $e_3$.
+
+    \nnl For $e_1 = \dfrac{v_1}{\norm{v_1}}$, we compute as follows.
+    \begin{align*}
+        e_1 &= \frac{v_1}{\norm{v_1}}\\ &= \frac{1}{\norm{1}}\\
+        &= \over{\inner{1,1}}\\
+        &= \over{\int_0^1 1 \cdot 1 \, dx}\\
+        &= \over{ x\big|_{x=0}^{x=1}}\\
+        &= \over{1-0}\\
+        &= 1.
+    \end{align*}
+    
+    \newpage Next, let $\alpha = v_2-\inner{v_2,e_1}e_1$. Then $e_2 = \dfrac{v_2-\inner{v_2,e_1}e_1}{\norm{v_2-\inner{v_2,e_1}e_1}} = \dfrac{\alpha}{\norm{\alpha}}$. Computing $\alpha$,
+    \begin{align*}
+        \alpha &= v_2-\inner{v_2,e_1}e_1\\
+            &= x-\inner{x,1}\cdot 1 \\
+            &= x - 1 \int_0^1 1x \,dx\\
+            &= x - \brac{\frac{x^2}{2}}_{x=0}^{x=1}\\
+            &= x - \over{2}\brac{(1)^2 - (0)^2}\\
+            &= x - \over{2}.
+    \end{align*}
+    And computing the norm,
+    \begin{align*}
+        \norm{\alpha} &= \norm{x - \over{2}}\\
+            &= \sqrt{\inner{x - \over{2}, \; x - \over{2}}}\\
+            &= \sqrt{\int_0^1 \pars{x - \over{2}}^2\,dx}\\
+            &= \sqrt{\over{3}\brac{\pars{x - \over{2}}^3}_{x=0}^{x=1}}\\
+            &= \sqrt{\over{3}\brac{\pars{1 - \over{2}}^3 - \pars{0 - \over{2}}^3}}\\
+            &= \sqrt{\over{3}\brac{\over{8} - \pars{- \over{8}}}}\\
+            &= \sqrt{\over{12}}\\
+            &= \over{2\sqrt{3}}.
+    \end{align*}
+    And hence,
+    \begin{align*}
+        e_2 &= \frac{\alpha}{\norm{\alpha}}\\
+        &= \frac{x - \over{2}}{\over{2\sqrt{3}}}\\
+        &= 2\sqrt{3}\pars{x - \over{2}}.
+    \end{align*}
+    
+    \nl Lastly, let $\beta = v_3 - \inner{v_3,e_1}e_1 - \inner{v_3}{e_2}e_2$. Then $e_3 = \dfrac{\beta}{\norm{\beta}}$. Computing $\beta$,
+    \begin{align*}
+        \beta &= v_3 - \inner{v_3,e_1}e_1 - \inner{v_3,e_2}e_2\\
+        &= x^2 - \inner{x^2, 1} - \inner{x^2, 2\sqrt{3}\pars{x - \over{2}}}\cdot 2\sqrt{3}\pars{x - \over{2}}\\
+        &= x^2 - \int_0^1 x^2 \, dx - 2\sqrt{3} \cdot 2\sqrt{3}\pars{x - \over{2}} \int_0^1 \pars{x^3 - \frac{x^2}{2}} \,dx\\
+        &= x^2 - \int_0^1 x^2 \, dx - \pars{ 12x-6 } \int_0^1 \pars{x^3 - \frac{x^2}{2}} \,dx\\
+        &= x^2 - \brac{\frac{x^3}{3}}_{x=0}^{x=1} - \pars{ 12x-6 } \brac{\frac{x^4}{4} - \frac{x^3}{6}}_{x=0}^{x=1}\\
+        &= x^2 - \over{3} - \pars{ 12x-6 } \brac{\over{12}}\\
+        &= x^2 - \over{3} - \pars{ x-\over{2} }\\
+        &= x^2 - x + \over{6}.
+    \end{align*}
+    And
+    \begin{align*}
+        \norm{\beta} &= \sqrt{\inner{\beta, \beta}}\\
+        &= \sqrt{\int_0^1 \pars{x^2 - x + \over{6}}^2\,dx}\\
+        &= \sqrt{\int_0^1 \pars{x^4 - 2x^3 + \frac 43x^2 -\frac 13x + \over{36}}dx}\\
+        &= \sqrt{\brac{\frac{x^5}{5} - \frac{x^4}{2} + \frac{4x^3}{9} - \frac{x^2}{6} + \frac{x}{36} }_{x=0}^{x=1}}\\
+        &= \sqrt{\over 5 - \over 2 + \frac{4}{9} - \over{6} + \over{36}}\\
+        &= \sqrt{\frac{36-90+80-30+5}{180}}\\
+        &= \over{\sqrt{180}}\\
+        &= \over{6\sqrt{5}}.
+    \end{align*}
+    Hence $\displaystyle
+        e_3 = \frac{\beta}{\norm{\beta}} = \frac{x^2 - x + \over{6}}{(6\sqrt{5})^{-1}}
+        = 6\sqrt{5}\pars{x^2 - x + \over{6}}.$
+    Therefore the orthonormal basis of $\poly{2}{[0,1]}$ is
+    $$\set{1,\quad 2\sqrt3 \pars{x-\over2}, \quad 6\sqrt{5}\pars{x^2 - x + \over{6}} }.$$

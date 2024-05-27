@@ -1,0 +1,37 @@
+Assume $T \in \mathcal{L}(V)$ for a complex vector space $V$.  Prove that $T$ is self-adjoint if and only if all eigenvalues for $T$ are real.
+\vspace{0.3in}
+
+\begin{proof} ($\Longrightarrow$) (If $T$ is self-adjoint, then all the eigenvalues for $T$ are real.)
+    
+    \nl Let $\lambda$ be an eigenvalue of $T$ and $v \in V\backslash0$ such that $Tv = \lambda v$. Then 
+    \begin{align*}
+        \lambda \norm v^2 &= \inner{\lambda v, v}\\
+        &= \inner{Tv, v}\\
+        &= \inner{v, T^*v}\\
+        &= \inner{v, Tv} \qquad \text{by hypothesis}\\
+        &= \inner{v, \lambda v}\\
+        &= \bar{\lambda} \inner{v,v}\\
+        &= \bar{\lambda} \norm v^2.
+    \end{align*}
+    Therefore $\lambda = \bar{\lambda}$, hence $\lambda \in \R$.
+\end{proof}
+
+\vspace{0.3in}
+
+\begin{proof} ($\Longleftarrow$) (If all the eigenvalues for $T$ are real, then $T$ is self-adjoint.)
+    By the hypothesis, $\lambda = \bar{\lambda}$ for an eigenvalue $\lambda$. Let $v \in V$ be an eigenvector so that $Tv = \lambda v$. Then,
+    \begin{align*}
+        \inner{Tv, v} &= \inner{\lambda v, v}\\
+        &= \lambda \inner{v,v} \\
+        &= \inner{v, \bar{\lambda} v}\\
+        &= \inner{v, \lambda v} \qquad \text{by hypothesis}\\
+        &= \inner{v, Tv}.
+    \end{align*}
+    Therefore $\inner{Tv, v} = \inner{v, Tv}$ is true for eigenvector $v \in V$. We are not guaranteed anything else under these assumptions.
+    
+    \nl \textbf{False by counterexample:} Let 
+    $$\mathcal{M}(T) := \mat1101 \quad\text{ and }\quad \mathcal{M}(T^*) = \mat1011$$
+    The eigenvalues of $T$ are $\lambda = 1$ with multiplicity 2. However, $\mathcal{M}(T) \neq \mathcal{M}(T^*)$. Hence a counterexample.
+\end{proof}
+
+

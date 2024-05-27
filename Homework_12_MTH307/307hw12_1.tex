@@ -1,0 +1,20 @@
+Suppose $T$ is a positive operator on $V$. Prove that $T$ is invertible if and only if $\langle Tv,v \rangle >0$ for every $v \in V$ with $v \ne 0$.
+
+\begin{proof} ($\Longrightarrow$)\\
+    Suppose $T$ is invertible. By the positivity hypothesis, there exists $R \in \L{V}$ such that $R^2 = T$. Hence, 
+    \begin{align*}
+        \inner{Tv, v}
+        &= \inner{R^2v, v} \tag{Substitution}\\
+        &= \inner{Rv, R^*v} \tag{Taking the adjoint}\\
+        &= \inner{Rv, Rv} \tag{Self-adjoint square roots}\\
+    \end{align*}
+    Which, by the definiteness property of inner products, $\inner{Rv, Rv} = 0$ if and only if $Rv = 0$.
+    
+    \nl By positivity on $T$, then $R^2 = T$. Multiplying on the right by $T^{-1}$, then $R^2T^{-1} = TT^{-1} = I$. Therefore $R(RT^{-1}) = I$. Hence $R$ is invertible and $R^{-1} = RT^{-1}$. 
+    
+    \nl Thus, by invertibility $\nullspace R = \{0\}$. Since $v \neq 0$ by hypothesis, $Rv \neq 0$.  Therefore $\inner{Rv,Rv} > 0$ for $v \neq 0$ and hence $\inner{Tv,v} >0$.
+\end{proof}
+
+\begin{proof} ($\Longleftarrow$)\\
+    Suppose $\inner{Tv,v} > 0$ for $v \neq 0$. This implies that $Tv \neq 0$ and $v \neq 0$ since $\inner{0,u} = 0 = \inner{u,0}$ for any $u \in V$. Thus $Tv \neq 0$ for all $v \neq 0$. Hence $T$ is injective, and thus invertible.
+\end{proof}

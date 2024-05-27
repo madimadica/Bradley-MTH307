@@ -1,0 +1,37 @@
+Let $V$ be a real vector space.  $V^4 = V \times V \times V \times V$.  Prove that $V^4$ and $\mathcal{L}(\mathbf{R}^4, V)$ are isomorphic vector spaces.
+\begin{mybox}
+\begin{proof}
+Define a map $\Phi$ as
+$$\Phi : V^4 \to \mathcal{L}(\R^4, V)$$
+$$\Phi(v) = T_v : \R^4 \to V$$
+$$\text{Where } T_v(x_1,x_2,x_3,x_4) = x_1v_1 + x_2v_2 + x_3v_3 + x_4v_4$$
+with $v = (v_1, v_2, v_3, v_4) \in V^4$
+
+\nl Then there is an inverse map $\phi$ so that
+$T\in \mathcal{L}(\mathbb{R}^4, V)$,
+$$\phi : \mathcal{L}(\mathbb{R}^4, V) \to V^4$$ $$\phi(T) = (T(e_1), T(e_2), T(e_3), T(e_4))$$
+With $e_i$ denoting the standard basis elements for $\R^4$. 
+
+\nl Next we will show the composition of functions $\Phi \circ \phi$ and $\phi \circ \Phi$ are the identity.
+\begin{align*}
+    \pars{\Phi \circ \phi}(T)\overbrace{(x_1,x_2,x_3,x_4)}^{\in\;\R^4} &= \Phi (\overbrace{T(e_1), T(e_2), T(e_3), T(e_4)}^{\in \; V^4})(x_1,x_2,x_3,x_4)\\
+    &= x_1T(e_1) + x_2 T(e_2) + x_3T(e_3) + x_4T(e_4)\\
+    &= T(x_1e_1 + x_2e_2 + x_3e_3 + x_4e_4)\\
+    &= T(x_1, x_2, x_3, x_4)
+\end{align*}
+For the other direction, we will let $v = (v_1, v_2, v_3, v_4) \in V^4$. Then,
+\begin{align*}
+    \pars{\phi \circ \Phi}\overbrace{(v_1, v_2, v_3, v_4)}^{\in\;V^4} &=(\Phi(v)(e_1), \Phi(v)(e_2), \Phi(v)(e_3), \Phi(v)(e_4))\\
+    &=(v_1, v_2, v_3, v_4)\\
+\end{align*}
+What remains to show is that $\Phi$ \textit{or} $\phi$ is a homomorphism. Showing either case will result in an isomorphism based on the compositions and inverses shown above. So, for some scalars $a, b$ and vectors $v,w \in V^4$,
+\begin{align*}
+    & \Phi(av + bw)(x_1,x_2,x_3,x_4)\\&= \Phi( a(v_1, v_2, v_3, v_4) + b(w_1, w_2, w_3, w_4))(x_1,x_2,x_3,x_4)\\
+    &= \Phi ( av_1 + bw_1,\; av_2 + bw_2,\; av_3 + bw_3,\; av_4 + bw_4)(x_1,x_2,x_3,x_4)\\
+    &= x_1av_1 + x_1bw_1 + x_2av_2 + x_2bw_2 + x_3av_3 + x_3bw_3 + x_4av_4 + x_4bw_4\\
+    &= a(x_1v_1 + x_2v_2 + x_3v_3 + x_4v_4) + b(x_1v_1 + x_2v_2 + x_3v_3 + x_4v_4)\\
+    &= a \Phi(v)(x_1,x_2,x_3,x_4) + b \Phi(w)(x_1,x_2,x_3,x_4)
+\end{align*}
+Therefore $V^4$ is isomorphic to $\mathcal{L}(\R^4,V)$.
+\end{proof}
+\end{mybox}

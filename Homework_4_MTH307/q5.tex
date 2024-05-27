@@ -1,0 +1,21 @@
+Let $D \in \mathcal{L}(\mathcal{P}_3(\mathbf{R}), \mathcal{P}_2(\mathbf{R}))$ denote the differentiation map $Dp = p'$.  Example 3.34 gives the matrix of $D$ with respect to the usual bases for $\mathcal{P}_3(\mathbf{R})$ and $\mathcal{P}_2(\mathbf{R})$.  \\
+        Find two new bases for $\mathcal{P}_3(\mathbf{R})$ and $\mathcal{P}_2(\mathbf{R})$ so that the matrix for $D$ with respect to these bases is
+        \[
+        \left(
+          \begin{array}{cccc}
+            1 & 0 & 0 & 0 \\
+            0 & 1 & 0 & 0 \\
+            0 & 0 & 1 & 0 \\
+          \end{array}
+        \right).
+        \]\vspace{.4in}
+        \begin{mybox}
+            \textbf{Solution: } Fix the basis of $\poly{2}$ to be $\{1, x, x^2\}$. Pulling from the columns of the given matrix as coefficients for with this basis, we can find the preimage from the definitions of derivitives. Thus,
+            \begin{align}
+                1(1) + 0(x) + 0(x^2) &= 1 = \dxof{x} = D(x). \notag\\
+                0(1) + 1(x) + 0(x^2) &= x = \dxof{\frac{x^2}{2}} = D\pars{\frac{x^2}{2}} .\notag\\
+                0(1) + 0(x) + 1(x^2) &= x^2 = \dxof{\frac{x^3}{3}} = D\pars{\frac{x^3}{3}}.\notag\\
+                0(1) + 0(x) + 0(x^2) &= 0 = \dxof{1} = D(1).\notag 
+            \end{align} 
+            Therefore our ordered basis for $\poly{3} = (x,\;\frac{x^2}{2},\;\frac{x^3}{3},\;1)$.
+        \end{mybox}

@@ -1,0 +1,29 @@
+Let $T \in \mathcal{L}(V)$ and $S \in \mathcal{L}(V)$ be invertible.
+        \begin{enumerate}
+        \item Show that $T$ and $S^{-1}TS$ have the same eigenvalues.
+        \begin{mybox}
+        \begin{proof}
+                Assume that $\lambda$ is the eigenvalue of $T$. By the definition of eigenvalue, for some vector $v \in V$, we have $Tv = \lambda v$. And, again, the the definition of eigenvalue, we will show that $S^{-1}TSv = \lambda v$.
+                \begin{align*}
+                        S^{-1}TSv = \lambda v & \iff  S^{-1}T(SS^{-1})v = S^{-1} \lambda v & \text{Multiply } S^{-1}\\
+                        &\iff S^{-1}Tv =  S^{-1} \lambda v  & \text{Identity, } SS^{-1} = I\\
+                        & \iff S^{-1} \lambda v =  S^{-1} \lambda v & \text{Eigenvalue of } T\\
+                        & \iff \lambda S^{-1}  v =  \lambda S^{-1}  v & \text{Linearity of } S\\
+                        & \iff \lambda S^{-1}S  v =   \lambda S^{-1}Sv & \text{Multiply } S\\
+                        &\iff \lambda v = \lambda v & \text{Identity}\\
+                        &\iff \lambda v = Tv & \text{Substitute }Tv
+                \end{align*} 
+        \end{proof}
+        \end{mybox}
+
+        \item What is the relationship between the eigenvectors of $T$ and the eigenvectors of $S^{-1}TS$.
+        \begin{mybox}
+                We can manipulate the equation as follows,
+                \begin{align*}
+                        S^{-1}TSv = \lambda v & \iff SS^{-1}TSv = S \lambda v & \text{Multiply }S\\
+                        &\iff TSv = \lambda S v & \text{Identity, linearity.}
+                \end{align*} 
+                Which, by the definition of eigenvector, $Tv = \lambda v$, if we substitute in $v$ with $Sv$ to the above manipulation, we get that $Sv$ is an \textit{eigenvector} of $T$.
+        \end{mybox}
+        \end{enumerate}
+        

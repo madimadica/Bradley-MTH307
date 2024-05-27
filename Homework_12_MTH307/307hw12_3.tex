@@ -1,0 +1,21 @@
+Suppose $S \in \mathcal{L}(V)$. Prove that the following are equivalent:
+\begin{enumerate}
+    \item S is an isometry;
+    \item $\langle S^*u , S^*v \rangle = \langle u , v \rangle$ for all $u, v \in V$;
+    \item $S^*e_1 , \ldots S^*e_m$ is an orthonormal list for every orthonormal list of vectors $e_1 , \ldots , e_m$ in $V$;
+    \item $S^*e_1 , \ldots S^*e_n$ is an orthonormal basis for some orthonormal basis $e_1 , \ldots , e_n$ of $V$.
+    \end{enumerate}
+    
+    \nl We will prove $(a) \Rightarrow (b) \Rightarrow (c) \Rightarrow (d) \Rightarrow (a)$.
+\begin{proof} (a $\implies$ b)\\
+   Suppose $S$ is an isometry. Then taking the adjoint of the right hand side, $\inner{S^*u, S^*v} = \inner{SS^*u, v}$. Since $S$ is an isometry, then $SS^* = I$. Hence, $\inner{S^*u, S^*v} = \inner{u,v}$.
+\end{proof}
+\begin{proof} (b $\implies$ c)\\
+    Suppose $\inner{S^*u, S^*v} = \inner{u,v}$ for all $u,v \in V$. Since $e_1, \dots, e_m$ is an orthonormal list then $\inner{e_j, e_k} = 0$ for $j \neq k$ and 1 for $j = k$. By (b), $\inner{S^*e_j, S^*e_k} = \inner{e_j, e_k}$, hence $S^*e_1, \dots, S^*e_m$ is also an orthonormal list in $V$ by equality.
+\end{proof}
+\begin{proof} (c $\implies$ d)\\
+    Suppose $S^*e_1 , \ldots S^*e_m$ is an orthonormal list for every orthonormal list of vectors $e_1 , \ldots , e_m$ in $V$. Then we can extend $e_1, \dots, e_m$ to a basis of $V$ by the Gram Schmidt procedure with and apply (c) with $m = n = \dim V$.
+\end{proof}
+\begin{proof} (d $\implies$ a)\\
+    Suppose $S^*e_1 , \ldots S^*e_n$ is an orthonormal basis for some orthonormal basis $e_1 , \ldots , e_n$ of $V$. Then $\inner{SS^*e_j, e_k} = \inner{S^*e_j, S^*e_k} = \inner{e_j, e_k}$, which is orthonormal. Every $u, v \in V$ can be written as a unique linear combination of $e_1, \dots, e_n$. Hence, $\inner{SS^*u, v} = \inner{u,v}$ and $SS^* = I$, a condition for an isometry.
+\end{proof}

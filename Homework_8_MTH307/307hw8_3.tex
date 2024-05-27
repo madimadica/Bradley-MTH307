@@ -1,0 +1,29 @@
+Suppose $V$ is a real inner product space.  Prove that
+    $$
+        \hspace{1in} \langle u,v \rangle = \frac{\|u+v \|^2 - \|u-v \|^2}{4} \qquad \text{for all } u, v \in V
+    $$
+    \begin{mybox} \textbf{Solution:} Direct proof. 
+        \begin{proof} The following utilizes the fact that we are acting on a real vector space and the conjugates are trivial. As such, $\inner{\bu, \bv} = \inner{\bv,\bu}$ and $\inner{\bu, -\bv} = -\inner{\bu,\bv}$.
+            \begin{align*}
+                &\qquad \dfrac{\norm{\bu+\bv}^2-\norm{\bu-\bv}^2}{4} \\
+                &= \over{4} \Brac{ 
+                    \inner{\bu + \bv, \bu + \bv}
+                - 
+                    \inner{\bu-\bv, \bu-\bv}
+                }\\
+                &= \over{4}\Brac{
+                    \norm{\bu} + \inner{\bu,\bv} + \inner{\bv,\bu} + \norm{\bv} - \Big(\norm{\bu} + \inner{\bu,-\bv} + \inner{-\bv,\bu} + \inner{-\bv,-\bv}\Big)
+                }\\
+                &= \over{4}\Brac{
+                    \norm{\bu} + \inner{\bu,\bv} + \inner{\bv,\bu} + \norm{\bv} - \norm{\bu} - \inner{\bu,-\bv} - \inner{-\bv,\bu} - \inner{-\bv,-\bv}
+                }\\
+                &= \over{4}\Brac{
+                    \norm{\bu} + \inner{\bu,\bv} + \inner{\bu,\bv} + \norm{\bv} - \norm{\bu} + \inner{\bu,\bv} + \inner{\bv,\bu} - \norm{\bv}
+                }\\
+                &= \over{4}\Brac{
+                    \inner{\bu,\bv} + \inner{\bu,\bv} + \inner{\bu,\bv} + \inner{\bu,\bv}
+                }\\
+                &= \inner{\bu,\bv}
+            \end{align*}
+        \end{proof}
+        \end{mybox}

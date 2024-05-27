@@ -1,0 +1,11 @@
+If $T$ is a positive and invertible operator, is $T^{-1}$ positive?
+
+\notab {\begin{proof}
+    By the hypothesis that $T$ is positive, $T$ is also self-adjoint. Hence, by the Spectral Theorem there exists a diagonal matrix of eigenvalues. By the properties of positive operators, all eigenvalues are nonnegative. Since $T$ is invertible by the hypothesis, the eigenvalues cannot be zero, and hence are positive. Therefore 
+    $$\mathcal{M}(T) = \begin{bmatrix}
+        \lambda_1 & & 0 \\ & \ddots & \\ 0 & & \lambda_n
+    \end{bmatrix} \wideand \mathcal{M}(T^{-1}) = \begin{bmatrix}
+        \over{\lambda_1} & & 0 \\ & \ddots & \\ 0 & & \over{\lambda_n}
+    \end{bmatrix}.$$
+    The eigenvalues of $T^{-1}$ are again non-negative (strictly positive) and $T^{-1}$ is clearly self adjoint. Therefore by property $b \implies a$ of positive operators, $T^{-1}$ is positive. This also holds for complex values since the eigenvalues are nonnegative by definition of $T$ positive.
+\end{proof}}

@@ -1,0 +1,29 @@
+Show that if $a_1, \ldots a_n \in \mathbf{R}$, then the square of the average of $a_1, \ldots , a_n$ is less than or equal to the average of $a_1^2, \ldots , a_n^2$.
+\begin{mybox}\textbf{Solution:} Direct proof:
+\begin{proof}
+    Let $\bar{A} := \displaystyle \pars{ \over{n} \sum_{i=1}^n {a_i}}^2$ and $\bar{B} := \displaystyle \over{n} \sum_{i=1}^n {a_i^2}$. Will will show that $\bar{A} \leq \bar{B}$.
+    
+    \nnl Let $\bv, \bw \in \R^n$ such that $\bv = (\thru{a})$ and $\bw = (\thru{1})$. By the Cauchy-Schwarz Inequality we have $\abs{\inner{\bv,\bw}} \leq \norm{\bv} \norm{\bw}$. Computing the left hand side,
+    \begin{align*}
+        \abs{\inner{\bv,\bw}} &= \abs{\inner{ (\thru{a}), (1,\dots,1)}}\\
+        &= \abs{ \sumthru{1a} }\\
+        &= \abs{ \sumthru{a} }.
+    \end{align*}
+    
+    \nnl Computing the right hand side,
+    \begin{align*}
+        \norm{\bv} \norm{\bw} &= \sqrt{a_1^2 + \cdots + a_n^2} \cdot \sqrt{1_1+\cdots+1_n}\\
+        &= \sqrt{n \pars{a_1^2 + \cdots + a_n^2}}.
+    \end{align*}
+    
+    \nnl Hence, $\abs{ \sumthru{a} } \leq \sqrt{n \pars{a_1^2 + \cdots + a_n^2}}$. Algebraically manipulating this inequality,
+    \begin{align*}
+        \abs{ \sumthru{a} } &\leq \sqrt{n \pars{a_1^2 + \cdots + a_n^2}}\\
+        \pars{\abs{\sumthru{a}}}^2 &\leq n \pars{a_1^2 + \cdots + a_n^2} \tag{square both sides}\\
+        \over{n^2}\pars{\abs{\sumthru{a}}}^2 &\leq \over{n}\pars{a_1^2 + \cdots + a_n^2}\tag{divide by $n^2$} \\
+        \over{n^2}\pars{\sumthru{a}}^2 &\leq \over{n}\pars{a_1^2 + \cdots + a_n^2}\tag{property of absolute value} \\
+        \pars{\frac{\sumthru{a}}{n}}^2 &\leq \pars{\frac{a_1^2 + \cdots + a_n^2}{n}}\tag{factor in $n$} \\
+        \bar{A} &\leq \bar{B}.
+    \end{align*} 
+\end{proof}
+\end{mybox}

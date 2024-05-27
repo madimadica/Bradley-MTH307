@@ -1,0 +1,21 @@
+Suppose that $T$ is a normal operator on $V$.  Suppose also that $v, w \in V$ satisfy the equations
+    \[
+        \|v\| = \|w\| = 2, \hspace{.25in} Tv=3v, \hspace{.25in} Tw=4w.
+    \]
+    Show that $\|T(v+w)\| = 10$.
+
+    \nnl \textbf{Solution: }
+
+    \nl By our hypotheses, $v \in E(3,T)$ and $w \in E(2,T)$. By proposition 7.22 (since $T$ is normal and 3 and 4 are distict eigenvalues), then $v$ and $w$ are orthogonal. Hence,
+    \begin{align*}
+        \norm{T(v+w)} &= \sqrt{\norm{T(v+w)}^2} \tag{Algebra} \\
+        &= \sqrt{ \norm{Tv + Tw}^2} \tag{Linearity}\\
+        &= \sqrt{\norm{3v + 4w}^2} \tag{$Tv = \lambda v$ substitution (hypotheses)}\\
+        &= \sqrt{\norm{3v}^2 + \norm{4w}^2} \tag{Pythagorean Theorem}\\
+        &= \sqrt{ 3^2 \norm v^2 + 4^2 \norm w^2} \tag{Properties of norms}\\
+        &= \sqrt{ 9 \norm v^2 + 16 \norm w^2} \tag{Simplify}\\
+        &= \sqrt{ 9 \cdot 2^2 + 16 \cdot 2^2} \tag{Substitution (hypotheses)}\\
+        &= \sqrt{ 36 + 64 } \tag{Simplify}\\
+        &= 10 \tag{Simplify}
+    \end{align*}
+    Therefore, under the hypotheses, $\norm{T(v+w)} = 10$.

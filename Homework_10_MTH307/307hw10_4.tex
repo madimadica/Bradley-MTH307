@@ -1,0 +1,14 @@
+Suppose $T \in \mathcal{L}(V)$ is normal.  Prove that $\text{range }T = \text{range }T^*$.
+\begin{proof} $\;$
+
+    \nl Because $T$ is normal, by proposition 7.20, $\norm{Tv} = \norm{T^*v}$ for all $v$. Since $Tw = 0$ for any vector $w \in \null T$ and $Tv = T^*v$, then $w \in \null T^*$. Similarly, it can be shown that for $T^*u = 0$ for $u \in \null T^*$ and $T^*v = Tv$, then $u \in \null T$. Hence $\null T = \null T^*$. 
+    
+    \nl Then, using the table of properties regarding the null space and range of $T$ and $T^*$ (7.7),
+    \begin{align*}
+        \range T &= \pars{\null T^*}^{\perp} \tag{7.7 d}\\
+         &= \pars{\null T}^{\perp} \tag{$\null T = \null T^*$}
+         \\ &= \range T^* \tag{7.7 b}
+    \end{align*}
+    Therefore $\range T = \range T^*$ for a normal operator $T \in \L{V}$.
+
+\end{proof}
