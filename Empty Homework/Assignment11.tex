@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{mathabx}
+\pagestyle{empty}
+
+\textwidth 6.5in
+\hoffset=-.65in
+\textheight=9.5in
+\voffset=-1.in
+
+\begin{document}
+
+\noindent MATH 307 \\
+Assignment \#11 \\
+Due Friday, April 15, 2022 \\
+
+For each problem, include the statement of the problem. Leave a blank line.  At the beginning of the next line, write \textbf{Solution} or \textbf{Proof} -- as appropriate.
+
+\begin{enumerate}
+\item \begin{enumerate}
+        \item Show that
+        $A=\left( \begin{array} {c c c} 1 & 1 & 1 \\ 1 & 1 & 1 \\1 & 1 & 1 \end{array} \right)$ is positive.
+
+        \item Find all $\alpha$ such that
+        $A=\left( \begin{array} {c c c} \alpha & 1 & 1 \\ 1 & 0 & 0 \\1 & 0 & 0 \end{array} \right)$ is positive.
+
+        \item Show that even though all its entries are positive, the matrix
+        $A=\left( \begin{array} {c c c} 2 & 2  \\ 2 & 1  \end{array} \right)$
+        is not positive.
+
+        \item Find an example of a positive matrix some of whose entries are negative.
+        \end{enumerate}
+
+\item If $T$ is a positive and invertible operator, is $T^{-1}$ positive?
+
+\item Consider the three statements:
+    \begin{enumerate}
+        \item $T$ is self-adjoint
+        \item $T$ is an isometry
+        \item $T^2=I$ (such a $T$ is called an \emph{involution})
+    \end{enumerate}
+    Prove that if an operator has any two of the properties, then it has the third one as well.
+
+\item Prove or give a counterexample:  If $T \in \mathcal{L}(V)$ and there exists an orthonormal basis $e_1, \ldots , e_n$ of  $V$ such that $\|Te_i\| = 1$ for each $e_i$, then $T$ is an isometry.
+
+\item Suppose $T \in \mathcal{L}(V)$.  Prove that there exists an isometry $S \in \mathcal{L}(V)$ such that
+    \[
+        T = \sqrt{TT^*}\;S.
+    \]
+
+
+\item Find the singular values of the differentiation operator $D \in \mathcal{L}(\mathcal{P}_2(\mathbf{R}))$ defined by $Dp = p'$, where the inner product is $\langle p , q \rangle = \int_{-1}^1 p(x)q(x)\;dx$.\\
+    Remark: It might be helpful to compute the matrix for $D$ with respect to the basis $1, x, x^2$ to find eigenvalues (easy) and then compute the matrix for $D$ again using an \emph{orthonormal basis} for $\mathcal{P}_2(\mathbf{R})$ to compute the singular values.  Use some technology for the integrations.
+
+\item Define $T \in \mathcal{L}(\mathbf{F}^3)$ by $T(z_1,z_2,z_3) = ( 4z_2 , 5z_3 , z_1 )$. Find (explicitly) an isometry $S \in \mathcal{L}(\mathbf{F}^3)$ such that $T = S\;\sqrt{T^*T}$.
+
+\item Suppose $T \in \mathcal{L}(V)$ is self-adjoint.  Prove that the singular values of $T$ equal the absolute values of the eigenvalues of $T$, repeated appropriately.
+
+
+\end{enumerate}
+
+\end{document} 

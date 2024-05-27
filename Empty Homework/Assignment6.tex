@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{mathabx}
+\pagestyle{empty}
+
+\textwidth 6.5in
+\hoffset=-.65in
+\textheight=9.5in
+\voffset=-1.in
+
+\begin{document}
+
+% Invariant Subspaces --- only one section; test on Wednesday
+
+\noindent MATH 307 \\
+Assignment \#6 \\   % 5.A
+Due Friday, February 25, 2022 \\
+Revision: 2/21/2022:  Fixed typo in problem \#3:  $U+V$ should be $U+W$.
+
+For each problem, include the statement of the problem. Leave a blank line.  At the beginning of the next line, write \textbf{Solution} or \textbf{Proof} -- as appropriate.
+
+\begin{enumerate}
+\item Label the following statements as being true or false.
+Provide some justification from the text for your label.
+    \begin{enumerate}
+        \item Every linear operator on an $n$-dimensional vector space has $n$ distinct eigenvalues.
+        \item If a linear operator on a vector space over $\mathbf{R}$ has one eigenvector, then it has an infinite number of eigenvectors.
+        \item There exists a square matrix with no eigenvectors.
+        \item Eigenvalues must be nonzero scalars.
+        \item Any two eigenvectors are linearly independent.
+        \item The sum of two eigenvalues of a linear operator $T$ is also an eigenvalue of $T$.
+        \item Linear operators on infinite-dimensional vectors spaces never have eigenvalues.
+        \item The sum of two eigenvectors of an operator $T$ is always an eigenvector of $T$.
+    \end{enumerate}
+
+\item Consider the operator
+        $T = \left(
+               \begin{array}{cc}
+                 0 & 0  \\
+                 0 & 1 \\
+               \end{array}
+             \right)$
+        acting on $\mathbf{R}^2$.  How many subspaces are there that are invariant under $T$?
+
+\item If $U$ and $W$ are invariant subspaces for $T \in \mathcal{L}(V)$ then $U+W$ is invariant for $T$.
+
+\item In $\mathbf{R}^2$, let $T$ be the reflection across the line $y=x$.
+    \begin{enumerate}
+    \item Write the matrix $A$ that represents $T$ relative to the standard basis.
+    \item Determine two invariant subspaces $\mathcal{M}$ and $\mathcal{N}$ for $T$ such that $\mathbf{R}^2 = \mathcal{M} \oplus \mathcal{N}$ where neither $\mathcal{M}$ nor $\mathcal{N}$ is the zero subspace.
+    \item Write a basis $\{ u_1, u_2 \}$ for $\mathbf{R}^2$ so that $\mathcal{M} = \text{span } (u_1)$ and  $\mathcal{N} = \text{span } (u_2)$.
+    \item Write the matrix $B$ that represents $T$ relative to the basis $\{ u_1, u_2 \}$.
+    \end{enumerate}
+
+\item \begin{enumerate}
+        \item Let $V = \mathbf{R}^2$. Find eigenvalues and eigenvectors for the linear operator $T$ defined by $T(x,y) = (2y , x)$.
+        \item Let $V = \mathbf{R}^2$. Find eigenvalues and eigenvectors for the linear operator $T$ defined by $T(x,y) = (-2y , x)$.
+        \end{enumerate}
+
+\item Let $T \in \mathcal{L}(V)$ and $S \in \mathcal{L}(V)$ be invertible.
+    \begin{enumerate}
+    \item Show that $T$ and $S^{-1}TS$ have the same eigenvalues.
+    \item What is the relationship between the eigenvectors of $T$ and the eigenvectors of $S^{-1}TS$.
+    \end{enumerate}
+
+\item Show that the operator $T \in \mathcal{L}(\mathbf{C}^\infty)$ defined by
+    \[
+    T(z_1,z_2, \ldots) = (0,z_1,z_2, \ldots)
+    \]
+    has no eigenvalues.
+
+\item Suppose $T \in \mathcal{L}(V)$ and there exists nonzero vectors $v$ and $w$ so that
+    \[
+        Tv = 3w \hspace{.5in} \text{and} \hspace{.5in} Tw=3v.
+    \]
+    Prove that 3 or $-3$ is an eigenvalue of $T$.
+
+\end{enumerate}
+
+\end{document} 

@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{mathabx}
+\pagestyle{empty}
+
+\textwidth 6.5in
+\hoffset=-.65in
+\textheight=9.5in
+\voffset=-1.in
+
+\begin{document}
+
+\noindent MATH 307 \\
+Assignment \#2 \\  % 2.A
+Due Friday, January 28, 2022 \\
+
+For each problem, include the statement of the problem. Leave a blank line.  At the beginning of the next line, write \textbf{Solution} or \textbf{Proof} -- as appropriate.
+
+\begin{enumerate}
+\item Label the following statements as being true or false.
+Provide some justification from the text for your label.
+    \begin{enumerate}
+        \item  If $V$ is a vector space and $W$ is a subset of $V$ that is a vector space, then $W$ is a subspace of $V$.
+        \item The empty set is a subspace of every vector space.
+        \item If $V$ is a vector space other than the zero vector space $\{0\}$, then $V$ contains a subspace $W$ such that $W \ne V$.
+        \item The intersection of any two subsets of $V$ is a subspace of $V$.
+    \end{enumerate}
+
+\item  Prove that the intersection of two subspaces $U$ and $W$ of a vector space $V$ is a subspace of $V$.
+
+\item  Prove that the union of two subspaces  $U$ and $W$ of a vector space $V$ is a subspace of $V$ if and only if one of of the subspaces is contained in the other.
+
+\item Let $V$ be the vector space of $2 \times 2$ matrices with the usual operation of addition and scalar multiplication as seen in MTH 207.  (We are \emph{not} considering multiplication of matrices in this exercise.)\\
+    Let $W_1$ be the set of matrices in $V$ of the form
+    $\left[
+      \begin{array}{cc}
+        x & -x \\
+        y & z \\
+      \end{array}
+    \right]$ and let $W_2$ be the set of matrices in $V$ of the form
+    $\left[
+      \begin{array}{cc}
+        a & b \\
+        -a & c \\
+      \end{array}
+      \right]$.
+      \begin{enumerate}
+      \item Prove that $W_1$ and $W_2$ are subspaces of $V$.
+      \item Describe the subspace $W_1 \cap W_2$.
+      \item Show that the subspace $W_1 + W_2$ is all of $V$.
+      \end{enumerate}
+
+\item  Prove or give a counterexample:  if $U_1, U_2,W$ are subspaces of the vector space $V$ such that $V = U_1 \oplus W$ and $V = U_2 \oplus W$, then $U_1 = U_2$.
+
+\item  Let $V = \mathbf{R}^3$ -- the usual 3D space from Calc III.  Let $U$ be the $x$-axis.  Define $W$ to be the subspace spanned by $(1,0,1)$.  Show that the usual $xz$-plane is the direct sum $U \oplus W$.
+
+\item  Suppose that the vectors $v_1, v_2, v_3, v_4$ span the vector space $V$.  Show that the vectors $v_1-v_2, v_1+v_2, v_3+v_4, v_4$ also span $V$.
+
+\end{enumerate}
+
+\end{document} 

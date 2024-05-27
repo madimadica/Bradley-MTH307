@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{mathabx}
+\pagestyle{empty}
+
+\textwidth 6.5in
+\hoffset=-.65in
+\textheight=9.5in
+\voffset=-1.in
+
+\begin{document}
+
+\noindent MATH 307 \\
+Assignment \#3 \\ % 2.B, 2.C, 3.A
+Due Friday, February 4, 2022 \\
+**Revised 01Feb2022 to correct typo in problem 2. Changed $u_1, u_2$ to $v_1, v_2$. \\
+
+For each problem, include the statement of the problem. Leave a blank line.  At the beginning of the next line, write \textbf{Solution} or \textbf{Proof} -- as appropriate.
+
+\begin{enumerate}
+\item  Suppose that the vectors $v_1, v_2, v_3, v_4$ are a basis for $V$.  Show that the vectors \\
+    $v_1-v_2, v_1+v_2, v_3+v_4, v_4$ also form a basis for $V$.
+
+\item   Suppose that the vectors $v_1, v_2, v_3, v_4$ is a basis for $V$.  Let $U$ be a subspace of $V$.  Assume $v_1, v_2 \in U$ but neither $v_3$ nor $v_4$ are in $U$.  Is $v_1, v_2$ a basis for $U$?  Justify.
+
+\item Let $v_1 = (-1,1,2) \in \mathbf{R}^3$.  Construct two bases for $\mathbf{R}^3$:  $\{v_1, v_2,v_3\}$ and $\{v_1, v_2', v_3'\}$ so that $\{v_2, v_3, v_3'\}$ is also a basis.
+
+\item
+    \begin{enumerate}
+        \item Under what conditions on the scalar $\xi$ do the vectors $(1,1,1)$ and $(1, \xi , \xi^2 )$ form a basis for $\mathbf{R}^3$?
+        \item Under what conditions on the scalar $\xi$ do the vectors\\ $(0,1,\xi)$, $(\xi , 0,1 )$, and $(\xi,1,1+\xi)$  form a basis for $\mathbf{R}^3$?
+    \end{enumerate}
+
+\item Let $V = \mathcal{P}(\mathbf{R})$ be the vector space of all polynomials with real coefficients.  If $p$ is any polynomial, let $Tp$ be the polynomial defined by $(Tp)(x) = p(x+1) - p(x)$.  Show that $T$ is a linear transformation.
+
+\item Let $V = \mathcal{P}_4(\mathbf{R})$, the vector space of polynomials of degree at most four. \\ Let $U = \{p \in V : p(1)=p(3)\}$
+    \begin{enumerate}
+        \item Find a basis of $U$.
+        \item Extend the basis in (a) to a basis of $V$.
+        \item Find a subspace $W$ of $V$ so that $V=U \oplus W$.
+    \end{enumerate}
+
+\item Suppose $a,b,c \in \mathbf{R}$.  Define $T: \mathcal{P}(\mathbf{R}) \to \mathbf{R}^3$ by
+    \[
+    Tp = \left( 2p(5)-5p'(1) + a p(1)p(3)\; , \;\int_1^4 x^2p(x)\;dx + b e^{p(0)}\; , \; p(2)+c\right).
+    \]
+    Show that $T$ is linear if and only if $a=b=c=0$.
+
+\item \begin{enumerate}
+        \item Find an example of a function $\varphi : \mathbf{R}^2 \to \mathbf{R}$ that is homogeneous but not additive (and hence not linear).
+        \item Find an example of a function $\varphi : \mathbf{C}^2 \to \mathbf{C}$ that is additive but not homogeneous (and hence not linear).
+    \end{enumerate}
+
+\end{enumerate}
+
+\end{document} 

@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{mathabx}
+\pagestyle{empty}
+
+\textwidth 6.5in
+\hoffset=-.65in
+\textheight=9.5in
+\voffset=-1.in
+
+\begin{document}
+
+\noindent MATH 307 \\
+Assignment \#12 \\
+Due Friday, April 22, 2022 \\
+
+For each problem, include the statement of the problem. Leave a blank line.  At the beginning of the next line, write \textbf{Solution} or \textbf{Proof} -- as appropriate.
+
+\begin{enumerate}
+\item Suppose $T$ is a positive operator on $V$. Prove that $T$ is invertible if and only if $\langle Tv,v \rangle >0$ for every $v \in V$ with $v \ne 0$.
+
+\item Suppose $T \in \mathcal{L}(V)$, for an inner product space $V$. For $u , v \in V$, define the function of two variables $\langle u , v \rangle_T$ by
+    \[
+        \langle u , v \rangle_T = \langle Tu , v \rangle.
+    \]
+Prove that $\langle \cdot , \cdot \rangle_T$ is an inner product on $V$ if and only if $T$ is an invertible positive operator (with respect to the original inner product $\langle \cdot , \cdot \rangle \; $).
+
+\item Suppose $S \in \mathcal{L}(V)$. Prove that the following are equivalent:
+\begin{enumerate}
+    \item S is an isometry;
+    \item $\langle S^*u , S^*v \rangle = \langle u , v \rangle$ for all $u, v \in V$;
+    \item $S^*e_1 , \ldots S^*e_m$ is an orthonormal list for every orthonormal list of vectors $e_1 , \ldots , e_m$ in $V$;
+    \item $S^*e_1 , \ldots S^*e_n$ is an orthonormal basis for some orthonormal basis $e_1 , \ldots , e_n$ of $V$.
+    \end{enumerate}
+
+\item Suppose $T_1 , T_2$ are normal operators on $\mathbf{F}^3$ and both operators have 2 , 5 , 7 as eigenvalues. Prove that there exists an isometry $S \in \mathcal{L}(\mathbf{F}^3)$ such that $T_1 = S^*T_2S$.
+
+\item Fix $u,  x \in V$ with $u \ne 0$. Define $T \in \mathcal{L}(V)$ by $Tv = \langle v , u \rangle x$ for every $v \in V$.  Prove that
+    \[
+      \sqrt{T^*T}v = \frac{\| x \|}{\| u \|} \langle v , u \rangle u
+    \]
+for every $v \in V$.
+
+\item Give an example of $T \in \mathcal{L}(\mathbf{C}^2)$ such that 0 is the only eigenvalue of $T$ and the singular values of $T$ are 5 , 0.
+
+\item Suppose $T \in \mathcal{L}(V)$ and $s$ is a singular value of $T$. Prove that there exists a vector $v \in V$ such that $\| v \| = 1$ and $\| Tv \| = s$.
+
+\item Suppose $T \in \mathcal{L}(\mathbf{C}^2)$ is defined by $T(x,y) = (-4y,x)$. Find the singular values of $T$.
+
+\end{enumerate}
+
+\end{document} 

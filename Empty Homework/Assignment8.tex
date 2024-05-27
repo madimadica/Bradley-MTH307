@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{mathabx}
+\pagestyle{empty}
+
+\textwidth 6.5in
+\hoffset=-.65in
+\textheight=9.5in
+\voffset=-1.in
+
+\begin{document}
+
+\noindent MATH 307 \\
+Assignment \#8 \\  % 6.A, 6.B, 6.C
+Due Friday, March 11, 2022; $\;\;$ CORRECTION: Problems 3 \& 5:  notation for inner product.  Fixed \LaTeX\ typo in \#7.  Deleted 3 probllems: 9Feb2022.\\
+
+For each problem, include the statement of the problem. Leave a blank line.  At the beginning of the next line, write \textbf{Solution} or \textbf{Proof} -- as appropriate.
+
+\begin{enumerate}
+\item Prove that
+    \[
+        16 \le (a+b+c+d)\left(\frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d} \right)
+    \]
+    for all positive numbers $a,b,c,d$.\\
+    Hint: find two vectors having lots of square roots; compute an inner product and also use Cauchy-Schwarz.
+
+\item Prove or disprove: there is an inner product on $\mathbf{R}^2$ such that the associated norm is given by
+    \[
+        \|(x,y)\| = \max \{ |x|, |y| \}
+    \]
+    for all $(x,y) \in \mathbf{R}^2$.
+
+\item Suppose $V$ is a real inner product space.  Prove that
+    \[
+        \langle u,v \rangle = \frac{\|u+v \|^2 - \|u-v \|^2}{4}
+    \]
+    for all $u,v \in V$.
+
+\item Show that if $a_1, \ldots a_n \in \mathbf{R}$, then the square of the average of $a_1, \ldots , a_n$ is less than or equal to the average of $a_1^2, \ldots , a_n^2$.
+
+\item Convert $\mathcal{P}_2([0,1])$ into an inner product space by writing $\langle p,q \rangle = \int_0^1 p(x)\overline{q(x)} \; dx$ for $p,q \in \mathcal{P}_2([0,1])$. Find a complete orthonormal set in that space.
+
+\item Suppose $U$ is the subspace of $\mathbf{R}^4$ defined by
+    \[
+        U = \text{span }((1,2,3,-4), (-5,4,3,2)).
+    \]
+    Find an orthonormal basis of $U$ and an orthonormal basis of $U^\perp$.
+
+
+\end{enumerate}
+
+\end{document} 

@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{mathabx}
+\pagestyle{empty}
+
+\textwidth 6.5in
+\hoffset=-.65in
+\textheight=9.5in
+\voffset=-1.in
+
+\begin{document}
+
+\noindent MATH 307 \\
+Assignment \#4 \\  %3.B, 3.C
+Due Friday, February 11, 2022 \\
+**Revised 07Feb2022 to correct typo in problem 5. Fixed a \LaTeX\ typo at the beginning of the first sentence to state that $D$ is a linear transformation from $\mathcal{P}_3(\mathbf{R})$ to $\mathcal{P}_2(\mathbf{R})$. And corrected parts (a) and (b) of \#6 changing $D$ to $A$.\\
+
+For each problem, include the statement of the problem. Leave a blank line.  At the beginning of the next line, write \textbf{Solution} or \textbf{Proof} -- as appropriate.
+
+\begin{enumerate}
+\item \begin{enumerate}
+    \item Find linear map $T : \mathbf{R}^4 \to \mathbf{R}^4$ so that range $T = \text{null } T$.
+    \item Show that there is no linear map $T : \mathbf{R}^5 \to \mathbf{R}^5$ so that range $T = \text{null } T$.
+    \end{enumerate}
+
+\item Find a $4 \times 4$ matrix $M$ so that the range of $M$ is spanned by $(1,0,1,0)$ and $(0,1,0,1)$.
+
+\item \begin{enumerate}
+        \item Give an example of a linear map on a three-dimensional space with a two-dimensional range.
+        \item Give an example of a linear map on a three-dimensional space with a two-dimensional null-space.
+    \end{enumerate}
+
+\item Let $T : V \to V$ be a linear map with a one-dimensional range.  Prove that $T^2 = cT$ for some scalar $c$.  (This means that $T(Tv) = cTv$ for all $v \in V$.)
+
+\item Let $D \in \mathcal{L}(\mathcal{P}_3(\mathbf{R}), \mathcal{P}_2(\mathbf{R}))$ denote the differentiation map $Dp = p'$.  Example 3.34 gives the matrix of $D$ with respect to the usual bases for $\mathcal{P}_3(\mathbf{R})$ and $\mathcal{P}_2(\mathbf{R}$.  \\
+    Find two new bases for $\mathcal{P}_3(\mathbf{R})$ and $\mathcal{P}_2(\mathbf{R}$ so that the matrix for $D$ with respect to these bases is
+    \[
+    \left(
+      \begin{array}{cccc}
+        1 & 0 & 0 & 0 \\
+        0 & 1 & 0 & 0 \\
+        0 & 0 & 1 & 0 \\
+      \end{array}
+    \right).
+    \]
+
+
+\item The general operation of finding an antiderivative is not a linear map because of the ``$+C$'' which means that any function has infinitely many antiderivatives.  Let's define a linear map from $\mathcal{P}_3(\mathbf{R})$ to $\mathcal{P}_4(\mathbf{R})$ that avoids ambiguity.  Let $A(a_0 + a_1x + a_2x^2 + a_3 x^3) = a_0x + (a_1/2)x^2 + (a_2/3)x^3 + (a_3/4) x^4$.
+    \begin{enumerate}
+    \item Find the matrix of $A$ with respect to the standard bases for $\mathcal{P}_3(\mathbf{R})$ and $\mathcal{P}_4(\mathbf{R})$.
+    \item Find new bases for $\mathcal{P}_3(\mathbf{R})$ and $\mathcal{P}_4(\mathbf{R})$ so that the matrix for $A$ with respect to the new bases is
+        \[
+    \left(
+      \begin{array}{cccc}
+        1 & 0 & 0 & 0 \\
+        0 & 1 & 0 & 0 \\
+        0 & 0 & 1 & 0 \\
+        0 & 0 & 0 & 1 \\
+        0 & 0 & 0 & 0 \\
+      \end{array}
+    \right).
+    \]
+    \end{enumerate}
+
+
+\end{enumerate}
+
+\end{document} 

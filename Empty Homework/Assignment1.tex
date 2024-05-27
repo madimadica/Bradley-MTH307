@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{mathabx}
+\pagestyle{empty}
+
+\textwidth 6.5in
+\hoffset=-.65in
+\textheight=9.5in
+\voffset=-1.in
+
+\begin{document}
+
+\noindent MATH 307 \\
+Assignment \#1 \\
+Due Friday, January 21, 2022 \\
+
+For each problem, include the statement of the problem. Leave a blank line.  At the beginning of the next line, write \textbf{Solution} or \textbf{Proof} -- as appropriate.
+
+\begin{enumerate}
+%\item (\S , \# )
+\item Label the following statements as being true or false.
+Provide some justification from the text for your label.
+    \begin{enumerate}
+        \item Every vector space contains a zero vector.
+        \item A vector space may have more than one zero vector.
+        \item In any vector space $au=bu$ implies that $a=b$.
+        \item In any vector space $au=av$ implies that $u=v$.
+        \item In $\mathcal{P}(\mathbf{F})$ only polynomials of the same degree may be added.
+        \item If $f$ and $g$ are polynomials of degree $n$, then $f+g$ is a polynomial of degree $n$.
+        \item If $f$ is a polynomial of degree $n$ and $c$ is a nonzero scalar, then $cf$ is a polynomial of degree $n$.
+        \item A nonzero element of $\mathbf{F}$ may be considered to be an element of $\mathcal{P}(\mathbf{F})$ having degree zero.
+        \item Two functions in $\mathbf{F}^S$ are equal if and only if they have the same values at each element of $S$.
+    \end{enumerate}
+
+\item Let $v_1, \ldots, v_4$ be four vectors in a vector space $V$. Verify $(v_1 + v_2) +( v_3+v_4) = [v_2+(v_3+v_1)]+v_4$.  Use the definition, properties, and theorems on pp.12-15 to justify each step in the transitions from the LHS to the RHS.
+
+\item Which vectors in $\mathbf{R}^3$ are linear combinations of $(1,0,-1), (0,1,1), (1,1,1)$?
+
+\item Let $V = \mathbf{R}^2$ with \emph{new} operations
+\begin{align*}
+    (x,y)+(x_1,y_1) &= (x+x_1,y+y_1) \\
+    c(x,y) &=(cx,y)
+\end{align*}
+Is $V$ a vector space?  Justify.
+
+\item Let $V = \mathbf{R}^2$ with \emph{new} operations
+\begin{align*}
+    (x,y)+(x_1,y_1) &= (x+x_1,0) \\
+    a(x,y) &=(ax,0)
+\end{align*}
+Is $V$ a vector space?  Justify.
+
+\item Consider $\mathbf{R}^n$ with new operations
+\begin{align*}
+    v \boxplus w &= v-w \\
+    a \cdot v &= -a v
+\end{align*}
+Which of the parts of the definition of vector space are satisfied with these new operations?
+
+\item Which subsets of $\mathcal{P}(\mathbf{R})$ form a vector space?  Justify.
+    \begin{enumerate}
+    \item All $p(x)$ such that $p(0)=1$.
+    \item All $p(x)$ such that $p(0)=0$.
+    \item All $p(x)$ such that $2p(0)-3p(1)=0$.
+    \end{enumerate}
+
+
+\end{enumerate}
+
+\end{document} 
